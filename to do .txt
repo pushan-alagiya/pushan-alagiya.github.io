@@ -1,5 +1,5 @@
-Propfile photo
-Descriptiom
+
+
 Resume
 Projects
 
