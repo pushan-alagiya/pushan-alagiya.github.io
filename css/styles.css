@@ -11738,3 +11738,17 @@ html {
       color: transparent;
   }
 }
+
+
+/* Text Classes */
+@media (max-width: 575.98px) {
+  .text-sm {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .text-sm {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+}
