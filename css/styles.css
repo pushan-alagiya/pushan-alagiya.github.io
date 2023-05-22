@@ -11752,3 +11752,8 @@ html {
     font-size: 16px; /* Adjust the font size as needed */
   }
 }
+
+
+.border-rad{
+  border-radius: 15px; 
+}
