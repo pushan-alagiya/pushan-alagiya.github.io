@@ -90,7 +90,6 @@
               <p class="lead fw-normal text-muted mb-0">Let's work together!</p>
             </div>
 
-            <!-- Experience Card 1-->
             <div class="card shadow border-0 rounded-4 mb-5">
               <div class="card-body contact-card">
                 <div
@@ -130,105 +129,107 @@
               </div>
             </div>
 
-            <div class="row gx-5 justify-content-center">
-              <div class="col-lg-8 col-xl-6">
-                <form
-                  id="contactForm"
-                  action="mailto:pushanalagiya@gmail.com"
-                  method="post"
-                  enctype="text/plain"
-                >
-                  <!-- Name input-->
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      id="name"
-                      type="text"
-                      placeholder="Enter your name..."
-                      data-sb-validations="required"
-                      name="Name"
-                    />
-                    <label for="name">Full name</label>
-                    <div
-                      class="invalid-feedback"
-                      data-sb-feedback="name:required"
-                    >
-                      A name is required.
+            <div class="card shadow border-0 rounded-4 mb-5 contact-inputs">
+              <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                  <form
+                    id="contactForm"
+                    action="mailto:pushanalagiya@gmail.com"
+                    method="post"
+                    enctype="text/plain"
+                  >
+                    <!-- Name input-->
+                    <div class="form-floating mb-3">
+                      <input
+                        class="form-control"
+                        id="name"
+                        type="text"
+                        placeholder="Enter your name..."
+                        data-sb-validations="required"
+                        name="Name"
+                      />
+                      <label for="name">Full name</label>
+                      <div
+                        class="invalid-feedback"
+                        data-sb-feedback="name:required"
+                      >
+                        A name is required.
+                      </div>
                     </div>
-                  </div>
-                  <!-- Email address input-->
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      id="email"
-                      type="email"
-                      placeholder="name@example.com"
-                      data-sb-validations="required,email"
-                      name="Email"
-                    />
-                    <label for="email">Email address</label>
-                    <div
-                      class="invalid-feedback"
-                      data-sb-feedback="email:required"
-                    >
-                      An email is required.
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                      <input
+                        class="form-control"
+                        id="email"
+                        type="email"
+                        placeholder="name@example.com"
+                        data-sb-validations="required,email"
+                        name="Email"
+                      />
+                      <label for="email">Email address</label>
+                      <div
+                        class="invalid-feedback"
+                        data-sb-feedback="email:required"
+                      >
+                        An email is required.
+                      </div>
+                      <div
+                        class="invalid-feedback"
+                        data-sb-feedback="email:email"
+                      >
+                        Email is not valid.
+                      </div>
                     </div>
-                    <div
-                      class="invalid-feedback"
-                      data-sb-feedback="email:email"
-                    >
-                      Email is not valid.
+                    <!-- Phone number input-->
+                    <div class="form-floating mb-3">
+                      <input
+                        class="form-control"
+                        id="phone"
+                        type="tel"
+                        placeholder="(123) 456-7890"
+                        data-sb-validations="required"
+                        name="Mobile"
+                      />
+                      <label for="phone">Phone number</label>
+                      <div
+                        class="invalid-feedback"
+                        data-sb-feedback="phone:required"
+                      >
+                        A phone number is required.
+                      </div>
                     </div>
-                  </div>
-                  <!-- Phone number input-->
-                  <div class="form-floating mb-3">
-                    <input
-                      class="form-control"
-                      id="phone"
-                      type="tel"
-                      placeholder="(123) 456-7890"
-                      data-sb-validations="required"
-                      name="Mobile"
-                    />
-                    <label for="phone">Phone number</label>
-                    <div
-                      class="invalid-feedback"
-                      data-sb-feedback="phone:required"
-                    >
-                      A phone number is required.
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        type="text"
+                        placeholder="Enter your message here..."
+                        style="height: 10rem"
+                        data-sb-validations="required"
+                        name="Message"
+                      ></textarea>
+                      <label for="message">Message</label>
+                      <div
+                        class="invalid-feedback"
+                        data-sb-feedback="message:required"
+                      >
+                        A message is required.
+                      </div>
                     </div>
-                  </div>
-                  <!-- Message input-->
-                  <div class="form-floating mb-3">
-                    <textarea
-                      class="form-control"
-                      id="message"
-                      type="text"
-                      placeholder="Enter your message here..."
-                      style="height: 10rem"
-                      data-sb-validations="required"
-                      name="Message"
-                    ></textarea>
-                    <label for="message">Message</label>
-                    <div
-                      class="invalid-feedback"
-                      data-sb-feedback="message:required"
-                    >
-                      A message is required.
-                    </div>
-                  </div>
 
-                  <!-- Submit Button-->
-                  <div class="d-grid">
-                    <button
-                      class="btn btn-primary btn-lg"
-                      id="submitButton"
-                      type="submit"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
+                    <!-- Submit Button-->
+                    <div class="d-grid">
+                      <button
+                        class="btn btn-primary btn-lg"
+                        id="submitButton"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
