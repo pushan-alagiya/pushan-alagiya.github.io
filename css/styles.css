@@ -12096,3 +12096,45 @@ html {
 .skills {
   justify-content: center;
 }
+
+.email-in-contact {
+  margin-bottom: 30px;
+  font-size: small;
+}
+
+.contact-items {
+  gap: 20px;
+  font-size: 30px;
+}
+
+.email-in-contact {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .email-in-contact {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-items {
+    gap: 5px;
+    font-size: 25px;
+  }
+
+  .email-in-contact {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact-items {
+    gap: 5px;
+    font-size: 20px;
+  }
+
+  .email-in-contact {
+    font-size: 15px;
+  }
+}
