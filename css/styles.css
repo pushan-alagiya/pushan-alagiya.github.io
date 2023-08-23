@@ -12136,5 +12136,28 @@ html {
 
   .email-in-contact {
     font-size: 15px;
+  margin-bottom: 20px;
+
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .email-in-contact {
+    font-size: 12px;
+  margin-bottom: 15px;
+
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .contact-items {
+    gap: 5px;
+    font-size: 15px;
+  }
+
+  .email-in-contact {
+    font-size: 7px;
+  margin-bottom: 10px;
+
   }
 }
