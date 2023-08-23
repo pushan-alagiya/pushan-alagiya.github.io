@@ -41,7 +41,7 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: #1c1c1c;
   --bs-primary-rgb: 30, 48, 243;
   --bs-secondary-rgb: 226, 30, 128;
   --bs-success-rgb: 25, 135, 84;
@@ -12111,9 +12111,29 @@ html {
   font-size: 30px;
 }
 
+.contact-card {
+  padding: 45px;
+}
+
 @media screen and (max-width: 800px) {
   .email-in-contact {
     font-size: 25px;
+  }
+
+  .contact-card {
+    padding: 45px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contact-card {
+    padding: 35px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .email-in-contact {
+    font-size: 22px;
   }
 }
 
@@ -12126,6 +12146,10 @@ html {
   .email-in-contact {
     font-size: 20px;
   }
+
+  .contact-card {
+    padding: 25px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -12136,16 +12160,22 @@ html {
 
   .email-in-contact {
     font-size: 15px;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
 
+  .contact-card {
+    padding: 20px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .email-in-contact {
     font-size: 12px;
-  margin-bottom: 15px;
+    margin-bottom: 15px;
+  }
 
+  .contact-card {
+    padding: 15px;
   }
 }
 
@@ -12157,7 +12187,6 @@ html {
 
   .email-in-contact {
     font-size: 7px;
-  margin-bottom: 10px;
-
+    margin-bottom: 10px;
   }
 }
