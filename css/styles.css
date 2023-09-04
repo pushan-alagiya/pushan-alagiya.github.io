@@ -8187,7 +8187,7 @@ fieldset:disabled .btn {
 }
 
 .p-4 {
-  padding: 1.5rem !important;
+  padding: 1.5rem;
 }
 
 .p-5 {
@@ -12178,6 +12178,10 @@ html {
     padding: 1.5rem;
   }
 
+  .p-4{
+    padding: 1rem;
+  }
+
   .contact-card {
     padding: 15px;
   }
@@ -12197,4 +12201,8 @@ html {
 
 .contact-inputs {
   padding: 40px 20px 40px;
+}
+
+.projects-5{
+  padding-inline: 3rem;
 }
