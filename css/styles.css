@@ -8191,7 +8191,7 @@ fieldset:disabled .btn {
 }
 
 .p-5 {
-  padding: 3rem !important;
+  padding: 3rem;
 }
 
 .px-0 {
@@ -12172,6 +12172,10 @@ html {
   .email-in-contact {
     font-size: 12px;
     margin-bottom: 15px;
+  }
+
+  .p-5{
+    padding: 1.5rem;
   }
 
   .contact-card {
