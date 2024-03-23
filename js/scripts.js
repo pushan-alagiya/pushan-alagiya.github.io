@@ -10,6 +10,22 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   document.getElementsByTagName("body")[0].appendChild(iDiv);
 
+  const profileImages = document.querySelectorAll(".noinverseimgages");
+  function isCursorOverProfileImage(e) {
+    for (let i = 0; i < profileImages.length; i++) {
+      const rect = profileImages[i].getBoundingClientRect();
+      if (
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   let pauseAnimation = script.getAttribute("pause-animation");
 
   let innerDiv = document.createElement("div");
@@ -81,20 +97,30 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   const addclass = (e) => {
-    if (script.getAttribute("pause-animation") !== "disable") {
-      document.body.classList.remove("mscursor-nocursor");
-      if (script.getAttribute("circle-outline") !== "disable") {
-        document
-          .querySelector("div.new")
-          .classList.remove("mscursor-scale-outline");
-        document.querySelector("div.new").style.border = "";
+    const isOverProfileImage = isCursorOverProfileImage(e);
+    // If cursor is over a profile image, apply different cursor behavior
+    if (!isOverProfileImage) {
+      iDiv.classList.add("mscursor-difference");
+
+      if (script.getAttribute("pause-animation") !== "disable") {
+        document.body.classList.remove("mscursor-nocursor");
+        if (script.getAttribute("circle-outline") !== "disable") {
+          document
+            .querySelector("div.new")
+            .classList.remove("mscursor-scale-outline");
+          document.querySelector("div.new").style.border = "";
+        }
+        document.querySelectorAll("div.mscursor-circle").forEach((element) => {
+          element.classList.remove("mscursor-scale");
+        });
       }
-      document.querySelectorAll("div.mscursor-circle").forEach((element) => {
-        element.classList.remove("mscursor-scale");
-      });
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+    } else {
+      iDiv.classList.remove("mscursor-difference");
+      coords.x = e.clientX;
+      coords.y = e.clientY;
     }
-    coords.x = e.clientX;
-    coords.y = e.clientY;
   };
 
   window.addEventListener("mousemove", (e) => addclass(e));
