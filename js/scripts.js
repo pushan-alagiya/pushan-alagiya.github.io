@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (window.innerWidth > 450) {
+  if ("maxTouchPoints" in navigator && navigator.maxTouchPoints > 0) {
     let iDiv = document.createElement("div");
     iDiv.id = "cursor";
     if (script.getAttribute("difference") == "disable") {
