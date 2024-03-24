@@ -2,7 +2,7 @@ let script = document.currentScript;
 let isDarkMode = localStorage.getItem("darkMode") === "true"; // Retrieve mode from localStorage, default to false if not found
 
 window.addEventListener("DOMContentLoaded", () => {
-  changeStylesheet(isDarkMode ? "../css/styles-dark.css" : "../css/styles.css");
+  changeStylesheet(isDarkMode ? "css/styles-dark.css" : "css/styles.css");
   let tglbtn = document.querySelector(".night-toggler");
   const profileImages = document.querySelectorAll(".noinverseimgages");
 
@@ -13,9 +13,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function toggleMode() {
     if (isDarkMode) {
-      changeStylesheet("../css/styles.css"); // switch to light mode stylesheet
+      changeStylesheet("css/styles.css"); // switch to light mode stylesheet
     } else {
-      changeStylesheet("../css/styles-dark.css"); // switch to dark mode stylesheet
+      changeStylesheet("css/styles-dark.css"); // switch to dark mode stylesheet
     }
     isDarkMode = !isDarkMode; // toggle the mode
     localStorage.setItem("darkMode", isDarkMode); // Save mode to localStorage
