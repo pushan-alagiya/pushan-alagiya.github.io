@@ -12210,6 +12210,7 @@ html {
   padding-inline: 3rem;
 }
 
+/* Cursor Classes */
 .mscursor-cursor {
   pointer-events: none;
   position: fixed;
@@ -12268,4 +12269,13 @@ html {
 
 .mscursor-nocursor {
   cursor: none !important;
+}
+
+/* Night Mode Toggler */
+.night-toggler {
+  border: 0px;
+}
+
+body.inverted {
+  filter: invert(100%);
 }
