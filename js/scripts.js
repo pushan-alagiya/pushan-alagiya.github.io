@@ -1,24 +1,30 @@
 let script = document.currentScript;
+let isDarkMode = localStorage.getItem("darkMode") === "true"; // Retrieve mode from localStorage, default to false if not found
 
 window.addEventListener("DOMContentLoaded", () => {
+  changeStylesheet(isDarkMode ? "../css/styles-dark.css" : "../css/styles.css");
   let tglbtn = document.querySelector(".night-toggler");
-  const bodyElement = document.body;
   const profileImages = document.querySelectorAll(".noinverseimgages");
-  const otherElements = document.querySelectorAll(
-    "body *:not(.noinverseimages)"
-  );
 
+  function changeStylesheet(newStylesheet) {
+    var linkElement = document.querySelector(".corecss");
+    linkElement.href = newStylesheet;
+  }
+
+  function toggleMode() {
+    if (isDarkMode) {
+      changeStylesheet("../css/styles.css"); // switch to light mode stylesheet
+    } else {
+      changeStylesheet("../css/styles-dark.css"); // switch to dark mode stylesheet
+    }
+    isDarkMode = !isDarkMode; // toggle the mode
+    localStorage.setItem("darkMode", isDarkMode); // Save mode to localStorage
+  }
+
+  // Toggle mode when button is clicked
   tglbtn.addEventListener("click", (e) => {
     e.preventDefault();
-    bodyElement.classList.toggle("inverted");
-    otherElements.forEach((element) => {
-      element.style.filter = bodyElement.classList.contains("inverted")
-        ? "invert(100%)"
-        : "none";
-    });
-    profileImages.forEach((image) => {
-      image.style.filter = "none";
-    });
+    toggleMode();
   });
 
   if (window.innerWidth > 450) {
