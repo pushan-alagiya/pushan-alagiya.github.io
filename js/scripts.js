@@ -1,5 +1,5 @@
 let script = document.currentScript;
-let isDarkMode = localStorage.getItem("darkMode") === "true"; // Retrieve mode from localStorage, default to false if not found
+let isDarkMode = localStorage.getItem("darkMode") !== "false"; // Retrieve mode from localStorage, default to false if not found
 
 window.addEventListener("DOMContentLoaded", () => {
   changeStylesheet(isDarkMode ? "css/styles-dark.css" : "css/styles.css");
