@@ -10,6 +10,8 @@
     <meta name="author" content="" />
     <title>My portfolio</title>
 
+    <link rel="stylesheet" href="css/loader.css" />
+
     <!-- icon-->
     <link rel="icon" type="image/x-icon" href="assets/cv.png" />
 
@@ -33,11 +35,51 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+      let description = document.getElementById("loadOverlay");
+      setTimeout(() => {
+        description.setAttribute("style", "display: none;");
+      }, 1500);
+    </script>
+
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
   </head>
 
   <body class="d-flex flex-column">
+    <div
+      id="loadOverlay"
+      style="
+        background-color: rgb(54, 54, 54);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          align-items: center;
+          color: white;
+          justify-content: center;
+          font-size: 24px;
+          font-weight: bold; /* Optionally make it bold */
+          animation: pulse 1s infinite alternate; /* Add animation */
+        "
+      >
+        <div class="loading-spinner">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
     <main class="flex-shrink-0">
       <!-- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">

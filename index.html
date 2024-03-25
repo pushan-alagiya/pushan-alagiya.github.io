@@ -13,9 +13,12 @@
     <!-- icon-->
     <link rel="icon" type="image/x-icon" href="assets/cv.png" />
 
+    <link rel="stylesheet" href="css/loader.css" />
+
     <!-- Custom Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       rel="stylesheet"
@@ -38,6 +41,39 @@
   </head>
 
   <body class="d-flex flex-column h-100">
+    <div
+      id="loadOverlay"
+      style="
+        background-color: rgb(54, 54, 54);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          align-items: center;
+          color: white;
+          justify-content: center;
+          font-size: 24px;
+          font-weight: bold; /* Optionally make it bold */
+          animation: pulse 1s infinite alternate; /* Add animation */
+        "
+      >
+        <div class="loading-spinner">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
     <main class="flex-shrink-0">
       <!-- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
@@ -505,38 +541,5 @@
         </div>
       </div>
     </footer>
-    <div class="loader-wrapper">
-      <span class="loader"><span class="loader-inner"></span></span>
-    </div>
-
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        // Add loading class to body
-        // Check if the loader has been shown before
-        var loaderShownBefore = localStorage.getItem("loaderShownBefore");
-
-        // If not shown before or on restart, show the loader
-        if (!loaderShownBefore || !performance.navigation.type) {
-          // Scroll to the top of the page
-          window.scrollTo(0, 0);
-          // Add loading class to body
-          document.body.classList.add("loading");
-
-          setTimeout(function () {
-            var loader = document.querySelector(".loader-wrapper");
-            loader.style.transition = "opacity 1s";
-            loader.style.opacity = "0";
-            setTimeout(function () {
-              loader.style.display = "none";
-              // Remove loading class from body
-              document.body.classList.remove("loading");
-            }, 500);
-          }, 500);
-
-          // Set the flag indicating that the loader has been shown
-          localStorage.setItem("loaderShownBefore", "true");
-        }
-      });
-    </script>
   </body>
 </html>
