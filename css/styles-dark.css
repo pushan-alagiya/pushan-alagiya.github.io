@@ -8562,6 +8562,11 @@ fieldset:disabled .btn {
   color: #6c757d !important;
 }
 
+.text-muted-title {
+  --bs-text-opacity: 1;
+  color: #fff !important;
+}
+
 .text-black-50 {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
@@ -11911,9 +11916,9 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  font-size: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
 }
 
 .profile {
@@ -11970,6 +11975,12 @@ html {
   fill: #d4d014;
 }
 
+@media (max-width: 1000px) {
+  .experience-info {
+    margin-top: 25px;
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     height: 60vw;
@@ -12021,6 +12032,10 @@ html {
   }
 }
 @media (min-width: 992px) {
+  .experience-info {
+    margin: 0;
+  }
+
   .profile {
     height: 40vw;
     width: 40vw;
@@ -12286,4 +12301,9 @@ body.inverted {
 
 #loadOverlay {
   display: none;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 1.3rem;
 }

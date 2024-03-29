@@ -11907,9 +11907,9 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  font-size: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
 }
 
 .profile {
@@ -12280,4 +12280,17 @@ body.inverted {
   filter: invert(100%);
 }
 
-#loadOverlay{display: none;}
+#loadOverlay {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .experience-info {
+    margin-top: 25px;
+  }
+}
+
+.center-text {
+  text-align: center;
+  font-size: 1.3rem;
+}
