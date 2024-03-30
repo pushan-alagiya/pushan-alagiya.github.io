@@ -12294,3 +12294,17 @@ body.inverted {
   text-align: center;
   font-size: 1.3rem;
 }
+
+.small-awards {
+  font-size: 1.1rem;
+}
+
+.awards-text {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.lower-text {
+  margin-top: 0.3rem;
+}
