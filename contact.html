@@ -44,6 +44,7 @@
 
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="js/form-validation.js"></script>
   </head>
 
   <body class="d-flex flex-column">
@@ -187,7 +188,6 @@
                     method="post"
                     enctype="text/plain"
                   >
-                    <!-- Name input-->
                     <div class="form-floating mb-3">
                       <input
                         class="form-control"
@@ -196,6 +196,7 @@
                         placeholder="Enter your name..."
                         data-sb-validations="required"
                         name="Name"
+                        autocomplete="name"
                       />
                       <label for="name">Full name</label>
                       <div
@@ -205,7 +206,7 @@
                         A name is required.
                       </div>
                     </div>
-                    <!-- Email address input-->
+                    <!-- Email input-->
                     <div class="form-floating mb-3">
                       <input
                         class="form-control"
@@ -214,6 +215,7 @@
                         placeholder="name@example.com"
                         data-sb-validations="required,email"
                         name="Email"
+                        autocomplete="email"
                       />
                       <label for="email">Email address</label>
                       <div
@@ -238,6 +240,7 @@
                         placeholder="(123) 456-7890"
                         data-sb-validations="required"
                         name="Mobile"
+                        autocomplete="tel"
                       />
                       <label for="phone">Phone number</label>
                       <div
@@ -257,6 +260,7 @@
                         style="height: 10rem"
                         data-sb-validations="required"
                         name="Message"
+                        autocomplete="message"
                       ></textarea>
                       <label for="message">Message</label>
                       <div
