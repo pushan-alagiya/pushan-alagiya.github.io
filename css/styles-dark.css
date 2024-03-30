@@ -12321,3 +12321,7 @@ body.inverted {
 .lower-text {
   margin-top: 0.3rem;
 }
+
+a {
+  text-decoration: none !important;
+}
