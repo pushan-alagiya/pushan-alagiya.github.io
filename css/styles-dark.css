@@ -12325,3 +12325,8 @@ body.inverted {
 a {
   text-decoration: none !important;
 }
+
+
+.project-images{
+  overflow: hidden;
+}

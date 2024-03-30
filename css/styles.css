@@ -12312,3 +12312,10 @@ body.inverted {
 a {
   text-decoration: none !important;
 }
+
+.project-images {
+  width: 100%; /* Set the width of the image to fill the container */
+  max-height: 30vw;
+  overflow: hidden;
+  object-fit: cover;
+}
