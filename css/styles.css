@@ -12319,3 +12319,16 @@ a {
   overflow: hidden;
   object-fit: cover;
 }
+
+.certi-header {
+  font-size: 1.2rem;
+}
+
+.skills-learnt {
+  font-size: 0.8;
+}
+
+.link-icon {
+  margin-left: 20px;
+  padding-top: 10px;
+}
