@@ -252,10 +252,6 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     toggleMode();
   });
-
-  if (window.innerWidth > 450) {
-    addcursor();
-  }
 });
 
 window.addEventListener("resize", () => {
