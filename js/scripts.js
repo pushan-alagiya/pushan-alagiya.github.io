@@ -272,3 +272,45 @@ window.addEventListener("resize", () => {
     }
   }
 });
+
+// Toggle function for Professional Skills
+function toggleProfessionalSkills() {
+  const additionalSkills = document.querySelectorAll(".additional-skill");
+  const toggleButton = document.getElementById("toggleSkills");
+
+  // Check if skills are currently hidden
+  const isHidden = additionalSkills[0].style.display === "none";
+
+  additionalSkills.forEach((skill) => {
+    skill.style.display = isHidden ? "block" : "none";
+  });
+
+  if (isHidden) {
+    toggleButton.innerHTML =
+      '<i class="bi bi-dash-circle me-1"></i>Show Less Skills';
+  } else {
+    toggleButton.innerHTML =
+      '<i class="bi bi-plus-circle me-1"></i>Show More Skills';
+  }
+}
+
+// Toggle function for Languages/Technologies
+function toggleLanguages() {
+  const additionalLanguages = document.querySelectorAll(".additional-language");
+  const toggleButton = document.getElementById("toggleLanguages");
+
+  // Check if languages are currently hidden
+  const isHidden = additionalLanguages[0].style.display === "none";
+
+  additionalLanguages.forEach((language) => {
+    language.style.display = isHidden ? "block" : "none";
+  });
+
+  if (isHidden) {
+    toggleButton.innerHTML =
+      '<i class="bi bi-dash-circle me-1"></i>Show Less Technologies';
+  } else {
+    toggleButton.innerHTML =
+      '<i class="bi bi-plus-circle me-1"></i>Show More Technologies';
+  }
+}

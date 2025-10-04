@@ -11894,9 +11894,11 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 .rounded-4 {
@@ -12331,4 +12333,599 @@ a {
 .link-icon {
   margin-left: 20px;
   padding-top: 10px;
+}
+
+/* Tech Carousel Styles */
+.tech-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.tech-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tech-carousel h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+
+.tech-track {
+  display: flex;
+  animation: scroll-left 40s linear infinite;
+  gap: 30px;
+  align-items: center;
+  width: calc(200% + 60px);
+  will-change: transform;
+}
+
+.tech-item {
+  flex: 0 0 auto;
+  width: 120px;
+  min-width: 120px;
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(30, 48, 243, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(30, 48, 243, 0.2);
+  border-color: var(--bs-primary);
+}
+
+.tech-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.tech-item:hover img {
+  filter: brightness(1) saturate(1.2);
+}
+
+.tech-item span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Enhanced visibility for dark logos in light theme */
+.tech-item img[alt="Express"],
+.tech-item img[alt="WebSocket"],
+.tech-item img[alt="Solidity"],
+.tech-item img[alt="Deno"] {
+  filter: brightness(1.2) contrast(1.3) saturate(1.1) !important;
+}
+
+.tech-item:hover img[alt="Express"],
+.tech-item:hover img[alt="WebSocket"],
+.tech-item:hover img[alt="Solidity"],
+.tech-item:hover img[alt="Deno"] {
+  filter: brightness(1.4) contrast(1.4) saturate(1.3) !important;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-carousel:hover .tech-track {
+  animation-play-state: paused;
+}
+
+/* Frontend Carousel Styles - Same as Backend */
+.frontend-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+  transform: translateZ(0);
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frontend-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.frontend-carousel h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+
+.frontend-track {
+  display: flex;
+  animation: scroll-left 45s linear infinite;
+  gap: 30px;
+  align-items: center;
+  width: calc(200% + 60px);
+  will-change: transform;
+}
+
+.frontend-carousel:hover .frontend-track {
+  animation-play-state: paused;
+}
+
+/* Cloud Technologies Carousel */
+.cloud-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.cloud-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cloud-carousel h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+
+.cloud-track {
+  display: flex;
+  animation: scroll-cloud 35s linear infinite;
+  gap: 30px;
+  align-items: center;
+  width: calc(200% + 60px);
+  will-change: transform;
+}
+
+@keyframes scroll-cloud {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.cloud-carousel:hover .cloud-track {
+  animation-play-state: paused;
+}
+
+/* Blockchain Technologies Carousel */
+.blockchain-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.blockchain-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.blockchain-carousel h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+
+.blockchain-track {
+  display: flex;
+  animation: scroll-blockchain 38s linear infinite;
+  gap: 30px;
+  align-items: center;
+  width: calc(200% + 60px);
+  will-change: transform;
+}
+
+@keyframes scroll-blockchain {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.blockchain-carousel:hover .blockchain-track {
+  animation-play-state: paused;
+}
+
+/* Light Mode Experience Cards Styling */
+.experience-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: all 0.3s ease;
+}
+
+.experience-card .bg-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.experience-card .text-gradient {
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 48, 243, 0.15);
+  border-color: #1e30f3;
+}
+
+/* Light Mode Experience Cards Styling - Professional Look */
+.experience-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  margin-bottom: 2rem !important;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.experience-card .card-body {
+  padding: 2.5rem !important;
+}
+
+/* Professional Gradient Backgrounds for Skills */
+.experience-card .bg-light {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 249, 250, 0.9) 100%
+  ) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Click indicator styling */
+.click-indicator {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.experience-card:hover .click-indicator {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Professional Modal Styling */
+.modal-dialog {
+  max-width: 900px;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #4c63d2 100%);
+  border: none;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  color: white;
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 2.5rem;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1.5rem 2.5rem 2rem 2.5rem;
+    padding-top: 0 !important;
+  background-color: rgba(248, 249, 250, 0.5);
+}
+
+/* Professional Project Cards within Modal */
+.project-info-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 4px solid var(--bs-primary);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.company-info-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Technology Badges with Gradients */
+.tech-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--bs-primary-rgb), 0.1) 0%,
+    rgba(var(--bs-primary-rgb), 0.2) 100%
+  );
+  color: var(--bs-primary);
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.3rem 0.4rem 0.3rem 0;
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* Project List Styling */
+.project-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.project-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1rem;
+}
+
+.project-list li:last-child {
+  border-bottom: none;
+}
+
+.project-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0.5rem;
+  top: 1rem;
+  color: var(--bs-primary);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.project-name {
+  color: var(--bs-primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design with Proper Text Scaling */
+@media (max-width: 992px) {
+  .modal-dialog {
+    max-width: calc(100% - 3rem);
+    margin: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .project-name {
+    font-size: 1rem;
+  }
+
+  .project-list li {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  .modal-body,
+  .modal-header,
+  .modal-footer {
+    padding: 1.5rem;
+  }
+
+  .experience-card .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .company-info-section,
+  .project-info-card {
+    padding: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .project-name {
+    font-size: 0.95rem;
+  }
+
+  .project-list li {
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .click-indicator {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .modal-body,
+  .modal-header,
+  .modal-footer {
+    padding: 1rem;
+  }
+
+  .company-info-section,
+  .project-info-card {
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+
+  .project-name {
+    font-size: 0.9rem;
+  }
+
+  .project-list li {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .tech-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
