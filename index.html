@@ -1,67 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="google-site-verification"
-      content="fssZF9jqXUfTCFFUgXvzD3GDM-6fsUcs8nzeJsVhnwI"
-    />
-    <meta
-      name="keywords"
-      content="Pushan, Alagiya, Portfoio, NodeJS Portfolio, NodeJS Developer, Blockchain "
-    />
-    <meta name="description" content="Pushan Alagiya Portfolio" />
-    <meta property="og:title" content="Portfolio | Pushan Alagiya" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pushan-alagiya.github.io/" />
-    <title>My portfolio</title>
 
-    <!-- icon-->
-    <link rel="icon" type="image/x-icon" href="assets/profile.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="google-site-verification" content="fssZF9jqXUfTCFFUgXvzD3GDM-6fsUcs8nzeJsVhnwI" />
+  <meta name="keywords" content="Pushan, Alagiya, Portfoio, NodeJS Portfolio, NodeJS Developer, Blockchain " />
+  <meta name="description" content="Pushan Alagiya Portfolio" />
+  <meta property="og:title" content="Portfolio | Pushan Alagiya" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pushan-alagiya.github.io/" />
+  <title>My portfolio</title>
 
-    <link rel="stylesheet" href="css/loader.css" />
+  <!-- icon-->
+  <link rel="icon" type="image/x-icon" href="assets/profile.png" />
 
-    <!-- Custom Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/loader.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
-    />
+  <!-- Custom Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Bootstrap icons-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
 
-    <!-- amimate -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link class="corecss" href="css/styles.css" rel="stylesheet" />
+  <!-- amimate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link class="corecss" href="css/styles.css" rel="stylesheet" />
 
-    <!-- Core theme JS-->
-    <script src="/js/scripts.js"></script>
-    
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  </head>
+  <!-- Core theme JS-->
+  <script src="/js/scripts.js"></script>
 
-  <body class="d-flex flex-column h-100">
-    <div
-      id="loadOverlay"
-      style="
+
+</head>
+
+<body class="d-flex flex-column h-100">
+  <div id="loadOverlay" style="
         background-color: rgb(54, 54, 54);
         position: absolute;
         top: 0px;
@@ -69,10 +50,8 @@
         width: 100%;
         height: 100%;
         z-index: 2000;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           display: flex;
           width: 100%;
           height: 100%;
@@ -83,896 +62,723 @@
           font-size: 24px;
           font-weight: bold; /* Optionally make it bold */
           animation: pulse 1s infinite alternate; /* Add animation */
-        "
-      >
-        <div class="loading-spinner">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+        ">
+      <div class="loading-spinner">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+  <main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">My Portfolio</span></a>
+        <button class="text-gradient night-toggler">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resume.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="certificates.html">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Featured Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header-->
+    <header class="py-5">
+      <div class="container px-5 pb-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-xxl-5">
+            <!-- Header text content-->
+            <div class="text-center text-xxl-start">
+              <div class="badge bg-gradient-primary-to-secondary text-white mb-4 animate__animated animate__fadeInDown animate__faster">
+                <div class="text-uppercase">Next.js • NestJS • Full Stack Developer</div>
+              </div>
+              <div class="fs-3 fw-light text-muted animate__animated animate__fadeInLeft animate__faster">
+                <b> Hi&nbsp; there </b> &nbsp; 👋 &nbsp; , I'm
+              </div>
+              <h1 class="display-3 fw-bolder mb-5 animate__animated animate__fadeInUp animate__faster">
+                <span class="text-gradient d-inline">Pushan Alagiya</span>
+              </h1>
+              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder animate__animated animate__fadeInLeft animate__faster" href="resume.html">Resume</a>
+                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder animate__animated animate__fadeInRight animate__faster" href="projects.html">Projects</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-7">
+            <!-- Header profile picture-->
+            <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+              <div class="profile bg-gradient-primary-to-secondary">
+                <img class="profile-img noinverseimgages animate__animated animate__fadeIn animate__faster" src="assets/Profile photo/profile_final.webp" alt="..." />
+
+                <div class="dots-1">
+                  <!-- SVG Dots-->
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                    </g>
+                  </svg>
+                  <!-- END of SVG dots-->
+                </div>
+                <div class="dots-2">
+                  <!-- SVG Dots-->
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                    </g>
+                  </svg>
+                  <!-- END of SVG dots-->
+                </div>
+                <div class="dots-3">
+                  <!-- SVG Dots-->
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                    </g>
+                  </svg>
+                  <!-- END of SVG dots-->
+                </div>
+                <div class="dots-4">
+                  <!-- SVG Dots-->
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                    </g>
+                  </svg>
+                  <!-- END of SVG dots-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- About Section-->
+    <section class="bg-light py-5">
+      <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+          <div class="col-xxl-8">
+            <div class="text-center my-5 animate__animated animate__fadeInDown animate__fast">
+              <h2 class="display-5 fw-bolder">
+                <span class="text-gradient d-inline">About Me</span>
+              </h2>
+              <p class="lead fw-light mb-4">
+                <b>
+                  Full Stack Developer with 3+ years of experience specializing in
+                  Node.js, NextJS, cloud architecture, and blockchain solutions.
+                </b>
+              </p>
+              <p class="text-muted animate__animated animate__fadeInUp animate__fast">
+                I'm a Full Stack Developer skilled in backend (Node.js, NestJS, Express, GraphQL) and frontend (React, Next.js, TypeScript) technologies. I have strong experience with AWS, Azure, Docker, Kubernetes, and blockchain (Solidity, smart contracts, Web3). With 18+ projects delivered, I focus on building scalable and innovative solutions.
+              </p>
+              <div class="d-flex justify-content-center fs-2 gap-4 animate__animated animate__fadeIn animate__fast">
+                <a class="text-gradient" href="https://devfolio.co/@pushan_alagiya">
+                  <i class="bi bi-file-code-fill"></i>
+                </a>
+                <a class="text-gradient" href="https://www.linkedin.com/in/pushan-alagiya-7a332220b">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a class="text-gradient" href="https://github.com/pushan-alagiya">
+                  <i class="bi bi-github"></i>
+                </a>
+                <a class="text-gradient" href="https://twitter.com/alagiyapushan">
+                  <i class="bi bi-twitter"></i>
+                </a>
+                <a class="text-gradient" href="https://www.youtube.com/channel/UCC6XM-0RirW0uYAafl0o6Wg">
+                  <i class="bi bi-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-5">
+      <div class="container px-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bolder">
+            <span class="text-gradient d-inline">Technical Skills</span>
+          </h2>
+          <p class="lead fw-light mb-4">Technologies I work with</p>
+        </div>
+
+        <div class="row gx-5 justify-content-center">
+          <div class="col-lg-10">
+            <!-- Backend Technologies -->
+            <div class="mb-5">
+              <div class="tech-carousel">
+                <h4 class="text-center mb-4">Backend Technologies</h4>
+                <div class="tech-track">
+                  <div class="tech-item">
+                    <img src="assets/svg/Node.js.svg" alt="Node.js" />
+                    <span>Node.js</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Nest.js.svg" alt="NestJS" />
+                    <span>NestJS</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Express.svg" alt="Express" />
+                    <span>Express</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Socket.io.svg" alt="WebSocket" />
+                    <span>WebSocket</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Laravel.svg" alt="Laravel" />
+                    <span>Laravel</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/GraphQL.svg" alt="GraphQL" />
+                    <span>GraphQL</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Solidity.svg" alt="Solidity" />
+                    <span>Solidity</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Deno.svg" alt="Deno" />
+                    <span>Deno</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/grpc.svg" alt="gRPC" />
+                    <span>gRPC</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Apache-Kafka.svg" alt="Kafka" />
+                    <span>Kafka</span>
+                  </div>
+                  <!-- Duplicate for seamless loop -->
+                  <div class="tech-item">
+                    <img src="assets/svg/Node.js.svg" alt="Node.js" />
+                    <span>Node.js</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Nest.js.svg" alt="NestJS" />
+                    <span>NestJS</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Laravel.svg" alt="Laravel" />
+                    <span>Laravel</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/GraphQL.svg" alt="GraphQL" />
+                    <span>GraphQL</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Express.svg" alt="Express" />
+                    <span>Express</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Socket.io.svg" alt="WebSocket" />
+                    <span>WebSocket</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Solidity.svg" alt="Solidity" />
+                    <span>Solidity</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Deno.svg" alt="Deno" />
+                    <span>Deno</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/grpc.svg" alt="gRPC" />
+                    <span>gRPC</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Apache-Kafka.svg" alt="Kafka" />
+                    <span>Kafka</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frontend Technologies -->
+            <div class="mb-5">
+              <div class="frontend-carousel">
+                <h4 class="text-center mb-4">Frontend Technologies</h4>
+                <div class="frontend-track">
+                  <div class="tech-item">
+                    <img src="assets/svg/Next.js.svg" alt="Next.js" />
+                    <span>Next.js</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/React.svg" alt="React" />
+                    <span>React</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Redux.svg" alt="Redux" />
+                    <span>Redux</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/TypeScript.svg" alt="TypeScript" />
+                    <span>TypeScript</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Material-UI.svg" alt="Material-UI" />
+                    <span>MUI</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Bootstrap.svg" alt="Bootstrap" />
+                    <span>Bootstrap</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Socket.io.svg" alt="WebSockets" />
+                    <span>WebSocket</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/ESLint.svg" alt="ESLint" />
+                    <span>ESLint</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/CSS3.svg" alt="CSS3" />
+                    <span>CSS3</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/HTML5.svg" alt="HTML5" />
+                    <span>HTML5</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/JavaScript.svg" alt="JavaScript" />
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Tailwind-CSS.svg" alt="TailwindCSS" />
+                    <span>Tailwind</span>
+                  </div>
+                  <!-- Duplicate for seamless loop -->
+                  <div class="tech-item">
+                    <img src="assets/svg/Next.js.svg" alt="Next.js" />
+                    <span>Next.js</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/React.svg" alt="React" />
+                    <span>React</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Redux.svg" alt="Redux" />
+                    <span>Redux</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/TypeScript.svg" alt="TypeScript" />
+                    <span>TypeScript</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Material-UI.svg" alt="Material-UI" />
+                    <span>MUI</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Bootstrap.svg" alt="Bootstrap" />
+                    <span>Bootstrap</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Socket.io.svg" alt="WebSockets" />
+                    <span>WebSocket</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/ESLint.svg" alt="ESLint" />
+                    <span>ESLint</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/CSS3.svg" alt="CSS3" />
+                    <span>CSS3</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/HTML5.svg" alt="HTML5" />
+                    <span>HTML5</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/JavaScript.svg" alt="JavaScript" />
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Tailwind-CSS.svg" alt="TailwindCSS" />
+                    <span>Tailwind</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cloud & Blockchain Technologies -->
+            <div class="mb-0">
+              <div class="row gx-5">
+                <!-- Cloud Technologies -->
+                <div class="col-lg-6 mb-5">
+                  <div class="cloud-carousel">
+                    <h4 class="text-center mb-4">Cloud Technologies</h4>
+                    <div class="cloud-track">
+                      <div class="tech-item">
+                        <img src="assets/svg/AWS.svg" alt="AWS" />
+                        <span>AWS</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Azure.svg" alt="Azure" />
+                        <span>Azure</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Google-Cloud.svg" alt="Google Cloud" />
+                        <span>Google Cloud</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Docker.svg" alt="Docker" />
+                        <span>Docker</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Kubernetes.svg" alt="Kubernetes" />
+                        <span>Kubernetes</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Digital-Ocean.svg" alt="DigitalOcean" />
+                        <span>DigitalOcean</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Heroku.svg" alt="Heroku" />
+                        <span>Heroku</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Vercel.svg" alt="Vercel" />
+                        <span>Vercel</span>
+                      </div>
+                      <!-- Duplicate for seamless loop -->
+                      <div class="tech-item">
+                        <img src="assets/svg/AWS.svg" alt="AWS" />
+                        <span>AWS</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Azure.svg" alt="Azure" />
+                        <span>Azure</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Google-Cloud.svg" alt="Google Cloud" />
+                        <span>Google Cloud</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Docker.svg" alt="Docker" />
+                        <span>Docker</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Kubernetes.svg" alt="Kubernetes" />
+                        <span>Kubernetes</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Digital-Ocean.svg" alt="DigitalOcean" />
+                        <span>DigitalOcean</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Heroku.svg" alt="Heroku" />
+                        <span>Heroku</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Vercel.svg" alt="Vercel" />
+                        <span>Vercel</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Blockchain Technologies -->
+                <div class="col-lg-6 mb-5">
+                  <div class="blockchain-carousel">
+                    <h4 class="text-center mb-4">Blockchain Technologies</h4>
+                    <div class="blockchain-track">
+                      <div class="tech-item">
+                        <img src="assets/svg/Solidity.svg" alt="Solidity" />
+                        <span>Solidity</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Hardhat.svg" alt="Hardhat" />
+                        <span>Hardhat</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/JavaScript.svg" alt="Ethers.js" />
+                        <span>Ethers.js</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/JavaScript.svg" alt="Web3.js" />
+                        <span>Web3.js</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Polygon.svg" alt="Polygon" />
+                        <span>Polygon</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/WebAssembly.svg" alt="Ethereum" />
+                        <span>Ethereum</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Rust.svg" alt="Solana" />
+                        <span>Solana</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Vyper.svg" alt="Vyper" />
+                        <span>Vyper</span>
+                      </div>
+                      <!-- Duplicate for seamless loop -->
+                      <div class="tech-item">
+                        <img src="assets/svg/Solidity.svg" alt="Solidity" />
+                        <span>Solidity</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Hardhat.svg" alt="Hardhat" />
+                        <span>Hardhat</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/JavaScript.svg" alt="Ethers.js" />
+                        <span>Ethers.js</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/JavaScript.svg" alt="Web3.js" />
+                        <span>Web3.js</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Polygon.svg" alt="Polygon" />
+                        <span>Polygon</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/WebAssembly.svg" alt="Ethereum" />
+                        <span>Ethereum</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Rust.svg" alt="Solana" />
+                        <span>Solana</span>
+                      </div>
+                      <div class="tech-item">
+                        <img src="assets/svg/Vyper.svg" alt="Vyper" />
+                        <span>Vyper</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Technologies -->
+            <div class="mb-5">
+              <div class="ai-carousel">
+                <h4 class="text-center mb-4">AI Technologies</h4>
+                <div class="ai-track">
+                  <div class="tech-item">
+                    <img src="assets/svg/LangGraph.svg" alt="LangGraph" />
+                    <span>LangGraph</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/LangChain.svg" alt="LangChain" />
+                    <span>LangChain</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Google-Gemini.svg" alt="Google AI SDK" />
+                    <span>Google AI SDK</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/n8n.svg" alt="n8n" />
+                    <span>n8n</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Flowise.svg" alt="Flowise" />
+                    <span>Flowise</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/ChatGPT.svg" alt="ChatGPT" />
+                    <span>ChatGPT</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Gemini.svg" alt="Gemini" />
+                    <span>Gemini</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Claude.svg" alt="Claude" />
+                    <span>Claude</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Anthropic.svg" alt="Anthropic" />
+                    <span>Anthropic</span>
+                  </div>
+                  <!-- Duplicate for seamless loop -->
+                  <div class="tech-item">
+                    <img src="assets/svg/LangGraph.svg" alt="LangGraph" />
+                    <span>LangGraph</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/LangChain.svg" alt="LangChain" />
+                    <span>LangChain</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Google-Gemini.svg" alt="Google AI SDK" />
+                    <span>Google AI SDK</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/n8n.svg" alt="n8n" />
+                    <span>n8n</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Flowise.svg" alt="Flowise" />
+                    <span>Flowise</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/ChatGPT.svg" alt="ChatGPT" />
+                    <span>ChatGPT</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Gemini.svg" alt="Gemini" />
+                    <span>Gemini</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Claude.svg" alt="Claude" />
+                    <span>Claude</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/svg/Anthropic.svg" alt="Anthropic" />
+                    <span>Anthropic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats/Achievements Section -->
+    <section class="bg-light py-5">
+      <div class="container px-5">
+        <div class="row gx-5 text-center">
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-item">
+              <div class="display-4 fw-bolder text-primary">18+</div>
+              <div class="text-muted fw-light">Projects Completed</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-item">
+              <div class="display-4 fw-bolder text-success">3+</div>
+              <div class="text-muted fw-light">Years Experience</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-item">
+              <div class="display-4 fw-bolder text-warning">15+</div>
+              <div class="text-muted fw-light">Technologies Mastered</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-item">
+              <div class="display-4 fw-bolder text-info">100%</div>
+              <div class="text-muted fw-light">Commitment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer-->
+  <footer class="bg-white py-4 mt-auto">
+    <div class="container px-5">
+      <div class="d-flex justify-content-center">
+        <div class="col-auto">
+          <div class="small m-0">Copyright &copy;</div>
         </div>
       </div>
     </div>
-    <main class="flex-shrink-0">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">My Portfolio</span></a
-          >
-          <button class="text-gradient night-toggler">
-            <i class="bi bi-moon-stars-fill"></i>
-          </button>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="certificates.html">Achievements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Featured Work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  </footer>
+</body>
 
-      <!-- Header-->
-      <header class="py-5">
-        <div class="container px-5 pb-5">
-          <div class="row gx-5 align-items-center">
-            <div class="col-xxl-5">
-              <!-- Header text content-->
-              <div class="text-center text-xxl-start">
-                <div
-                  class="badge bg-gradient-primary-to-secondary text-white mb-4 animate__animated animate__fadeInDown animate__faster"
-                >
-                  <div class="text-uppercase">Next.js • NestJS • Full Stack Developer</div>
-                </div>
-                <div
-                  class="fs-3 fw-light text-muted animate__animated animate__fadeInLeft animate__faster"
-                >
-                  <b> Hi&nbsp; there </b> &nbsp; 👋 &nbsp; , I'm
-                </div>
-                <h1
-                  class="display-3 fw-bolder mb-5 animate__animated animate__fadeInUp animate__faster"
-                >
-                  <span class="text-gradient d-inline">Pushan Alagiya</span>
-                </h1>
-                <div
-                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
-                >
-                  <a
-                    class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder animate__animated animate__fadeInLeft animate__faster"
-                    href="resume.html"
-                    >Resume</a
-                  >
-                  <a
-                    class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder animate__animated animate__fadeInRight animate__faster"
-                    href="projects.html"
-                    >Projects</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-7">
-              <!-- Header profile picture-->
-              <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                <div class="profile bg-gradient-primary-to-secondary">
-                  <img
-                    class="profile-img noinverseimgages animate__animated animate__fadeIn animate__faster"
-                    src="assets/Profile photo/profile_final.webp"
-                    alt="..."
-                  />
-
-                  <div class="dots-1">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-2">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-3">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-4">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- About Section-->
-      <section class="bg-light py-5">
-        <div class="container px-5">
-          <div class="row gx-5 justify-content-center">
-            <div class="col-xxl-8">
-              <div
-                class="text-center my-5 animate__animated animate__fadeInDown animate__fast"
-              >
-                <h2 class="display-5 fw-bolder">
-                  <span class="text-gradient d-inline">About Me</span>
-                </h2>
-                <p class="lead fw-light mb-4">
-                  <b>
-                    Full Stack Developer with 3+ years of experience specializing in 
-                    Node.js, NextJS, cloud architecture, and blockchain solutions.
-                  </b>
-                </p>
-                <p
-                  class="text-muted animate__animated animate__fadeInUp animate__fast"
-                >
-                    I'm a Full Stack Developer skilled in backend (Node.js, NestJS, Express, GraphQL) and frontend (React, Next.js, TypeScript) technologies. I have strong experience with AWS, Azure, Docker, Kubernetes, and blockchain (Solidity, smart contracts, Web3). With 18+ projects delivered, I focus on building scalable and innovative solutions.
-                </p>
-                <div
-                  class="d-flex justify-content-center fs-2 gap-4 animate__animated animate__fadeIn animate__fast"
-                >
-                  <a
-                    class="text-gradient"
-                    href="https://devfolio.co/@pushan_alagiya"
-                  >
-                    <i class="bi bi-file-code-fill"></i>
-                  </a>
-                  <a
-                    class="text-gradient"
-                    href="https://www.linkedin.com/in/pushan-alagiya-7a332220b"
-                  >
-                    <i class="bi bi-linkedin"></i>
-                  </a>
-                  <a
-                    class="text-gradient"
-                    href="https://github.com/pushan-alagiya"
-                  >
-                    <i class="bi bi-github"></i>
-                  </a>
-                  <a
-                    class="text-gradient"
-                    href="https://twitter.com/alagiyapushan"
-                  >
-                    <i class="bi bi-twitter"></i>
-                  </a>
-                  <a
-                    class="text-gradient"
-                    href="https://www.youtube.com/channel/UCC6XM-0RirW0uYAafl0o6Wg"
-                  >
-                    <i class="bi bi-youtube"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section class="py-5">
-        <div class="container px-5">
-          <div class="text-center mb-5">
-            <h2 class="display-5 fw-bolder">
-              <span class="text-gradient d-inline">Technical Skills</span>
-            </h2>
-            <p class="lead fw-light mb-4">Technologies I work with</p>
-          </div>
-          
-          <div class="row gx-5 justify-content-center">
-            <div class="col-lg-10">
-              <!-- Backend Technologies -->
-              <div class="mb-5">
-                <div class="tech-carousel">
-                  <h4 class="text-center mb-4">Backend Technologies</h4>
-                  <div class="tech-track">
-                    <div class="tech-item">
-                      <img src="assets/svg/Node.js.svg" alt="Node.js" />
-                      <span>Node.js</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Nest.js.svg" alt="NestJS" />
-                      <span>NestJS</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Express.svg" alt="Express" />
-                      <span>Express</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Socket.io.svg" alt="WebSocket" />
-                      <span>WebSocket</span>
-                    </div>
-                     <div class="tech-item">
-                      <img src="assets/svg/Laravel.svg" alt="Laravel" />
-                      <span>Laravel</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/GraphQL.svg" alt="GraphQL" />
-                      <span>GraphQL</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                      <span>Solidity</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Deno.svg" alt="Deno" />
-                      <span>Deno</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/grpc.svg" alt="gRPC" />
-                      <span>gRPC</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Apache-Kafka.svg" alt="Kafka" />
-                      <span>Kafka</span>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="tech-item">
-                      <img src="assets/svg/Node.js.svg" alt="Node.js" />
-                      <span>Node.js</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Nest.js.svg" alt="NestJS" />
-                      <span>NestJS</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Laravel.svg" alt="Laravel" />
-                      <span>Laravel</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/GraphQL.svg" alt="GraphQL" />
-                      <span>GraphQL</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Express.svg" alt="Express" />
-                      <span>Express</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Socket.io.svg" alt="WebSocket" />
-                      <span>WebSocket</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                      <span>Solidity</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Deno.svg" alt="Deno" />
-                      <span>Deno</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/grpc.svg" alt="gRPC" />
-                      <span>gRPC</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Apache-Kafka.svg" alt="Kafka" />
-                      <span>Kafka</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Frontend Technologies -->
-              <div class="mb-5">
-                <div class="frontend-carousel">
-                  <h4 class="text-center mb-4">Frontend Technologies</h4>
-                  <div class="frontend-track">
-                    <div class="tech-item">
-                      <img src="assets/svg/Next.js.svg" alt="Next.js" />
-                      <span>Next.js</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/React.svg" alt="React" />
-                      <span>React</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Redux.svg" alt="Redux" />
-                      <span>Redux</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/TypeScript.svg" alt="TypeScript" />
-                      <span>TypeScript</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Material-UI.svg" alt="Material-UI" />
-                      <span>MUI</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Bootstrap.svg" alt="Bootstrap" />
-                      <span>Bootstrap</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Socket.io.svg" alt="WebSockets" />
-                      <span>WebSocket</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/ESLint.svg" alt="ESLint" />
-                      <span>ESLint</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/CSS3.svg" alt="CSS3" />
-                      <span>CSS3</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/HTML5.svg" alt="HTML5" />
-                      <span>HTML5</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/JavaScript.svg" alt="JavaScript" />
-                      <span>JavaScript</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Tailwind-CSS.svg" alt="TailwindCSS" />
-                      <span>Tailwind</span>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="tech-item">
-                      <img src="assets/svg/Next.js.svg" alt="Next.js" />
-                      <span>Next.js</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/React.svg" alt="React" />
-                      <span>React</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Redux.svg" alt="Redux" />
-                      <span>Redux</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/TypeScript.svg" alt="TypeScript" />
-                      <span>TypeScript</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Material-UI.svg" alt="Material-UI" />
-                      <span>MUI</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Bootstrap.svg" alt="Bootstrap" />
-                      <span>Bootstrap</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Socket.io.svg" alt="WebSockets" />
-                      <span>WebSocket</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/ESLint.svg" alt="ESLint" />
-                      <span>ESLint</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/CSS3.svg" alt="CSS3" />
-                      <span>CSS3</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/HTML5.svg" alt="HTML5" />
-                      <span>HTML5</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/JavaScript.svg" alt="JavaScript" />
-                      <span>JavaScript</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/svg/Tailwind-CSS.svg" alt="TailwindCSS" />
-                      <span>Tailwind</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cloud & Blockchain Technologies -->
-              <div class="mb-5">
-                <div class="row gx-5">
-                  <!-- Cloud Technologies -->
-                  <div class="col-lg-6 mb-5">
-                    <div class="cloud-carousel">
-                      <h4 class="text-center mb-4">Cloud Technologies</h4>
-                      <div class="cloud-track">
-                        <div class="tech-item">
-                          <img src="assets/svg/AWS.svg" alt="AWS" />
-                          <span>AWS</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Azure.svg" alt="Azure" />
-                          <span>Azure</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Google-Cloud.svg" alt="Google Cloud" />
-                          <span>Google Cloud</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Docker.svg" alt="Docker" />
-                          <span>Docker</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Kubernetes.svg" alt="Kubernetes" />
-                          <span>Kubernetes</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Digital-Ocean.svg" alt="DigitalOcean" />
-                          <span>DigitalOcean</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Heroku.svg" alt="Heroku" />
-                          <span>Heroku</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Vercel.svg" alt="Vercel" />
-                          <span>Vercel</span>
-                        </div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="tech-item">
-                          <img src="assets/svg/AWS.svg" alt="AWS" />
-                          <span>AWS</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Azure.svg" alt="Azure" />
-                          <span>Azure</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Google-Cloud.svg" alt="Google Cloud" />
-                          <span>Google Cloud</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Docker.svg" alt="Docker" />
-                          <span>Docker</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Kubernetes.svg" alt="Kubernetes" />
-                          <span>Kubernetes</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Digital-Ocean.svg" alt="DigitalOcean" />
-                          <span>DigitalOcean</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Heroku.svg" alt="Heroku" />
-                          <span>Heroku</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Vercel.svg" alt="Vercel" />
-                          <span>Vercel</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Blockchain Technologies -->
-                  <div class="col-lg-6 mb-5">
-                    <div class="blockchain-carousel">
-                      <h4 class="text-center mb-4">Blockchain Technologies</h4>
-                      <div class="blockchain-track">
-                        <div class="tech-item">
-                          <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                          <span>Solidity</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Hardhat.svg" alt="Hardhat" />
-                          <span>Hardhat</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/JavaScript.svg" alt="Ethers.js" />
-                          <span>Ethers.js</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/JavaScript.svg" alt="Web3.js" />
-                          <span>Web3.js</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Polygon.svg" alt="Polygon" />
-                          <span>Polygon</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/WebAssembly.svg" alt="Ethereum" />
-                          <span>Ethereum</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Rust.svg" alt="Solana" />
-                          <span>Solana</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Vyper.svg" alt="Vyper" />
-                          <span>Vyper</span>
-                        </div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="tech-item">
-                          <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                          <span>Solidity</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Hardhat.svg" alt="Hardhat" />
-                          <span>Hardhat</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/JavaScript.svg" alt="Ethers.js" />
-                          <span>Ethers.js</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/JavaScript.svg" alt="Web3.js" />
-                          <span>Web3.js</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Polygon.svg" alt="Polygon" />
-                          <span>Polygon</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/WebAssembly.svg" alt="Ethereum" />
-                          <span>Ethereum</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Rust.svg" alt="Solana" />
-                          <span>Solana</span>
-                        </div>
-                        <div class="tech-item">
-                          <img src="assets/svg/Vyper.svg" alt="Vyper" />
-                          <span>Vyper</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Stats/Achievements Section -->
-      <section class="bg-light py-5">
-        <div class="container px-5">
-          <div class="row gx-5 text-center">
-            <div class="col-lg-3 col-6 mb-4">
-              <div class="stat-item">
-                <div class="display-4 fw-bolder text-primary">18+</div>
-                <div class="text-muted fw-light">Projects Completed</div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6 mb-4">
-              <div class="stat-item">
-                <div class="display-4 fw-bolder text-success">3+</div>
-                <div class="text-muted fw-light">Years Experience</div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6 mb-4">
-              <div class="stat-item">
-                <div class="display-4 fw-bolder text-warning">15+</div>
-                <div class="text-muted fw-light">Technologies Mastered</div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6 mb-4">
-              <div class="stat-item">
-                <div class="display-4 fw-bolder text-info">100%</div>
-                <div class="text-muted fw-light">Commitment</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="d-flex justify-content-center">
-          <div class="col-auto">
-            <div class="small m-0">Copyright &copy;</div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>

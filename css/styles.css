@@ -12644,6 +12644,69 @@ a {
   animation-play-state: paused;
 }
 
+.ai-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.ai-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ai-carousel h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+
+.ai-track {
+  display: flex;
+  animation: scroll-ai 35s linear infinite;
+  gap: 30px;
+  align-items: center;
+  width: calc(200% + 60px);
+  will-change: transform;
+}
+
+@keyframes scroll-ai {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ai-carousel:hover .ai-track {
+  animation-play-state: paused;
+}
+
 /* Light Mode Experience Cards Styling */
 .experience-card {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -13024,6 +13087,10 @@ a {
   .blockchain-track {
     animation: scroll-blockchain 11s linear infinite;
   }
+
+  .ai-track {
+    animation: scroll-ai 10s linear infinite;
+  }
 }
 
 @media (max-width: 480px) {
@@ -13041,5 +13108,9 @@ a {
 
   .blockchain-track {
     animation: scroll-blockchain 7s linear infinite;
+  }
+
+  .ai-track {
+    animation: scroll-ai 6s linear infinite;
   }
 }

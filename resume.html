@@ -1,71 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="google-site-verification"
-      content="fssZF9jqXUfTCFFUgXvzD3GDM-6fsUcs8nzeJsVhnwI"
-    />
-    <meta
-      name="keywords"
-      content="Pushan, Alagiya, Portfoio, NodeJS Portfolio, NodeJS Developer, Blockchain "
-    />
-    <meta name="description" content="Pushan Alagiya Portfolio" />
-    <meta property="og:title" content="Resume | Pushan Alagiya" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pushan-alagiya.github.io/resume" />
-    <title>My Resume</title>
 
-    <link rel="stylesheet" href="css/loader.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="google-site-verification" content="fssZF9jqXUfTCFFUgXvzD3GDM-6fsUcs8nzeJsVhnwI" />
+  <meta name="keywords" content="Pushan, Alagiya, Portfoio, NodeJS Portfolio, NodeJS Developer, Blockchain " />
+  <meta name="description" content="Pushan Alagiya Portfolio" />
+  <meta property="og:title" content="Resume | Pushan Alagiya" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pushan-alagiya.github.io/resume" />
+  <title>My Resume</title>
+
+  <link rel="stylesheet" href="css/loader.css" />
 
 
-    <!-- icon-->
-    <link rel="icon" type="image/x-icon" href="assets/profile.png" />
+  <!-- icon-->
+  <link rel="icon" type="image/x-icon" href="assets/profile.png" />
 
-    <!-- Custom Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
-    />
+  <!-- Custom Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap icons-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link class="corecss" href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link class="corecss" href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      let description = document.getElementById("loadOverlay");
-      setTimeout(() => {
-        description.setAttribute("style", "display: none;");
-      }, 1500);
-    </script>
-    
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+  <script>
+    let description = document.getElementById("loadOverlay");
+    setTimeout(() => {
+      description.setAttribute("style", "display: none;");
+    }, 1500);
+  </script>
 
-    <!-- Professional Experience Cards & Modal Styles -->
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
 
-  </head>
+  <!-- Professional Experience Cards & Modal Styles -->
 
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
-      <div
-      id="loadOverlay"
-      style="
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+  <main class="flex-shrink-0">
+    <div id="loadOverlay" style="
         background-color: rgb(54, 54, 54);
         position: absolute;
         top: 0px;
@@ -73,10 +57,8 @@
         width: 100%;
         height: 100%;
         z-index: 2000;
-      "
-    >
-      <div
-        style="
+      ">
+      <div style="
           display: flex;
           width: 100%;
           height: 100%;
@@ -87,8 +69,7 @@
           font-size: 24px;
           font-weight: bold; /* Optionally make it bold */
           animation: pulse 1s infinite alternate; /* Add animation */
-        "
-      >
+        ">
         <div class="loading-spinner">
           <div class="dot"></div>
           <div class="dot"></div>
@@ -96,900 +77,868 @@
         </div>
       </div>
     </div>
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">My Portfolio</span></a
-          >
-          <button class="text-gradient night-toggler">
-            <i class="bi bi-moon-stars-fill"></i>
-          </button>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="certificates.html">Achievements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">My Portfolio</span></a>
+        <button class="text-gradient night-toggler">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resume.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="certificates.html">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <!-- Page Content-->
-      <div class="container px-5 my-5">
-        <div class="text-center mb-5">
-          <h1 class="display-5 fw-bolder mb-0">
-            <span class="text-gradient d-inline">Resume</span>
-          </h1>
-        </div>
-        <div class="row gx-5 justify-content-center">
-          <div class="col-lg-11 col-xl-9 col-xxl-8">
-            <!-- Experience Section-->
-            <section>
-              <div
-                class="d-flex align-items-center justify-content-between mb-4"
-              >
-                <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-                <!-- Download resume button-->
-                <a class="btn btn-primary px-4 py-3" href="assets/Resume.pdf">
-                  <div
-                    class="d-inline-block bi bi-download bi-align-center me-2"
-                  >
-                    <span class="d-none d-sm-inline"
-                      >&nbsp; Download Resume</span
-                    >
-                  </div>
-                </a>
-              </div>
+    <!-- Page Content-->
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bolder mb-0">
+          <span class="text-gradient d-inline">Resume</span>
+        </h1>
+      </div>
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-11 col-xl-9 col-xxl-8">
+          <!-- Experience Section-->
+          <section>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h2 class="text-primary fw-bolder mb-0">Experience</h2>
+              <!-- Download resume button-->
+              <a class="btn btn-primary px-4 py-3" href="assets/Resume.pdf">
+                <div class="d-inline-block bi bi-download bi-align-center me-2">
+                  <span class="d-none d-sm-inline">&nbsp; Download Resume</span>
+                </div>
+              </a>
+            </div>
 
-              <!-- Experience Card 0-->
-              <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#crestModal" style="cursor: pointer;">
-                <div class="card-body">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          Jan 2024 - Present
-                        </div>
-                        <div class="small fw-bolder mb-2">
-                          SE L2
-                        </div>
-                        <div class="small text-muted-title"><a href="https://www.crestinfosystems.com/" onclick="event.stopPropagation();">Crest Infosystems</a></div>
-                        <div class="small text-muted">Surat, Gujarat</div>
-                        <hr>
-                        <div class="small text-muted">Tech Stack: </div>
-                        <div class="fw-bolder text-gradient">MERN Stack, NextJS & NestJS</div>
+            <!-- Experience Card 0-->
+            <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#crestModal" style="cursor: pointer;">
+              <div class="card-body">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <div class="text-secondary fw-bolder mb-2">
+                        Jan 2024 - Present
                       </div>
+                      <div class="small fw-bolder mb-2">
+                        SE L2
+                      </div>
+                      <div class="small text-muted-title"><a href="https://www.crestinfosystems.com/" onclick="event.stopPropagation();">Crest Infosystems</a></div>
+                      <div class="small text-muted">Surat, Gujarat</div>
+                      <hr>
+                      <div class="small text-muted">Tech Stack: </div>
+                      <div class="fw-bolder text-gradient">MERN Stack, NextJS & NestJS</div>
                     </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm experience-info">
-                        As a Full Stack Developer, I design and build scalable web applications, working across both frontend and backend. My skills include developing robust APIs, optimizing databases, and architecting cloud-based solutions. I focus on performance, security, and maintainability, collaborating with teams to deliver reliable products. My experience spans modern frameworks and tools, enabling me to create efficient, user-friendly solutions that meet evolving business needs.
-                        <div class="mt-3 click-indicator">
-                          <i class="bi bi-arrow-right-circle me-2"></i>
-                          <span class="text-primary fw-medium">Click to view detailed project information</span>
-                        </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm experience-info">
+                      As a Full Stack Developer, I design and build scalable web applications, working across both frontend and backend. My skills include developing robust APIs, optimizing databases, and architecting cloud-based solutions. I focus on performance, security, and maintainability, collaborating with teams to deliver reliable products. My experience spans modern frameworks and tools, enabling me to create efficient, user-friendly solutions that meet evolving business needs. Additionally, I specialize in AI development, building intelligent solutions using LangChain, LangGraph, and Python to create agentic AI systems that automate complex workflows and enhance user experiences.
+                      <div class="mt-3 click-indicator">
+                        <i class="bi bi-arrow-right-circle me-2"></i>
+                        <span class="text-primary fw-medium">Click to view detailed project information</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Experience Card 1-->
-              <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#wholetexModal" style="cursor: pointer;">
-                <div class="card-body">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          July 2023
-                        </div>
-                        <div class="small mb-2 fw-bolder">
-                          Full Stack Developer
-                        </div>
-                        <div class="small text-muted-title"><a href="https://www.wholetex.com/" onclick="event.stopPropagation();">Wholetex Pvt. Ltd.</a></div>
-                        <div class="small text-muted">Surat, Gujarat</div>
-                        <hr>
-                        <div class="small text-muted">Tech Stack: </div>
-                        <div class="fw-bolder text-gradient">MERN Stack</div>
+            <!-- Experience Card 1-->
+            <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#wholetexModal" style="cursor: pointer;">
+              <div class="card-body">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <div class="text-secondary fw-bolder mb-2">
+                        July 2023
                       </div>
+                      <div class="small mb-2 fw-bolder">
+                        Full Stack Developer
+                      </div>
+                      <div class="small text-muted-title"><a href="https://www.wholetex.com/" onclick="event.stopPropagation();">Wholetex Pvt. Ltd.</a></div>
+                      <div class="small text-muted">Surat, Gujarat</div>
+                      <hr>
+                      <div class="small text-muted">Tech Stack: </div>
+                      <div class="fw-bolder text-gradient">MERN Stack</div>
                     </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
-                        During my tenure at Wholetex Pvt. Ltd., I delved into MERN stack development, focusing on my project "<b class="text-primary">Admin Panel QR Code Product Tracking.</b>" Building an efficient system to track products via QR codes was both challenging and rewarding. This hands-on experience not only honed my coding skills but also provided invaluable insights into real-world web development.
-                        <div class="mt-3 click-indicator">
-                          <i class="bi bi-arrow-right-circle me-2"></i>
-                          <span class="text-primary fw-medium">Click to view detailed project information</span>
-                        </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm">
+                      During my tenure at Wholetex Pvt. Ltd., I delved into MERN stack development, focusing on my project "<b class="text-primary">Admin Panel QR Code Product Tracking.</b>" Building an efficient system to track products via QR codes was both challenging and rewarding. This hands-on experience not only honed my coding skills but also provided invaluable insights into real-world web development.
+                      <div class="mt-3 click-indicator">
+                        <i class="bi bi-arrow-right-circle me-2"></i>
+                        <span class="text-primary fw-medium">Click to view detailed project information</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Experience Card 2-->
-              <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#technohacksModal" style="cursor: pointer;">
-                <div class="card-body">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          July 2023
-                        </div>
-                        <div class="small mb-2 fw-bolder">
-                          Web Dev Intern
-                        </div>
-                        <div class="small text-muted-title"><a href="https://technohacks.co.in/" onclick="event.stopPropagation();">Technohacks</a></div>
-                        <div class="small text-muted">Virtual Internship</div>
-                        <hr>
-                        <div class="small text-muted">Tech Stack: </div>
-                        <div class="fw-bolder text-gradient">HTML, CSS & JavaScript</div>
+            <!-- Experience Card 2-->
+            <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#technohacksModal" style="cursor: pointer;">
+              <div class="card-body">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <div class="text-secondary fw-bolder mb-2">
+                        July 2023
                       </div>
+                      <div class="small mb-2 fw-bolder">
+                        Web Dev Intern
+                      </div>
+                      <div class="small text-muted-title"><a href="https://technohacks.co.in/" onclick="event.stopPropagation();">Technohacks</a></div>
+                      <div class="small text-muted">Virtual Internship</div>
+                      <hr>
+                      <div class="small text-muted">Tech Stack: </div>
+                      <div class="fw-bolder text-gradient">HTML, CSS & JavaScript</div>
                     </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
-                        During my internship at Technohacks, I dove into the realm of web development, concentrating on sculpting a lively <b class="text-primary">"Product Page"</b> for a website. Through refining my skills in HTML, CSS, and JavaScript, I infused captivating visuals and seamless navigation into the project.
-                        <div class="mt-3 click-indicator">
-                          <i class="bi bi-arrow-right-circle me-2"></i>
-                          <span class="text-primary fw-medium">Click to view detailed project information</span>
-                        </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm">
+                      During my internship at Technohacks, I dove into the realm of web development, concentrating on sculpting a lively <b class="text-primary">"Product Page"</b> for a website. Through refining my skills in HTML, CSS, and JavaScript, I infused captivating visuals and seamless navigation into the project.
+                      <div class="mt-3 click-indicator">
+                        <i class="bi bi-arrow-right-circle me-2"></i>
+                        <span class="text-primary fw-medium">Click to view detailed project information</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Experience Card 3-->
-              <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#edxlModal" style="cursor: pointer;">
-                <div class="card-body">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          Jan 2023
-                        </div>
-                        <div class="small mb-2 fw-bolder">
-                          Full Stack Web Dev Intern
-                        </div>
-                        <div class="small text-muted-title"><a href="https://www.edxl.in/" onclick="event.stopPropagation();">EDXL</a></div>
-                        <div class="small text-muted">Virtual Internship</div>
-                        <hr>
-                        <div class="small text-muted">Project: </div>
-                        <div class="fw-bolder text-gradient">Healthcare Management System</div>
+            <!-- Experience Card 3-->
+            <div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#edxlModal" style="cursor: pointer;">
+              <div class="card-body">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <div class="text-secondary fw-bolder mb-2">
+                        Jan 2023
                       </div>
+                      <div class="small mb-2 fw-bolder">
+                        Full Stack Web Dev Intern
+                      </div>
+                      <div class="small text-muted-title"><a href="https://www.edxl.in/" onclick="event.stopPropagation();">EDXL</a></div>
+                      <div class="small text-muted">Virtual Internship</div>
+                      <hr>
+                      <div class="small text-muted">Project: </div>
+                      <div class="fw-bolder text-gradient">Healthcare Management System</div>
                     </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
-                        During my internship at EDXL, I immersed myself in full stack web development, spearheading the creation of a <b class="text-primary">"Clinic Management System."</b> This hands-on journey honed not only my front-end and back-end skills but also offered practical solutions for a critical healthcare project.
-                        <div class="mt-3 click-indicator">
-                          <i class="bi bi-arrow-right-circle me-2"></i>
-                          <span class="text-primary fw-medium">Click to view detailed project information</span>
-                        </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm">
+                      During my internship at EDXL, I immersed myself in full stack web development, spearheading the creation of a <b class="text-primary">"Clinic Management System."</b> This hands-on journey honed not only my front-end and back-end skills but also offered practical solutions for a critical healthcare project.
+                      <div class="mt-3 click-indicator">
+                        <i class="bi bi-arrow-right-circle me-2"></i>
+                        <span class="text-primary fw-medium">Click to view detailed project information</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-            </section>
+          </section>
 
-            <!-- Divider-->
-            <div class="pb-5"></div>
-            <!-- Education Section-->
-            <section>
-              <h2 class="text-primary  fw-bolder mb-4">Education</h2>
-              <!-- Education Card 1-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          2020 - 2024
-                        </div>
-                        <div class="mb-2">
-                          <div class="small fw-bolder">
-                            <a href="http://www.ssgec.ac.in/">
+          <!-- Divider-->
+          <div class="pb-5"></div>
+          <!-- Education Section-->
+          <section>
+            <h2 class="text-primary  fw-bolder mb-4">Education</h2>
+            <!-- Education Card 1-->
+            <div class="card shadow border-0 rounded-4 mb-5">
+              <div class="card-body p-5">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <div class="text-secondary fw-bolder mb-2">
+                        2020 - 2024
+                      </div>
+                      <div class="mb-2">
+                        <div class="small fw-bolder">
+                          <a href="http://www.ssgec.ac.in/">
                             Shantilal Shah Engineering College
                           </a>
-                          </div>
-                          <div class="small text-muted">GTU</div>
                         </div>
-                        <div class="fst-italic">
-                          <div class="small text-muted">
-                            BE in Information Technology
-                          </div>
+                        <div class="small text-muted">GTU</div>
+                      </div>
+                      <div class="fst-italic">
+                        <div class="small text-muted">
+                          BE in Information Technology
+                        </div>
+                        <div class="small text-muted mt-2">
+                          CGPA: 9.45 | College Topper
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
-                        In my college study of Information Technology, I gained
-                        a comprehensive understanding of computer systems,
-                        programming languages, network administration, and
-                        database management. Through practical projects and
-                        theoretical coursework, I developed the skills to
-                        analyze complex problems, design innovative solutions,
-                        and implement cutting-edge technologies..
-                      </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm">
+                      In my college study of Information Technology, I gained
+                      a comprehensive understanding of computer systems,
+                      programming languages, network administration, and
+                      database management. Through practical projects and
+                      theoretical coursework, I developed the skills to
+                      analyze complex problems, design innovative solutions,
+                      and implement cutting-edge technologies. I graduated as the college topper with a CGPA of 9.45, demonstrating excellence in both theoretical knowledge and practical application.
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Education Card 2-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          2018 - 2020
-                        </div>
-                        <div class="mb-2">
-                          <div class="small fw-bolder">
-                            <a href="https://naimisharanya.edu.in/">
+            </div>
+            <!-- Education Card 2-->
+            <div class="card shadow border-0 rounded-4 mb-5">
+              <div class="card-body p-5">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <div class="text-secondary fw-bolder mb-2">
+                        2018 - 2020
+                      </div>
+                      <div class="mb-2">
+                        <div class="small fw-bolder">
+                          <a href="https://naimisharanya.edu.in/">
                             Shree Naimisharanaya Gurukul
                           </a>
-                          </div>
-                          <div class="small text-muted">GSEB</div>
                         </div>
-                        <div class="fst-italic">
-                          <div class="small text-muted">HSE</div>
-                        </div>
+                        <div class="small text-muted">GSEB</div>
+                      </div>
+                      <div class="fst-italic">
+                        <div class="small text-muted">HSE</div>
                       </div>
                     </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
-                        During my HSE, I delved into subjects like Physics,
-                        Chemistry, and Mathematics. Through rigorous coursework
-                        and engaging experiments, I honed my analytical and
-                        problem-solving skills. This educational journey
-                        provided a strong foundation for pursuing further
-                        studies in STEM disciplines and equipped me with the
-                        knowledge to excel in scientific pursuits.
-                      </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm">
+                      During my HSE, I delved into subjects like Physics,
+                      Chemistry, and Mathematics. Through rigorous coursework
+                      and engaging experiments, I honed my analytical and
+                      problem-solving skills. This educational journey
+                      provided a strong foundation for pursuing further
+                      studies in STEM disciplines and equipped me with the
+                      knowledge to excel in scientific pursuits.
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
-            <!-- Divider-->
-            <div class="pb-5"></div>
-            <!-- Skills Section-->
-            <section>
-              <!-- Skillset Card-->
-              <h2 class="text-primary  fw-bolder mb-4">Skills</h2>
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <!-- Professional skills list-->
-                  <div class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
-                      <div
-                        class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
-                      >
-                        <i class="bi bi-tools"></i>
-                      </div>
-                      <h4 class="fw-bolder mb-0">
-                        <span class="text-gradient d-inline"
-                          >Professional Skills</span
-                        >
-                      </h4>
+            </div>
+          </section>
+          <!-- Divider-->
+          <div class="pb-5"></div>
+          <!-- Skills Section-->
+          <section>
+            <!-- Skillset Card-->
+            <h2 class="text-primary  fw-bolder mb-4">Skills</h2>
+            <div class="card shadow border-0 rounded-4 mb-5">
+              <div class="card-body p-5">
+                <!-- Professional skills list-->
+                <div class="mb-5">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                      <i class="bi bi-tools"></i>
                     </div>
-                    <div id="skillsGrid" class="row row-cols-1 row-cols-md-3 g-4">
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Full Stack Development
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Backend Development
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Frontend Development
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Cloud Architecture
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Blockchain Development
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Smart Contract Development
-                        </div>
-                      </div>
-                      <div class="col additional-skill" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          API Development
-                        </div>
-                      </div>
-                      <div class="col additional-skill" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Database Design
-                        </div>
-                      </div>
-                      <div class="col additional-skill" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          DevOps & Deployment
-                        </div>
+                    <h4 class="fw-bolder mb-0">
+                      <span class="text-gradient d-inline">Professional Skills</span>
+                    </h4>
+                  </div>
+                  <div id="skillsGrid" class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Full Stack Development
                       </div>
                     </div>
-                    <div class="text-center mb-4 mt-4">
-                      <button class="btn btn-outline-primary btn-sm" id="toggleSkills" onclick="toggleProfessionalSkills()">
-                        <i class="bi bi-plus-circle me-1"></i>Show More Skills
-                      </button>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Backend Development
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Frontend Development
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Cloud Architecture
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Blockchain Development
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Smart Contract Development
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        AI Development
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Agentic AI Solutions
+                      </div>
+                    </div>
+                    <div class="col additional-skill" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        LangChain
+                      </div>
+                    </div>
+                    <div class="col additional-skill" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        LangGraph
+                      </div>
+                    </div>
+                    <div class="col additional-skill" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        API Development
+                      </div>
+                    </div>
+                    <div class="col additional-skill" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Database Design
+                      </div>
+                    </div>
+                    <div class="col additional-skill" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        DevOps & Deployment
+                      </div>
                     </div>
                   </div>
-                  <!-- Languages list-->
-                  <div class="mb-0">
-                    <div class="d-flex align-items-center mb-4">
-                      <div
-                        class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
-                      >
-                        <i class="bi bi-code-slash"></i>
+                  <div class="text-center mb-4 mt-4">
+                    <button class="btn btn-outline-primary btn-sm" id="toggleSkills" onclick="toggleProfessionalSkills()">
+                      <i class="bi bi-plus-circle me-1"></i>Show More Skills
+                    </button>
+                  </div>
+                </div>
+                <!-- Languages list-->
+                <div class="mb-0">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h3 class="fw-bolder mb-0">
+                      <span class="text-gradient d-inline">Languages</span>
+                    </h3>
+                  </div>
+                  <div id="languagesGrid" class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Node.js
                       </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        React.js
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Next.js
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        TypeScript
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        NestJS
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Express.js
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Python
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Solidity
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        LangChain
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        LangGraph
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        GraphQL
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        MongoDB
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        PostgreSQL
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Redis
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        AWS
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Docker
+                      </div>
+                    </div>
+                    <div class="col additional-language" style="display: none;">
+                      <div class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center">
+                        Kubernetes
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-outline-primary btn-sm" id="toggleLanguages" onclick="toggleLanguages()">
+                      <i class="bi bi-plus-circle me-1"></i>Show More Technologies
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <div class="pb-5"></div>
+
+          <!-- Awards Section-->
+          <section>
+            <a href="certificates.html">
+              <h2 class="text-primary fw-bolder mb-4" style="display: inline-block;">Achievements</h2>
+              <div class="feature link-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                <i class="bi bi-box-arrow-up-right"></i>
+              </div>
+            </a>
+            <!--  Card 1-->
+            <div class="card shadow border-0 rounded-4 mb-5">
+              <div class="card-body p-5">
+                <div class="row align-items-center gx-5">
+
+                  <!-- CARD 1 -->
+                  <div class="col text-center text-mg-start mb-5 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
                       <h3 class="fw-bolder mb-0">
-                        <span class="text-gradient d-inline">Languages</span>
+                        <span class="text-gradient small-awards d-inline">Devang Mehta IT Awards - 2022</span>
                       </h3>
+                      <br>
+                      <a href="https://dewangmehtafoundation.org/" target="_blank"><img class="border-rad noinverseimgages" src="assets/Awards/DMIA - 2022.webp" width="90%" alt=""></a>
+                      <div class="text-sm awards-text">
+                        Facilitation of Toppers <br>
+                        <div class="small text-muted lower-text">College Topper 2022</div>
+                      </div>
                     </div>
-                    <div id="languagesGrid" class="row row-cols-1 row-cols-md-3 g-4">
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Node.js
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          React.js
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Next.js
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          TypeScript
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          NestJS
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Express.js
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Solidity
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Python
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          GraphQL
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          MongoDB
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          PostgreSQL
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Redis
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          AWS
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Docker
-                        </div>
-                      </div>
-                      <div class="col additional-language" style="display: none;">
-                        <div
-                          class="d-flex align-items-center justify-content-center skills bg-light rounded-4 p-3 h-100 text-center"
-                        >
-                          Kubernetes
+                  </div>
+
+                  <!-- CARD 2 -->
+                  <div class="col-lg-6">
+                    <div class="col text-center text-mg-start  mb-lg-0">
+                      <div class="bg-light p-4 rounded-4">
+                        <h3 class="fw-bolder mb-0">
+                          <span class="text-gradient small-awards d-inline">Devang Mehta IT Awards - 2023</span>
+                        </h3>
+                        <br>
+                        <a href="https://dewangmehtafoundation.org/" target="_blank"><img class="border-rad noinverseimgages" src="assets/Awards/DM.webp" width="90%" alt=""></a>
+                        <div class="text-sm awards-text">
+                          Facilitation of Toppers <br>
+                          <div class="small text-muted  lower-text">College Topper 2023</div>
                         </div>
                       </div>
                     </div>
-                    <div class="text-center mt-4">
-                      <button class="btn btn-outline-primary btn-sm" id="toggleLanguages" onclick="toggleLanguages()">
-                        <i class="bi bi-plus-circle me-1"></i>Show More Technologies
-                      </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Divider-->
+          <div class="pb-5"></div>
+          <!-- Extra Curricular Section-->
+          <section>
+            <h2 class="text-primary fw-bolder mb-4">Extra Curriculars</h2>
+            <!--  Card 1-->
+            <div class="card shadow border-0 rounded-4 mb-5">
+              <div class="card-body p-5">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-mg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <h3 class="fw-bolder mb-0">
+                        <span class="text-gradient d-inline">Youtube Channel</span>
+                      </h3>
+                      <br>
+                      <a href="https://www.youtube.com/channel/UCC6XM-0RirW0uYAafl0o6Wg" target="_blank"><img class="border-rad noinverseimgages" src="assets/LIWP(1).webp" width="90%" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="text-sm">
+                      I'm passionate about helping others learn new skills, and I believe that everyone has the potential to be a great programmer or IT professional. My videos are designed to be easy to follow and understand, even for those with no prior experience. I cover a wide range of topics, including programming languages, web development, data science, and more. Whether you're a beginner or an experienced IT professional, I'm sure you'll find something useful on my channel.
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
-
-
-            <div class="pb-5"></div>
-
-            <!-- Awards Section-->
-    <section>
-      <a href="certificates.html">
-      <h2 class="text-primary fw-bolder mb-4" style="display: inline-block;">Achievements</h2>
-        <div class="feature link-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-          <i class="bi bi-box-arrow-up-right"></i>
-        </div>
-      </a>
-      <!--  Card 1-->
-      <div class="card shadow border-0 rounded-4 mb-5">
-        <div class="card-body p-5">
-          <div class="row align-items-center gx-5">
-            
-            <!-- CARD 1 -->
-            <div class="col text-center text-mg-start mb-5 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                <h3 class="fw-bolder mb-0">
-                  <span class="text-gradient small-awards d-inline">Devang Mehta IT Awards - 2022</span>
-                </h3>
-                <br>
-                <a href="https://dewangmehtafoundation.org/" target="_blank"><img class="border-rad noinverseimgages" src="assets/Awards/DMIA - 2022.webp" width="90%" alt=""></a>
-                <div class="text-sm awards-text">
-                  Facilitation of Toppers <br>
-                  <div class="small text-muted lower-text">College Topper 2022</div>
-                </div>
-              </div>  
             </div>
 
-            <!-- CARD 2 -->
-            <div class="col-lg-6">
-              <div class="col text-center text-mg-start  mb-lg-0">
-                <div class="bg-light p-4 rounded-4">
-                  <h3 class="fw-bolder mb-0">
-                    <span class="text-gradient small-awards d-inline">Devang Mehta IT Awards - 2023</span>
-                  </h3>
-                  <br>
-                  <a href="https://dewangmehtafoundation.org/" target="_blank"><img class="border-rad noinverseimgages" src="assets/Awards/DM.webp" width="90%" alt=""></a>
-                  <div class="text-sm awards-text">
-                    Facilitation of Toppers <br>
-                    <div class="small text-muted  lower-text">College Topper 2023</div>
-                  </div>
-                </div>  
-              </div>  
-            </div>
-
-          </div>
-        </div>
-      </div>
-      </section>
-
-
-            <!-- Divider-->
-            <div class="pb-5"></div>
-            <!-- Extra Curricular Section-->
-           <section>
-              <h2 class="text-primary fw-bolder mb-4">Extra Curriculars</h2>
-               <!--  Card 1-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-mg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <h3 class="fw-bolder mb-0">
-                          <span class="text-gradient d-inline">Youtube Channel</span>
-                        </h3>
-                        <br>
-                        <a href="https://www.youtube.com/channel/UCC6XM-0RirW0uYAafl0o6Wg" target="_blank"><img class="border-rad noinverseimgages" src="assets/LIWP(1).webp" width="90%" alt=""></a>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
-                        I'm passionate about helping others learn new skills, and I believe that everyone has the potential to be a great programmer or IT professional. My videos are designed to be easy to follow and understand, even for those with no prior experience. I cover a wide range of topics, including programming languages, web development, data science, and more. Whether you're a beginner or an experienced IT professional, I'm sure you'll find something useful on my channel.
-                      </div>
+            <!-- Education Card 1-->
+            <div class="card shadow border-0 rounded-4 mb-5">
+              <div class="card-body p-5">
+                <div class="row align-items-center gx-5">
+                  <div class="col text-center text-mg-start mb-4 mb-lg-0">
+                    <div class="bg-light p-4 rounded-4">
+                      <h3 class="fw-bolder mb-0">
+                        <span class="text-gradient d-inline">NCC</span>
+                      </h3>
+                      <br>
+                      <img class="border-rad noinverseimgages" src="assets/WhatsApp Image 2023-05-22 at 2.03.46 PM.webp" width="90%" alt="">
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <!-- Education Card 1-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-mg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <h3 class="fw-bolder mb-0">
-                          <span class="text-gradient d-inline">NCC</span>
-                        </h3>
-                        <br>
-                        <img class="border-rad noinverseimgages" src="assets/WhatsApp Image 2023-05-22 at 2.03.46 PM.webp" width="90%" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div class="text-sm">
+                  <div class="col-lg-8">
+                    <div class="text-sm">
                       Among the memorable experiences during my time in the <b>NCC</b> was the Air Force Attachment Camp held at the esteemed Air Force Station Hyderabad and All India Vayu Sainik Camp held at Jodhpur. This camps offered a diverse range of activities, such as flying, shooting, and hiking, allowing us to fully immerse ourselves in the Air Force experience. Furthermore, the opportunity to meet and learn from Air Force officers was invaluable in shaping my perspective.
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
 
 
 
 
-    <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="d-flex justify-content-center">
-          <div class="col-auto">
-            <div class="small m-0">Copyright &copy;</div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Experience Modals -->
-    
-    <!-- Crest Infosystems Modal -->
-    <div class="modal fade" id="crestModal" tabindex="-1" aria-labelledby="crestModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="crestModalLabel">
-              <i class="bi bi-building me-2"></i>Crest Infosystems - SE L2
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Company Info Section -->
-            <div class="company-info-section mb-4">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Position Details</h6>
-                  <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>Jan 2024 - Present</div>
-                  <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Surat, Gujarat</div>
-                  <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Software Engineer L2</div>
-                </div>
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Technologies</h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    <span class="tech-badge">MERN Stack</span>
-                    <span class="tech-badge">Next.js</span>
-                    <span class="tech-badge">NestJS</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">Cloud Tools</span>
-                  </div>
+          <!-- Footer-->
+          <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+              <div class="d-flex justify-content-center">
+                <div class="col-auto">
+                  <div class="small m-0">Copyright &copy;</div>
                 </div>
               </div>
             </div>
+          </footer>
 
-            <!-- Projects Section -->
-            <div class="project-info-card">
-              <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
-              <ul class="project-list">
-                <li>
-                  <div class="project-name">Chores for Me</div>
-                  <p class="mb-0 text-muted">Developed robust backend systems and APIs using Node.js, managed databases, and leveraged cloud tools to ensure scalability and reliability.</p>
-                </li>
-                <li>
-                  <div class="project-name">Adbox Marketing Platform</div>
-                  <p class="mb-0 text-muted">Worked on a comprehensive marketing platform, crafting complex queries, integrating Image.LY for image editing, and optimizing SEO for better reach.</p>
-                </li>
-                <li>
-                  <div class="project-name">DigiFama Real Estate</div>
-                  <p class="mb-0 text-muted">Led the development of a real estate platform, implementing whitelabeling, user emulation features, and seamless payment integration.</p>
-                </li>
-                <li>
-                  <div class="project-name">Pikhaul Logistics</div>
-                  <p class="mb-0 text-muted">Engineered real-time logistics solutions, focusing on performance and scalability for large-scale user applications.</p>
-                </li>
-                <li>
-                  <div class="project-name">Wakabay 3PL Platform</div>
-                  <p class="mb-0 text-muted">Contributed to a Third-Party Logistics platform, designing scalable architectures and optimizing system performance.</p>
-                </li>
-              </ul>
-            </div>
+          <!-- Experience Modals -->
 
-            <!-- Impact Section -->
-            <div class="project-info-card">
-              <h6 class="fw-bold mb-2"><i class="bi bi-trophy me-2"></i>Professional Impact</h6>
-              <p class="mb-0">These experiences have strengthened my expertise in designing, developing, and deploying full stack applications, while collaborating across the entire software development lifecycle to deliver reliable, scalable products.</p>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="https://www.crestinfosystems.com/" target="_blank" class="btn btn-primary">
-              <i class="bi bi-globe me-1"></i>Visit Company Website
-            </a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Wholetex Modal -->
-    <div class="modal fade" id="wholetexModal" tabindex="-1" aria-labelledby="wholetexModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="wholetexModalLabel">
-              <i class="bi bi-building me-2"></i>Wholetex Pvt. Ltd. - Full Stack Intern
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Company Info Section -->
-            <div class="company-info-section mb-4">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Position Details</h6>
-                  <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>July 2023</div>
-                  <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Surat, Gujarat</div>
-                  <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Full Stack Intern</div>
+          <!-- Crest Infosystems Modal -->
+          <div class="modal fade" id="crestModal" tabindex="-1" aria-labelledby="crestModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="crestModalLabel">
+                    <i class="bi bi-building me-2"></i>Crest Infosystems - SE L2
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Technologies</h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    <span class="tech-badge">MongoDB</span>
-                    <span class="tech-badge">Express.js</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">QR Code</span>
+                <div class="modal-body">
+                  <!-- Company Info Section -->
+                  <div class="company-info-section mb-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Position Details</h6>
+                        <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>Jan 2024 - Present</div>
+                        <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Surat, Gujarat</div>
+                        <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Software Engineer L2</div>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Technologies</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                          <span class="tech-badge">MERN Stack</span>
+                          <span class="tech-badge">Next.js</span>
+                          <span class="tech-badge">NestJS</span>
+                          <span class="tech-badge">Node.js</span>
+                          <span class="tech-badge">Cloud Tools</span>
+                          <span class="tech-badge">AI/ML</span>
+                          <span class="tech-badge">LangChain</span>
+                          <span class="tech-badge">LangGraph</span>
+                          <span class="tech-badge">Python</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Projects Section -->
+                  <div class="project-info-card">
+                    <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
+                    <ul class="project-list">
+                      <li>
+                        <div class="project-name">Chores for Me</div>
+                        <p class="mb-0 text-muted">Developed robust backend systems and APIs using Node.js, managed databases, and leveraged cloud tools to ensure scalability and reliability.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Adbox Marketing Platform</div>
+                        <p class="mb-0 text-muted">Worked on a comprehensive marketing platform, crafting complex queries, integrating Image.LY for image editing, and optimizing SEO for better reach.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">DigiFama Real Estate</div>
+                        <p class="mb-0 text-muted">Led the development of a real estate platform, implementing whitelabeling, user emulation features, and seamless payment integration.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Pikhaul Logistics</div>
+                        <p class="mb-0 text-muted">Engineered real-time logistics solutions, focusing on performance and scalability for large-scale user applications.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Wakabay 3PL Platform</div>
+                        <p class="mb-0 text-muted">Contributed to a Third-Party Logistics platform, designing scalable architectures and optimizing system performance.</p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Impact Section -->
+                  <div class="project-info-card">
+                    <h6 class="fw-bold mb-2"><i class="bi bi-trophy me-2"></i>Professional Impact</h6>
+                    <p class="mb-0">These experiences have strengthened my expertise in designing, developing, and deploying full stack applications, while collaborating across the entire software development lifecycle to deliver reliable, scalable products. My work in AI development, particularly with LangChain and LangGraph, has enabled me to create intelligent, agentic solutions that automate complex workflows and enhance user experiences through advanced AI capabilities.</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://www.crestinfosystems.com/" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-globe me-1"></i>Visit Company Website
+                  </a>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Projects Section -->
-            <div class="project-info-card">
-              <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
-              <ul class="project-list">
-                <li>
-                  <div class="project-name">Admin Panel QR Code Product Tracking</div>
-                  <p class="mb-0 text-muted">Developed a comprehensive QR code-based product tracking system with dynamic QR code generation for supply chain management.</p>
-                </li>
-                <li>
-                  <div class="project-name">Real-time Inventory Management</div>
-                  <p class="mb-0 text-muted">Built responsive admin panel for managing products, tracking inventory, and monitoring product movement with MongoDB integration.</p>
-                </li>
-                <li>
-                  <div class="project-name">RESTful API Development</div>
-                  <p class="mb-0 text-muted">Created robust APIs using Express.js and Node.js for product operations, user authentication, and comprehensive data management.</p>
-                </li>
-                <li>
-                  <div class="project-name">Database Architecture</div>
-                  <p class="mb-0 text-muted">Designed efficient database schemas for storing product information, tracking history, and user management in industrial settings.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="https://www.wholetex.com/" target="_blank" class="btn btn-primary">
-              <i class="bi bi-globe me-1"></i>Visit Company Website
-            </a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EDXL Modal -->
-    <div class="modal fade" id="edxlModal" tabindex="-1" aria-labelledby="edxlModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="edxlModalLabel">
-              <i class="bi bi-building me-2"></i>EDXL - Full Stack Web Dev Intern
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Company Info Section -->
-            <div class="company-info-section mb-4">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Position Details</h6>
-                  <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>July 2023</div>
-                  <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Virtual Internship</div>
-                  <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Full Stack Web Dev Intern</div>
+          <!-- Wholetex Modal -->
+          <div class="modal fade" id="wholetexModal" tabindex="-1" aria-labelledby="wholetexModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="wholetexModalLabel">
+                    <i class="bi bi-building me-2"></i>Wholetex Pvt. Ltd. - Full Stack Intern
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Technologies</h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    <span class="tech-badge">Full Stack</span>
-                    <span class="tech-badge">Healthcare Tech</span>
-                    <span class="tech-badge">Web Development</span>
-                    <span class="tech-badge">Database Design</span>
-                    <span class="tech-badge">UI/UX</span>
+                <div class="modal-body">
+                  <!-- Company Info Section -->
+                  <div class="company-info-section mb-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Position Details</h6>
+                        <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>July 2023</div>
+                        <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Surat, Gujarat</div>
+                        <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Full Stack Intern</div>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Technologies</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                          <span class="tech-badge">MongoDB</span>
+                          <span class="tech-badge">Express.js</span>
+                          <span class="tech-badge">React</span>
+                          <span class="tech-badge">Node.js</span>
+                          <span class="tech-badge">QR Code</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Projects Section -->
+                  <div class="project-info-card">
+                    <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
+                    <ul class="project-list">
+                      <li>
+                        <div class="project-name">Admin Panel QR Code Product Tracking</div>
+                        <p class="mb-0 text-muted">Developed a comprehensive QR code-based product tracking system with dynamic QR code generation for supply chain management.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Real-time Inventory Management</div>
+                        <p class="mb-0 text-muted">Built responsive admin panel for managing products, tracking inventory, and monitoring product movement with MongoDB integration.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">RESTful API Development</div>
+                        <p class="mb-0 text-muted">Created robust APIs using Express.js and Node.js for product operations, user authentication, and comprehensive data management.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Database Architecture</div>
+                        <p class="mb-0 text-muted">Designed efficient database schemas for storing product information, tracking history, and user management in industrial settings.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://www.wholetex.com/" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-globe me-1"></i>Visit Company Website
+                  </a>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Projects Section -->
-            <div class="project-info-card">
-              <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
-              <ul class="project-list">
-                <li>
-                  <div class="project-name">Clinic Management System</div>
-                  <p class="mb-0 text-muted">Developed comprehensive healthcare management solution with patient registration, profile management, and medical history tracking.</p>
-                </li>
-                <li>
-                  <div class="project-name">Appointment Scheduling System</div>
-                  <p class="mb-0 text-muted">Implemented intuitive booking system with calendar integration, automated reminders, and real-time availability management.</p>
-                </li>
-                <li>
-                  <div class="project-name">Digital Medical Records</div>
-                  <p class="mb-0 text-muted">Designed secure medical record storage with easy retrieval, update functionality, and comprehensive doctor dashboard integration.</p>
-                </li>
-                <li>
-                  <div class="project-name">Billing & Analytics System</div>
-                  <p class="mb-0 text-muted">Integrated payment processing features and developed analytics tools for clinic administration and performance tracking.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="https://www.edxl.in/" target="_blank" class="btn btn-primary">
-              <i class="bi bi-globe me-1"></i>Visit Company Website
-            </a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Technohacks Modal -->
-    <div class="modal fade" id="technohacksModal" tabindex="-1" aria-labelledby="technohacksModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="technohacksModalLabel">
-              <i class="bi bi-building me-2"></i>Technohacks - Web Dev Intern
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Company Info Section -->
-            <div class="company-info-section mb-4">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Position Details</h6>
-                  <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>August 2023</div>
-                  <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Virtual Internship</div>
-                  <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Web Dev Intern</div>
+          <!-- EDXL Modal -->
+          <div class="modal fade" id="edxlModal" tabindex="-1" aria-labelledby="edxlModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="edxlModalLabel">
+                    <i class="bi bi-building me-2"></i>EDXL - Full Stack Web Dev Intern
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-6">
-                  <h6 class="fw-bold mb-2">Technologies</h6>
-                  <div class="d-flex flex-wrap gap-1">
-                    <span class="tech-badge">HTML5</span>
-                    <span class="tech-badge">CSS3</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Responsive Design</span>
-                    <span class="tech-badge">UI/UX</span>
+                <div class="modal-body">
+                  <!-- Company Info Section -->
+                  <div class="company-info-section mb-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Position Details</h6>
+                        <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>July 2023</div>
+                        <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Virtual Internship</div>
+                        <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Full Stack Web Dev Intern</div>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Technologies</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                          <span class="tech-badge">Full Stack</span>
+                          <span class="tech-badge">Healthcare Tech</span>
+                          <span class="tech-badge">Web Development</span>
+                          <span class="tech-badge">Database Design</span>
+                          <span class="tech-badge">UI/UX</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Projects Section -->
+                  <div class="project-info-card">
+                    <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
+                    <ul class="project-list">
+                      <li>
+                        <div class="project-name">Clinic Management System</div>
+                        <p class="mb-0 text-muted">Developed comprehensive healthcare management solution with patient registration, profile management, and medical history tracking.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Appointment Scheduling System</div>
+                        <p class="mb-0 text-muted">Implemented intuitive booking system with calendar integration, automated reminders, and real-time availability management.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Digital Medical Records</div>
+                        <p class="mb-0 text-muted">Designed secure medical record storage with easy retrieval, update functionality, and comprehensive doctor dashboard integration.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Billing & Analytics System</div>
+                        <p class="mb-0 text-muted">Integrated payment processing features and developed analytics tools for clinic administration and performance tracking.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://www.edxl.in/" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-globe me-1"></i>Visit Company Website
+                  </a>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Projects Section -->
-            <div class="project-info-card">
-              <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
-              <ul class="project-list">
-                <li>
-                  <div class="project-name">Dynamic Product Page Development</div>
-                  <p class="mb-0 text-muted">Created fully responsive product page with seamless adaptation across desktop, tablet, and mobile devices using modern CSS techniques.</p>
-                </li>
-                <li>
-                  <div class="project-name">Interactive UI Elements</div>
-                  <p class="mb-0 text-muted">Implemented engaging features including image galleries, product zoom functionality, and dynamic content updates with vanilla JavaScript.</p>
-                </li>
-                <li>
-                  <div class="project-name">Performance Optimization</div>
-                  <p class="mb-0 text-muted">Applied CSS and JavaScript optimization techniques to ensure fast loading times and smooth user experience across all devices.</p>
-                </li>
-                <li>
-                  <div class="project-name">Cross-browser Compatibility</div>
-                  <p class="mb-0 text-muted">Ensured consistent functionality and appearance across different browsers while maintaining clean, well-documented code standards.</p>
-                </li>
-              </ul>
+          <!-- Technohacks Modal -->
+          <div class="modal fade" id="technohacksModal" tabindex="-1" aria-labelledby="technohacksModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="technohacksModalLabel">
+                    <i class="bi bi-building me-2"></i>Technohacks - Web Dev Intern
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Company Info Section -->
+                  <div class="company-info-section mb-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Position Details</h6>
+                        <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>August 2023</div>
+                        <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>Virtual Internship</div>
+                        <div class="text-muted"><i class="bi bi-briefcase me-2"></i>Web Dev Intern</div>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Technologies</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                          <span class="tech-badge">HTML5</span>
+                          <span class="tech-badge">CSS3</span>
+                          <span class="tech-badge">JavaScript</span>
+                          <span class="tech-badge">Responsive Design</span>
+                          <span class="tech-badge">UI/UX</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Projects Section -->
+                  <div class="project-info-card">
+                    <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
+                    <ul class="project-list">
+                      <li>
+                        <div class="project-name">Dynamic Product Page Development</div>
+                        <p class="mb-0 text-muted">Created fully responsive product page with seamless adaptation across desktop, tablet, and mobile devices using modern CSS techniques.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Interactive UI Elements</div>
+                        <p class="mb-0 text-muted">Implemented engaging features including image galleries, product zoom functionality, and dynamic content updates with vanilla JavaScript.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Performance Optimization</div>
+                        <p class="mb-0 text-muted">Applied CSS and JavaScript optimization techniques to ensure fast loading times and smooth user experience across all devices.</p>
+                      </li>
+                      <li>
+                        <div class="project-name">Cross-browser Compatibility</div>
+                        <p class="mb-0 text-muted">Ensured consistent functionality and appearance across different browsers while maintaining clean, well-documented code standards.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://technohacks.co.in/" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-globe me-1"></i>Visit Company Website
+                  </a>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <a href="https://technohacks.co.in/" target="_blank" class="btn btn-primary">
-              <i class="bi bi-globe me-1"></i>Visit Company Website
-            </a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </body>
+
+</body>
+
 </html>
