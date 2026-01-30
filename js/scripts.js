@@ -228,6 +228,63 @@ let script = document.currentScript;
 let isDarkMode = localStorage.getItem("darkMode") !== "false"; // Retrieve mode from localStorage, default to false if not found
 
 window.addEventListener("DOMContentLoaded", () => {
+  if (typeof renderNav === "function") {
+    const navEl = document.getElementById("nav-placeholder");
+    if (navEl) renderNav("nav-placeholder");
+  }
+  if (typeof renderFooter === "function") {
+    const footerEl = document.getElementById("footer-placeholder");
+    if (footerEl) renderFooter("footer-placeholder");
+  }
+  if (typeof hideLoaderAfter === "function") {
+    hideLoaderAfter(1500);
+  }
+
+  if (typeof renderStats === "function" && document.getElementById("statsContainer")) {
+    renderStats("statsContainer");
+  }
+  if (typeof renderTechTrackInto === "function") {
+    if (typeof TECH_BACKEND !== "undefined" && document.getElementById("techBackendTrack")) renderTechTrackInto("techBackendTrack", TECH_BACKEND);
+    if (typeof TECH_FRONTEND !== "undefined" && document.getElementById("techFrontendTrack")) renderTechTrackInto("techFrontendTrack", TECH_FRONTEND);
+    if (typeof TECH_CLOUD !== "undefined" && document.getElementById("techCloudTrack")) renderTechTrackInto("techCloudTrack", TECH_CLOUD);
+    if (typeof TECH_BLOCKCHAIN !== "undefined" && document.getElementById("techBlockchainTrack")) renderTechTrackInto("techBlockchainTrack", TECH_BLOCKCHAIN);
+    if (typeof TECH_AI !== "undefined" && document.getElementById("techAiTrack")) renderTechTrackInto("techAiTrack", TECH_AI);
+  }
+  if (typeof renderProjects === "function" && document.getElementById("projectsContainer")) {
+    renderProjects("projectsContainer");
+  }
+  if (typeof renderSocialLinks === "function") {
+    const socialEl = document.querySelector("#socialLinksContainer, .contact-items");
+    if (socialEl) renderSocialLinks(socialEl.id ? "#" + socialEl.id : ".contact-items");
+  }
+  if (typeof renderAwards === "function" && document.getElementById("awardsContainer")) {
+    renderAwards("awardsContainer");
+  }
+  if (typeof renderCertifications === "function" && document.getElementById("certificationsContainer")) {
+    renderCertifications("certificationsContainer");
+  }
+  if (typeof renderExperienceCards === "function" && document.getElementById("experienceContainer")) {
+    renderExperienceCards("experienceContainer");
+  }
+  if (typeof renderExperienceModals === "function" && document.getElementById("experienceModalsContainer")) {
+    renderExperienceModals("experienceModalsContainer");
+  }
+  if (typeof renderEducation === "function" && document.getElementById("educationContainer")) {
+    renderEducation("educationContainer");
+  }
+  if (typeof renderSkillsGrid === "function" && document.getElementById("skillsGrid") && typeof PROFESSIONAL_SKILLS !== "undefined") {
+    renderSkillsGrid("skillsGrid", PROFESSIONAL_SKILLS, 8, "additional-skill");
+  }
+  if (typeof renderSkillsGrid === "function" && document.getElementById("languagesGrid") && typeof LANGUAGES_LIST !== "undefined") {
+    renderSkillsGrid("languagesGrid", LANGUAGES_LIST, 7, "additional-language");
+  }
+  if (typeof renderResumeAwards === "function" && document.getElementById("resumeAwardsContainer")) {
+    renderResumeAwards("resumeAwardsContainer");
+  }
+  if (typeof renderExtracurricular === "function" && document.getElementById("extracurricularContainer")) {
+    renderExtracurricular("extracurricularContainer");
+  }
+
   if (window.innerWidth >= 450) {
     addcursor();
     cursorAppear = false;

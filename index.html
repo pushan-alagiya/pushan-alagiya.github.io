@@ -35,8 +35,11 @@
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Data and components (load before scripts)-->
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
   <!-- Core theme JS-->
-  <script src="/js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
 
 
 </head>
@@ -71,37 +74,8 @@
     </div>
   </div>
   <main class="flex-shrink-0">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-      <div class="container px-5">
-        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">My Portfolio</span></a>
-        <button class="text-gradient night-toggler">
-          <i class="bi bi-moon-stars-fill"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resume.html">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="certificates.html">Achievements</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Featured Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- Navigation (injected from js/data.js + components.js)-->
+    <div id="nav-placeholder"></div>
 
     <!-- Header-->
     <header class="py-5">
@@ -267,22 +241,8 @@
               <p class="text-muted animate__animated animate__fadeInUp animate__fast">
                 I'm a Full Stack Developer skilled in backend (Node.js, NestJS, Express, GraphQL) and frontend (React, Next.js, TypeScript) technologies. I have strong experience with AWS, Azure, Docker, Kubernetes, and blockchain (Solidity, smart contracts, Web3). With 18+ projects delivered, I focus on building scalable and innovative solutions.
               </p>
-              <div class="d-flex justify-content-center fs-2 gap-4 animate__animated animate__fadeIn animate__fast">
-                <a class="text-gradient" href="https://devfolio.co/@pushan_alagiya">
-                  <i class="bi bi-file-code-fill"></i>
-                </a>
-                <a class="text-gradient" href="https://www.linkedin.com/in/pushan-alagiya-7a332220b">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-                <a class="text-gradient" href="https://github.com/pushan-alagiya">
-                  <i class="bi bi-github"></i>
-                </a>
-                <a class="text-gradient" href="https://twitter.com/alagiyapushan">
-                  <i class="bi bi-twitter"></i>
-                </a>
-                <a class="text-gradient" href="https://www.youtube.com/channel/UCC6XM-0RirW0uYAafl0o6Wg">
-                  <i class="bi bi-youtube"></i>
-                </a>
+              <div id="socialLinksContainer" class="d-flex justify-content-center fs-2 gap-4 animate__animated animate__fadeIn animate__fast">
+                <!-- Social links injected from js/data.js -->
               </div>
             </div>
           </div>
@@ -302,434 +262,48 @@
 
         <div class="row gx-5 justify-content-center">
           <div class="col-lg-10">
-            <!-- Backend Technologies -->
+            <!-- Backend Technologies (injected from js/data.js) -->
             <div class="mb-5">
               <div class="tech-carousel">
                 <h4 class="text-center mb-4">Backend Technologies</h4>
-                <div class="tech-track">
-                  <div class="tech-item">
-                    <img src="assets/svg/Node.js.svg" alt="Node.js" />
-                    <span>Node.js</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Nest.js.svg" alt="NestJS" />
-                    <span>NestJS</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Express.svg" alt="Express" />
-                    <span>Express</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Socket.io.svg" alt="WebSocket" />
-                    <span>WebSocket</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Laravel.svg" alt="Laravel" />
-                    <span>Laravel</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/GraphQL.svg" alt="GraphQL" />
-                    <span>GraphQL</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                    <span>Solidity</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Deno.svg" alt="Deno" />
-                    <span>Deno</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/grpc.svg" alt="gRPC" />
-                    <span>gRPC</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Apache-Kafka.svg" alt="Kafka" />
-                    <span>Kafka</span>
-                  </div>
-                  <!-- Duplicate for seamless loop -->
-                  <div class="tech-item">
-                    <img src="assets/svg/Node.js.svg" alt="Node.js" />
-                    <span>Node.js</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Nest.js.svg" alt="NestJS" />
-                    <span>NestJS</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Laravel.svg" alt="Laravel" />
-                    <span>Laravel</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/GraphQL.svg" alt="GraphQL" />
-                    <span>GraphQL</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Express.svg" alt="Express" />
-                    <span>Express</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Socket.io.svg" alt="WebSocket" />
-                    <span>WebSocket</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                    <span>Solidity</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Deno.svg" alt="Deno" />
-                    <span>Deno</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/grpc.svg" alt="gRPC" />
-                    <span>gRPC</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Apache-Kafka.svg" alt="Kafka" />
-                    <span>Kafka</span>
-                  </div>
-                </div>
+                <div id="techBackendTrack" class="tech-track"></div>
               </div>
             </div>
 
-            <!-- Frontend Technologies -->
+            <!-- Frontend Technologies (injected from js/data.js) -->
             <div class="mb-5">
               <div class="frontend-carousel">
                 <h4 class="text-center mb-4">Frontend Technologies</h4>
-                <div class="frontend-track">
-                  <div class="tech-item">
-                    <img src="assets/svg/Next.js.svg" alt="Next.js" />
-                    <span>Next.js</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/React.svg" alt="React" />
-                    <span>React</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Redux.svg" alt="Redux" />
-                    <span>Redux</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/TypeScript.svg" alt="TypeScript" />
-                    <span>TypeScript</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Material-UI.svg" alt="Material-UI" />
-                    <span>MUI</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Bootstrap.svg" alt="Bootstrap" />
-                    <span>Bootstrap</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Socket.io.svg" alt="WebSockets" />
-                    <span>WebSocket</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/ESLint.svg" alt="ESLint" />
-                    <span>ESLint</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/CSS3.svg" alt="CSS3" />
-                    <span>CSS3</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/HTML5.svg" alt="HTML5" />
-                    <span>HTML5</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/JavaScript.svg" alt="JavaScript" />
-                    <span>JavaScript</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Tailwind-CSS.svg" alt="TailwindCSS" />
-                    <span>Tailwind</span>
-                  </div>
-                  <!-- Duplicate for seamless loop -->
-                  <div class="tech-item">
-                    <img src="assets/svg/Next.js.svg" alt="Next.js" />
-                    <span>Next.js</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/React.svg" alt="React" />
-                    <span>React</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Redux.svg" alt="Redux" />
-                    <span>Redux</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/TypeScript.svg" alt="TypeScript" />
-                    <span>TypeScript</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Material-UI.svg" alt="Material-UI" />
-                    <span>MUI</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Bootstrap.svg" alt="Bootstrap" />
-                    <span>Bootstrap</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Socket.io.svg" alt="WebSockets" />
-                    <span>WebSocket</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/ESLint.svg" alt="ESLint" />
-                    <span>ESLint</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/CSS3.svg" alt="CSS3" />
-                    <span>CSS3</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/HTML5.svg" alt="HTML5" />
-                    <span>HTML5</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/JavaScript.svg" alt="JavaScript" />
-                    <span>JavaScript</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Tailwind-CSS.svg" alt="TailwindCSS" />
-                    <span>Tailwind</span>
-                  </div>
-                </div>
+                <div id="techFrontendTrack" class="frontend-track"></div>
               </div>
             </div>
 
             <!-- Cloud & Blockchain Technologies -->
             <div class="mb-0">
               <div class="row gx-5">
-                <!-- Cloud Technologies -->
+                <!-- Cloud Technologies (injected from js/data.js) -->
                 <div class="col-lg-6 mb-5">
                   <div class="cloud-carousel">
                     <h4 class="text-center mb-4">Cloud Technologies</h4>
-                    <div class="cloud-track">
-                      <div class="tech-item">
-                        <img src="assets/svg/AWS.svg" alt="AWS" />
-                        <span>AWS</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Azure.svg" alt="Azure" />
-                        <span>Azure</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Google-Cloud.svg" alt="Google Cloud" />
-                        <span>Google Cloud</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Docker.svg" alt="Docker" />
-                        <span>Docker</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Kubernetes.svg" alt="Kubernetes" />
-                        <span>Kubernetes</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Digital-Ocean.svg" alt="DigitalOcean" />
-                        <span>DigitalOcean</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Heroku.svg" alt="Heroku" />
-                        <span>Heroku</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Vercel.svg" alt="Vercel" />
-                        <span>Vercel</span>
-                      </div>
-                      <!-- Duplicate for seamless loop -->
-                      <div class="tech-item">
-                        <img src="assets/svg/AWS.svg" alt="AWS" />
-                        <span>AWS</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Azure.svg" alt="Azure" />
-                        <span>Azure</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Google-Cloud.svg" alt="Google Cloud" />
-                        <span>Google Cloud</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Docker.svg" alt="Docker" />
-                        <span>Docker</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Kubernetes.svg" alt="Kubernetes" />
-                        <span>Kubernetes</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Digital-Ocean.svg" alt="DigitalOcean" />
-                        <span>DigitalOcean</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Heroku.svg" alt="Heroku" />
-                        <span>Heroku</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Vercel.svg" alt="Vercel" />
-                        <span>Vercel</span>
-                      </div>
-                    </div>
+                    <div id="techCloudTrack" class="cloud-track"></div>
                   </div>
                 </div>
 
-                <!-- Blockchain Technologies -->
+                <!-- Blockchain Technologies (injected from js/data.js) -->
                 <div class="col-lg-6 mb-5">
                   <div class="blockchain-carousel">
                     <h4 class="text-center mb-4">Blockchain Technologies</h4>
-                    <div class="blockchain-track">
-                      <div class="tech-item">
-                        <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                        <span>Solidity</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Hardhat.svg" alt="Hardhat" />
-                        <span>Hardhat</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/JavaScript.svg" alt="Ethers.js" />
-                        <span>Ethers.js</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/JavaScript.svg" alt="Web3.js" />
-                        <span>Web3.js</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Polygon.svg" alt="Polygon" />
-                        <span>Polygon</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/WebAssembly.svg" alt="Ethereum" />
-                        <span>Ethereum</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Rust.svg" alt="Solana" />
-                        <span>Solana</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Vyper.svg" alt="Vyper" />
-                        <span>Vyper</span>
-                      </div>
-                      <!-- Duplicate for seamless loop -->
-                      <div class="tech-item">
-                        <img src="assets/svg/Solidity.svg" alt="Solidity" />
-                        <span>Solidity</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Hardhat.svg" alt="Hardhat" />
-                        <span>Hardhat</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/JavaScript.svg" alt="Ethers.js" />
-                        <span>Ethers.js</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/JavaScript.svg" alt="Web3.js" />
-                        <span>Web3.js</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Polygon.svg" alt="Polygon" />
-                        <span>Polygon</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/WebAssembly.svg" alt="Ethereum" />
-                        <span>Ethereum</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Rust.svg" alt="Solana" />
-                        <span>Solana</span>
-                      </div>
-                      <div class="tech-item">
-                        <img src="assets/svg/Vyper.svg" alt="Vyper" />
-                        <span>Vyper</span>
-                      </div>
-                    </div>
+                    <div id="techBlockchainTrack" class="blockchain-track"></div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- AI Technologies -->
+            <!-- AI Technologies (injected from js/data.js) -->
             <div class="mb-5">
               <div class="ai-carousel">
                 <h4 class="text-center mb-4">AI Technologies</h4>
-                <div class="ai-track">
-                  <div class="tech-item">
-                    <img src="assets/svg/LangGraph.svg" alt="LangGraph" />
-                    <span>LangGraph</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/LangChain.svg" alt="LangChain" />
-                    <span>LangChain</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Google-Gemini.svg" alt="Google AI SDK" />
-                    <span>Google AI SDK</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/n8n.svg" alt="n8n" />
-                    <span>n8n</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Flowise.svg" alt="Flowise" />
-                    <span>Flowise</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/ChatGPT.svg" alt="ChatGPT" />
-                    <span>ChatGPT</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Gemini.svg" alt="Gemini" />
-                    <span>Gemini</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Claude.svg" alt="Claude" />
-                    <span>Claude</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Anthropic.svg" alt="Anthropic" />
-                    <span>Anthropic</span>
-                  </div>
-                  <!-- Duplicate for seamless loop -->
-                  <div class="tech-item">
-                    <img src="assets/svg/LangGraph.svg" alt="LangGraph" />
-                    <span>LangGraph</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/LangChain.svg" alt="LangChain" />
-                    <span>LangChain</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Google-Gemini.svg" alt="Google AI SDK" />
-                    <span>Google AI SDK</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/n8n.svg" alt="n8n" />
-                    <span>n8n</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Flowise.svg" alt="Flowise" />
-                    <span>Flowise</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/ChatGPT.svg" alt="ChatGPT" />
-                    <span>ChatGPT</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Gemini.svg" alt="Gemini" />
-                    <span>Gemini</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Claude.svg" alt="Claude" />
-                    <span>Claude</span>
-                  </div>
-                  <div class="tech-item">
-                    <img src="assets/svg/Anthropic.svg" alt="Anthropic" />
-                    <span>Anthropic</span>
-                  </div>
-                </div>
+                <div id="techAiTrack" class="ai-track"></div>
               </div>
             </div>
           </div>
@@ -737,48 +311,17 @@
       </div>
     </section>
 
-    <!-- Stats/Achievements Section -->
+    <!-- Stats/Achievements Section (injected from js/data.js) -->
     <section class="bg-light py-5">
       <div class="container px-5">
-        <div class="row gx-5 text-center">
-          <div class="col-lg-3 col-6 mb-4">
-            <div class="stat-item">
-              <div class="display-4 fw-bolder text-primary">18+</div>
-              <div class="text-muted fw-light">Projects Completed</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mb-4">
-            <div class="stat-item">
-              <div class="display-4 fw-bolder text-success">3+</div>
-              <div class="text-muted fw-light">Years Experience</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mb-4">
-            <div class="stat-item">
-              <div class="display-4 fw-bolder text-warning">15+</div>
-              <div class="text-muted fw-light">Technologies Mastered</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mb-4">
-            <div class="stat-item">
-              <div class="display-4 fw-bolder text-info">100%</div>
-              <div class="text-muted fw-light">Commitment</div>
-            </div>
-          </div>
+        <div id="statsContainer" class="row gx-5 text-center">
+          <!-- Stats injected from js/data.js -->
         </div>
       </div>
     </section>
   </main>
-  <!-- Footer-->
-  <footer class="bg-white py-4 mt-auto">
-    <div class="container px-5">
-      <div class="d-flex justify-content-center">
-        <div class="col-auto">
-          <div class="small m-0">Copyright &copy;</div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (injected from js/components.js) -->
+  <div id="footer-placeholder"></div>
 </body>
 
 </html>

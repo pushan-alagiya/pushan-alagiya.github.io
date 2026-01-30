@@ -46,14 +46,9 @@
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      let description = document.getElementById("loadOverlay");
-      setTimeout(() => {
-        description.setAttribute("style", "display: none;");
-      }, 1500);
-    </script>
-    
+    <!-- Data and components (load before scripts)-->
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
   </head>
@@ -61,7 +56,7 @@
   <body class="d-flex flex-column h-100 bg-light">
     <main class="flex-shrink-0">
       <div
-      id="loadOverlay"
+        id="loadOverlay"
       style="
         background-color: rgb(54, 54, 54);
         position: absolute;
@@ -93,47 +88,8 @@
         </div>
       </div>
     </div>
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">My Portfolio</span></a
-          >
-          <button class="text-gradient night-toggler">
-            <i class="bi bi-moon-stars-fill"></i>
-          </button>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="certificates.html">Achievements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </li>
-          </div>
-        </div>
-      </nav>
+      <!-- Navigation (injected from js/data.js + components.js)-->
+      <div id="nav-placeholder"></div>
 
       <!-- Page Content-->
       <div class="container px-5 my-5">
@@ -144,210 +100,34 @@
         </div>
         <div class="row gx-5 justify-content-center">
           <div class="col-lg-11 col-xl-9 col-xxl-8">
-            <!-- Awards Section-->
-    <!-- Awards Section-->
-    <section>
-        <h2 class="text-primary fw-bolder mb-4">Awards</h2>
-        <!--  Card 1-->
-        <div class="card shadow border-0 rounded-4 mb-5">
-          <div class="card-body p-5">
-            <div class="row align-items-center gx-5">
-              
-              <!-- CARD 1 -->
-              <div class="col text-center text-mg-start mb-5 mb-lg-0">
-                <div class="bg-light p-4 rounded-4">
-                  <h3 class="fw-bolder mb-0">
-                    <span class="text-gradient small-awards d-inline">Devang Mehta IT Awards - 2022</span>
-                  </h3>
-                  <br>
-                  <a href="https://dewangmehtafoundation.org/" target="_blank"><img class="border-rad noinverseimgages" src="assets/Awards/DMIA - 2022.webp" width="90%" alt=""></a>
-                  <div class="text-sm awards-text">
-                    Facilitation of Toppers <br>
-                    <div class="small text-muted lower-text">College Topper 2022</div>
+            <!-- Awards Section (injected from js/data.js)-->
+            <section>
+              <h2 class="text-primary fw-bolder mb-4">Awards</h2>
+              <div class="card shadow border-0 rounded-4 mb-5">
+                <div class="card-body p-5">
+                  <div id="awardsContainer" class="row align-items-center gx-5">
+                    <!-- Awards injected from js/data.js -->
                   </div>
-                </div>  
+                </div>
               </div>
-  
-              <!-- CARD 2 -->
-              <div class="col-lg-6">
-                <div class="col text-center text-mg-start  mb-lg-0">
-                  <div class="bg-light p-4 rounded-4">
-                    <h3 class="fw-bolder mb-0">
-                      <span class="text-gradient small-awards d-inline">Devang Mehta IT Awards - 2023</span>
-                    </h3>
-                    <br>
-                    <a href="https://dewangmehtafoundation.org/" target="_blank"><img class="border-rad noinverseimgages" src="assets/Awards/DM.webp" width="90%" alt=""></a>
-                    <div class="text-sm awards-text">
-                      Facilitation of Toppers <br>
-                      <div class="small text-muted  lower-text">College Topper 2023</div>
-                    </div>
-                  </div>  
-                </div>  
+            </section>
+
+            <div class="pb-5"></div>
+
+            <!-- Certifications Section (injected from js/data.js)-->
+            <section>
+              <h2 class="text-primary fw-bolder mb-4">Certifications</h2>
+              <div id="certificationsContainer">
+                <!-- Certifications injected from js/data.js -->
               </div>
-  
-            </div>
+            </section>
           </div>
         </div>
-        </section>
-  
-        <!-- Divider-->
-        <div class="pb-5"></div>
-
-        <section>
-            <h2 class="text-primary fw-bolder mb-4">Certifications</h2>
-            
-
-             <!--  AWS Certified Developer Associate -->
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <div class="row align-items-center gx-5">
-                  <div class="col text-center text-mg-start mb-4 mb-lg-0" >
-                    <div class="bg-light p-4 rounded-4">
-                      
-                      <a href="https://www.credly.com/badges/7ffb95b2-5688-4b16-8ec4-7ad2c9be4aa1" target="_blank" ><img class="border-rad noinverseimgages" src="assets/Certifications/AWS-dev.webp" width="100%" alt="AWS Certified Developer Associate"></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="text-sm">
-                      Earning the <b class="text-gradient">AWS Certified Developer - Associate</b> certification demonstrates comprehensive knowledge in developing, deploying, and debugging cloud-based applications using AWS services, showcasing expertise in modern cloud development practices.
-                    </div>
-                    <br>
-                    <div class="text-gradient fw-bolder">Skills Learnt</div>
-                    <ul>
-                        <li class="skills-learnt text-sm">AWS core services and cloud architecture patterns</li>
-                        <li class="skills-learnt text-sm">Serverless application development with Lambda</li>
-                        <li class="skills-learnt text-sm">CI/CD pipelines and deployment automation</li>
-                        <li class="skills-learnt text-sm">Monitoring, logging, and troubleshooting applications</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- MongoDB NodeJS -->
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <div class="row align-items-center gx-5">
-                  <div class="col text-center text-mg-start mb-4 mb-lg-0" >
-                    <div class="bg-light p-4 rounded-4">
-                      
-                      <a href="https://drive.google.com/file/d/1DPr9l6IebIHeSC-fqfnh9xCpGBl1vTsP/view?usp=drivesdk" target="_blank" ><img class="border-rad noinverseimgages" src="assets/Certifications/mongodb.webp" width="100%" alt=""></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="text-sm">
-                      Earning the <b class="text-gradient">MongoDB Node.js Developer Certification</b> demonstrates proficiency in building applications using MongoDB and Node.js, along with strong problem-solving and database management skills.
-                    </div>
-                    <br>
-                    <div class="text-gradient fw-bolder">Skills Learnt </div>
-                    <ul>
-                      <li class="skills-learnt text-sm">Advanced data modeling Concepts</li>
-                      <li class="skills-learnt text-sm">Aggregation pipeline</li>
-                      <li class="skills-learnt text-sm">Production deployment and scaling of Node.js apps</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-             <!--  Postman Students Expert -->
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <div class="row align-items-center gx-5">
-                  <div class="col text-center text-mg-start mb-4 mb-lg-0" >
-                    <div class="bg-light p-4 rounded-4">
-                      
-                      <a href="https://badgr.com/public/assertions/ieiKNkNNS_e8ZV_d00Av3g" target="_blank" ><img class="border-rad noinverseimgages" src="assets/Certifications/Postman.webp" width="100%" alt=""></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="text-sm">
-                        Earning the <b class="text-gradient">Postman Student Expert badge</b> showcases proficiency in creating, managing, and executing API tests, along with effective communication and teamwork skills.
-                    </div>
-                    <br>
-                    <div class="text-gradient fw-bolder">Skills Learnt </div>
-                    <ul>
-                        <li class="skills-learnt text-sm">API testing with Postman.</li>
-                        <li class="skills-learnt text-sm">   Collaborative communication.</li>
-                        <li class="skills-learnt text-sm">  Efficient API test management.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            
-            <!--  MongoDB Intro -->
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <div class="row align-items-center gx-5">
-                  <div class="col text-center text-mg-start mb-4 mb-lg-0" >
-                    <div class="bg-light p-4 rounded-4">
-                      
-                      <a href="https://badgr.com/public/assertions/ieiKNkNNS_e8ZV_d00Av3g" target="_blank" ><img class="border-rad noinverseimgages" src="assets/Certifications/mongodb.webp" width="100%" alt=""></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="text-sm">
-                        Upon completing the <b class="text-gradient">Introduction to MongoDB Course</b>, I possesd a solid foundation in leveraging MongoDB. I gained insights into advanced topics such as performance optimization through indexing strategies.
-                    </div>
-                    <br>
-                    <div class="text-gradient fw-bolder">Skills Learnt</div>
-                    <ul>
-                        <li class="skills-learnt text-sm">Database operations</li>
-                        <li class="skills-learnt text-sm">Data modeling principles and indexing</li>
-                        <li class="skills-learnt text-sm">Querying and aggregation techniques</li>
-                    </ul>
-                </div>
-                
-                </div>
-              </div>
-            </div>
-
-
-            <!--  NPTEL - Java -->
-             <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <div class="row align-items-center gx-5">
-                  <div class="col text-center text-mg-start mb-4 mb-lg-0" >
-                    <div class="bg-light p-4 rounded-4">
-                      
-                      <a href="https://drive.google.com/file/d/1l7wiB3xTyJJJWpb3Hf29risnsFYhI-LV/view?usp=sharing" target="_blank" ><img class="border-rad noinverseimgages" src="assets/Certifications/NPTEL-Java.webp" width="100%" alt=""></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="text-sm">
-                      Earning the <b class="text-gradient">Certificate for the Completion of Java Training</b> signifies proficiency in Java programming, demonstrating skills in problem-solving, software development, and understanding fundamental concepts with an outstanding score of 97.50%.
-                  </div>
-                  <br>
-                  <div class="text-gradient fw-bolder">Skills Learned</div>
-                  <ul>
-                      <li class="skills-learnt text-sm">Java syntax and language features.</li>
-                      <li class="skills-learnt text-sm">Object-oriented programming principles.</li>
-                      <li class="skills-learnt text-sm">Data structures and algorithms implementation.</li>
-                  </ul>
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            </div>
-          </section>
         </main>
 
 
-    <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="d-flex justify-content-center">
-          <div class="col-auto">
-            <div class="small m-0">Copyright &copy;</div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer (injected from js/components.js)-->
+    <div id="footer-placeholder"></div>
     
   </body>
 </html>

@@ -47,14 +47,9 @@
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      let description = document.getElementById("loadOverlay");
-      setTimeout(() => {
-        description.setAttribute("style", "display: none;");
-      }, 1500);
-    </script>
-
+    <!-- Data and components (load before scripts)-->
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="js/form-validation.js"></script>
@@ -95,47 +90,8 @@
       </div>
     </div>
     <main class="flex-shrink-0">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">My Portfolio</span></a
-          >
-          <button class="text-gradient night-toggler">
-            <i class="bi bi-moon-stars-fill"></i>
-          </button>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="certificates.html">Achievements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <!-- Navigation (injected from js/data.js + components.js)-->
+      <div id="nav-placeholder"></div>
 
       <!-- Page content-->
       <section class="py-5">
@@ -160,32 +116,8 @@
                   pushanalagiya@gmail.com
                 </div>
                 <div class="bg-light p-4 rounded-4">
-                  <div class="d-flex justify-content-center contact-items">
-                    <a
-                      class="text-gradient"
-                      href="https://devfolio.co/@pushan_alagiya"
-                      ><i class="bi bi-file-code-fill"></i
-                    ></a>
-                    <a
-                      class="text-gradient"
-                      href="https://www.linkedin.com/in/pushan-alagiya-7a332220b"
-                      ><i class="bi bi-linkedin"></i
-                    ></a>
-                    <a
-                      class="text-gradient"
-                      href="https://github.com/pushan-alagiya"
-                      ><i class="bi bi-github"></i
-                    ></a>
-                    <a
-                      class="text-gradient"
-                      href="https://twitter.com/alagiyapushan"
-                      ><i class="bi bi-twitter"></i
-                    ></a>
-                    <a
-                      class="text-gradient"
-                      href="https://www.youtube.com/channel/UCC6XM-0RirW0uYAafl0o6Wg"
-                      ><i class="bi bi-youtube"></i
-                    ></a>
+                  <div id="socialLinksContainer" class="d-flex justify-content-center contact-items">
+                    <!-- Social links injected from js/data.js -->
                   </div>
                 </div>
               </div>
@@ -309,15 +241,7 @@
       </section>
     </main>
 
-    <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="d-flex justify-content-center">
-          <div class="col-auto">
-            <div class="small m-0">Copyright &copy;</div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer (injected from js/components.js)-->
+    <div id="footer-placeholder"></div>
   </body>
 </html>

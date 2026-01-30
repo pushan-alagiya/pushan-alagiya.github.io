@@ -30,143 +30,11 @@
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    let description = document.getElementById("loadOverlay");
-    setTimeout(() => {
-      description.setAttribute("style", "display: none;");
-    }, 1500);
-  </script>
+  <!-- Data and components (load before scripts)-->
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
-  <script>
-    // Projects data array
-    const projectsData = [{
-        title: "Invity",
-        description: "An innovative event invitation and management platform. Invity provides a seamless experience for creating, managing, and sharing event invitations with modern features and intuitive design.",
-        image: "assets/invity.png",
-        githubUrl: "https://github.com/pushan-alagiya/Invitly",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      },
-      {
-        title: "BlockchainViz",
-        description: "Built an exploration platform designed to help developers truly understand how blockchain works; not just at a conceptual level, but through interactive visualization and hands-on experience. The goal is simple: break down complex Web3 concepts into clear, visual, and practical modules. What you'll find inside: Cryptography Fundamentals (Encodings, Hashing, Encryption, Signatures), Blockchain Core (How blockchain & transactions work, HD wallets), Smart Contracts & Platforms (Solidity fundamentals, Solana deep dive), Solana Ecosystem (Accounts, CLI, environments, Web3 data model), Tokens & DeFi (Token launchpads, liquidity pools, PoS, liquid staking), Dev Tools & Wallets (Alchemy API, wallet demos & adapters), Security & MPC (Key storage methods, MPC wallet architecture). If you're learning blockchain and want a clear mental model of what's happening under the hood, this should help. This is built with NextJS and has integration of some of the most prominent Web3 Libraries in JS.",
-        image: "assets/blockchain.png",
-        githubUrl: "https://blockchain-viz-seven.vercel.app/",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      },
-      {
-        title: "SabhaSthal V2",
-        description: "SabhaSthal is an upgraded, peer-to-peer video conferencing and collaboration platform, now with additional real-time interactive features. This new version (V2) introduces a collaborative drawing board with customizable strokes and colors, enhanced chat functionality, optimized screen sharing, and user control toggles for camera and microphone. SabhaSthal V2 also includes login and sign-up functionality and a refreshed UI, creating a seamless and versatile experience for virtual meetings and collaboration. Features include real-time collaborative drawing board with live updates, customizable strokes and colors, enhanced chat functionality with optimized messaging, improved screen sharing for smoother streaming, camera and microphone toggles for privacy control, user authentication with secure login and sign-up, and updated responsive UI for intuitive user experience.",
-        image: "assets/Sabhathal-v2-1.webp",
-        githubUrl: "https://github.com/pushan-alagiya/SabhaSthal-V2",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      },
-      {
-        title: "SabhaSthal V1",
-        description: "SabhaSthal is a peer-to-peer video conferencing web application that enables real-time video communication and chat among users. This initial version (V1) is built with Node.js, Socket.IO, and React, using WebRTC for seamless, high-quality video streaming. The app supports video calls, direct chat, and an interactive UI for connecting users effortlessly. Features include real-time video conferencing with WebRTC for smooth, low-latency video and audio calls, instant messaging integrated with video calls, peer-to-peer communication managed by Socket.IO, and responsive design optimized for both desktop and mobile devices.",
-        image: "assets/Sabhasthal-v1.webp",
-        githubUrl: "https://github.com/pushan-alagiya/SabhaSthal-V1",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      },
-      {
-        title: "DScrap",
-        description: "The innovative waste recycling platform, built with React and React Router DOM, ensures a smooth user experience. It allows a user to book a hassle-free sale, pick-up and call for any type of scrap. You can schedule a pick-up call through our website at a time and date that is convenient for you. Utilizing Axios for efficient data fetching and Bootstrap icons for an appealing UI, we prioritize user convenience. On the backend, we employ Express.js and MongoDB for seamless data management, with bcrypt for enhanced security.",
-        image: "assets/Admin Sequence.webp",
-        githubUrl: "https://github.com/pushan-alagiya/DScrap",
-        imageClass: "noinverseimgages rounded-4 project-images"
-      },
-      {
-        title: "AI Chatbot",
-        description: "This project is an AI-powered chatbot built using React.js, Node.js, Express.js, and the OpenAI API. The chatbot is capable of understanding and responding to user inputs naturally, making it ideal for applications such as customer support, virtual assistance, or just general conversation. Features include natural language understanding powered by OpenAI's advanced language models, interactive chat interface with real-time dynamic responses, customizable behavior to suit specific use cases, and scalable modular architecture for easy expansion and integration.",
-        image: "assets/Chat.webp",
-        githubUrl: "https://github.com/pushan-alagiya/ai-chat-bot",
-        imageClass: "noinverseimgages rounded-4 project-images"
-      },
-      {
-        title: "NextJS Boilerplate CLI",
-        description: "BE-CLI - Enterprise NestJS Application Generator. A production-grade interactive CLI tool that generates enterprise-ready NestJS backend applications with zero configuration hassle. BE-CLI is an enterprise-grade CLI tool that extends the official NestJS CLI to generate production-ready, scalable backend applications. It provides an interactive wizard to configure your project with best practices, security, logging, and modern architecture patterns built-in. Why BE-CLI? Zero Manual Configuration - All dependencies and configurations are automatically handled. Production-Ready - Security, error handling, logging, and monitoring out of the box. Interactive & Intuitive - Beautiful TUI with section-based editing and progress tracking. Feature-Rich - Database, Auth, AWS, Background Jobs, Realtime, and more. TypeScript-First - Full TypeScript support with strict mode. Cross-Platform - Works on Windows, macOS, and Linux. Auto-Documentation - Swagger/OpenAPI, README, and architecture docs generated automatically.",
-        image: "assets/backend-cli.png",
-        githubUrl: "https://github.com/pushan-alagiya/be-cli",
-        imageClass: "noinverseimgages rounded-4 project-images"
-      },
-      {
-        title: "Full Stack Netflix Clone",
-        description: "Currently, I'm creating a captivating full-stack Netflix clone using the power-packed MERN stack (MongoDB, Express.js, React, Node.js). On the surface, the journey might appear straightforward, but as I delve deeper, I'm uncovering layers of complexity that truly challenge and invigorate.",
-        image: "assets/netflix.webp",
-        githubUrl: "https://github.com/pushan-alagiya/Netflix-Clone",
-        imageClass: "rounded-4 noinverseimgages project-images"
-      },
-      {
-        title: "Social App Backend",
-        description: "My social app, crafted with Express.js and MongoDB, offers seamless connections and engaging interactions. Leveraging JWT for secure authentication and bcrypt for password encryption, I have ensured user privacy. CORS facilitates smooth cross-origin communication, while multer enables effortless file uploads. The robust backend promise a seamless and secure social networking experience.",
-        image: "assets/social-app.webp",
-        githubUrl: "https://github.com/pushan-alagiya/Celestial-Social-Nexus-Backend",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      },
-      {
-        title: "Elect 3.0",
-        description: "The Elect 3.0 is developed to overcome the flaws of EVM system. So directly EVM will be replaced by touch screen interface having the great user interface and high security. The project is based on an emerging tech of web3 - The Blockchain.",
-        image: "assets/5.webp",
-        githubUrl: "https://github.com/pushan-alagiya/Elect-3.0",
-        imageClass: "rounded-4 noinverseimgages project-images"
-      },
-      {
-        title: "Cwrite",
-        description: "The Simple React Blog App is a web application that allows users to read and delete blog posts. Developed using React, this user-friendly app provides a seamless and interactive experience for both blog readers and administrators. By leveraging the power of React components and state management, the app offers an efficient way to browse through blog posts and manage content easily.",
-        image: "assets/cwrite.webp",
-        githubUrl: "https://github.com/pushan-alagiya/cwrite",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      },
-      {
-        title: "Recipy",
-        description: "A fully-featured, JavaScript-based recipe website offering users a seamless experience to discover, search, and save recipes. The platform includes authentication, recipe bookmarking, cart management, pagination, and more—all managed entirely on the frontend. Features include user authentication with credentials stored in local storage, powerful recipe search and filtering by keywords, categories, ingredients, or dietary preferences, bookmarking functionality for favorite recipes, recipe cart for meal planning and shopping list export, pagination for improved performance, and responsive UI optimized for mobile, tablet, and desktop views.",
-        image: "assets/Recipy.webp",
-        githubUrl: "https://github.com/pushan-alagiya/Recipy",
-        imageClass: "rounded-4 noinverseimgage project-images"
-      }
-    ];
-
-    // Function to render projects
-    function renderProjects() {
-      const container = document.getElementById("projectsContainer");
-      if (!container) return;
-
-      container.innerHTML = projectsData
-        .map(
-          (project) => `
-          <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-            <div class="card-body p-0">
-              <div class="d-flex align-items-center row align-items-center gx-5">
-                <div class="col text-center text-mg-start mb-4 mb-lg-0">
-                  <a href="${project.githubUrl}" target="_blank">
-                    <img
-                      src="${project.image}"
-                      alt="${project.title}"
-                      width="100%"
-                      class="${project.imageClass}"
-                    />
-                  </a>
-                </div>
-                <div class="projects-5">
-                  <h2 class="fw-bolder text-gradient text-center">
-                    ${project.title}
-                  </h2>
-                  <br />
-                  <p class="text-sm">
-                    ${project.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        `
-        )
-        .join("");
-    }
-
-    // Render projects when DOM is loaded
-    document.addEventListener("DOMContentLoaded", renderProjects);
-  </script>
 </head>
 
 <body class="d-flex flex-column h-100 bg-light">
@@ -199,37 +67,8 @@
     </div>
   </div>
   <main class="flex-shrink-0">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-      <div class="container px-5">
-        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">My Portfolio</span></a>
-        <button class="text-gradient night-toggler">
-          <i class="bi bi-moon-stars-fill"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resume.html">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="certificates.html">Achievements</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- Navigation (injected from js/data.js + components.js)-->
+    <div id="nav-placeholder"></div>
     <!-- Projects Section-->
     <section class="py-5">
       <div class="container px-5 mb-5">
@@ -260,16 +99,8 @@
       </div>
     </section>
   </main>
-  <!-- Footer-->
-  <footer class="bg-white py-4 mt-auto">
-    <div class="container px-5">
-      <div class="d-flex justify-content-center">
-        <div class="col-auto">
-          <div class="small m-0">Copyright &copy;</div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (injected from js/components.js)-->
+  <div id="footer-placeholder"></div>
 </body>
 
 </html>
