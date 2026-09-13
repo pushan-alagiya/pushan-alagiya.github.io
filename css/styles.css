@@ -13837,3 +13837,53 @@ a {
 .experience-card-forge:hover .cert-img-forge {
   transform: scale(1.04);
 }
+
+/* Hero Profile Image & Floating Elements */
+.hero-img-frame {
+  padding: 20px;
+}
+
+.hero-profile-img {
+  max-width: 310px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  aspect-ratio: 4/5;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.hero-floating-badge {
+  max-width: 250px;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 992px) {
+  .hero-img-frame {
+    padding: 24px;
+  }
+  .hero-profile-img {
+    max-width: 365px !important;
+  }
+  .hero-floating-badge {
+    max-width: 275px !important;
+    padding: 0.65rem 1.25rem !important;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-img-frame {
+    padding: 26px;
+  }
+  .hero-profile-img {
+    max-width: 395px !important;
+  }
+  .hero-floating-badge {
+    max-width: 285px !important;
+  }
+}
+
