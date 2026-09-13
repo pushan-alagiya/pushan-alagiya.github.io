@@ -8,7 +8,7 @@ function getNavHTML() {
     (link) =>
       `<li class="nav-item"><a class="nav-link" href="${link.href}">${link.label}</a></li>`
   ).join("");
-  return `<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+  return `<nav class="navbar navbar-expand-lg navbar-forge py-3">
   <div class="container px-5">
     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">My Portfolio</span></a>
     <button class="text-gradient night-toggler">
@@ -118,18 +118,25 @@ function renderProjects(containerId) {
   if (!container) return;
   container.innerHTML = PROJECTS_DATA.map(
     (p) =>
-      `<div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-        <div class="card-body p-0">
-          <div class="d-flex align-items-center row align-items-center gx-5">
-            <div class="col text-center text-mg-start mb-4 mb-lg-0">
-              <a href="${p.githubUrl}" target="_blank" rel="noopener">
-                <img src="${p.image}" alt="${p.title}" width="100%" class="${p.imageClass}" />
+      `<div class="card experience-card-forge mb-5">
+        <div class="row align-items-center gx-5">
+          <div class="col-lg-5 text-center mb-4 mb-lg-0">
+            <a href="${p.githubUrl}" target="_blank" rel="noopener" class="d-block position-relative">
+              <div class="position-absolute top-0 end-0 m-2" style="z-index: 2;">
+                <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> View Project
+                </span>
+              </div>
+              <img src="${p.image}" alt="${p.title}" class="img-fluid ${p.imageClass} rounded-4 shadow-sm" style="object-fit: cover; width: 100%; max-height: 280px;" />
+            </a>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h3 fw-bolder app-text-primary mb-3">${p.title}</h2>
+            <p class="app-text-secondary mb-4" style="line-height: 1.6;">${p.description}</p>
+            <div>
+              <a href="${p.githubUrl}" target="_blank" rel="noopener" class="btn btn-outline-primary rounded-pill px-4 fw-semibold btn-sm">
+                Source Code <i class="bi bi-github ms-2"></i>
               </a>
-            </div>
-            <div class="projects-5">
-              <h2 class="fw-bolder text-gradient text-center">${p.title}</h2>
-              <br />
-              <p class="text-sm">${p.description}</p>
             </div>
           </div>
         </div>
@@ -143,12 +150,22 @@ function renderAwards(containerId) {
   if (!el) return;
   el.innerHTML = AWARDS_DATA.map(
     (a) =>
-      `<div class="col text-center text-mg-start mb-5 mb-lg-0">
-        <div class="bg-light p-4 rounded-4">
-          <h3 class="fw-bolder mb-0"><span class="text-gradient small-awards d-inline">${a.title}</span></h3>
-          <br>
-          <a href="${a.link}" target="_blank" rel="noopener"><img class="border-rad noinverseimgages" src="${a.image}" width="90%" alt="${a.title}"></a>
-          <div class="text-sm awards-text">Facilitation of Toppers<br><div class="small text-muted lower-text">${a.subtitle}</div></div>
+      `<div class="col-md-6 mb-4">
+        <div class="card experience-card-forge h-100 p-4 d-flex flex-column justify-content-between">
+          <div>
+            <div class="cert-logo-frame mb-3">
+              <a href="${a.link}" target="_blank" rel="noopener">
+                <img class="border-rad noinverseimgages cert-img-forge" src="${a.image}" alt="${a.title}">
+              </a>
+            </div>
+            <h3 class="h5 fw-bold mb-1"><span class="text-gradient small-awards d-inline">${a.title}</span></h3>
+            <div class="text-sm awards-text text-muted mb-3">Facilitation of Toppers • <span class="text-primary">${a.subtitle}</span></div>
+          </div>
+          <div class="pt-3 border-top border-secondary border-opacity-10 text-end">
+            <a href="${a.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold">
+              <span>View Award</span> <i class="bi bi-box-arrow-up-right ms-1 small"></i>
+            </a>
+          </div>
         </div>
       </div>`
   ).join("");
@@ -160,19 +177,26 @@ function renderCertifications(containerId) {
   if (!el) return;
   el.innerHTML = CERTIFICATIONS_DATA.map(
     (c) =>
-      `<div class="card shadow border-0 rounded-4 mb-5">
-        <div class="card-body p-5">
+      `<div class="card experience-card-forge mb-4">
+        <div class="p-0">
           <div class="row align-items-center gx-5">
-            <div class="col text-center text-mg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                <a href="${c.link}" target="_blank" rel="noopener"><img class="border-rad noinverseimgages" src="${c.image}" width="100%" alt="${c.name}"></a>
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+              <div class="cert-logo-frame">
+                <a href="${c.link}" target="_blank" rel="noopener">
+                  <img class="border-rad noinverseimgages cert-img-forge" src="${c.image}" alt="${c.name}">
+                </a>
               </div>
             </div>
             <div class="col-lg-8">
-              <div class="text-sm">${c.description}</div>
-              <br>
-              <div class="text-gradient fw-bolder">Skills Learnt</div>
-              <ul>${(c.skills || []).map((s) => `<li class="skills-learnt text-sm">${s}</li>`).join("")}</ul>
+              <h3 class="h4 fw-bold mb-2 app-text-primary">${c.name}</h3>
+              <div class="text-sm app-text-secondary mb-3">${c.description}</div>
+              <div class="fw-semibold text-primary small mb-2"><i class="bi bi-check2-circle me-1"></i>Skills Validated</div>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                ${(c.skills || []).map((s) => `<span class="forge-pill small">${s}</span>`).join("")}
+              </div>
+              <a href="${c.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold">
+                <i class="bi bi-shield-check me-1"></i>Verify Credential <i class="bi bi-box-arrow-up-right ms-1 small"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -188,51 +212,45 @@ function renderExperienceCards(containerId) {
     const projectCount = (e.projects || []).length;
     const techTags = (e.techStack || "")
       .split(",")
-      .slice(0, 6)
-      .map((t) => `<span class="project-tag small py-1 px-2 mb-1">${t.trim()}</span>`)
+      .map((t) => t.trim())
+      .filter(Boolean)
+      .slice(0, 8)
+      .map((t) => `<span class="forge-pill small me-1 mb-1">${t}</span>`)
       .join("");
 
-    return `<div class="card shadow border-0 rounded-4 mb-5 experience-card" data-bs-toggle="modal" data-bs-target="#${e.modalId}" style="cursor: pointer;">
-      <div class="card-body p-4 p-md-5">
-        <div class="row align-items-start gx-5">
-          <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-            <div class="bg-light p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
-              <div>
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="text-secondary fw-bolder">${e.period}</span>
-                  ${projectCount ? `<span class="badge bg-primary text-dark fw-bold px-2 py-1"><i class="bi bi-folder-check me-1"></i>${projectCount} Projects</span>` : ""}
-                </div>
-                <div class="mb-2">
-                  <div class="small fw-bolder fs-6">
-                    <a href="${e.companyUrl}" onclick="event.stopPropagation();" target="_blank" rel="noopener">${e.companyName}</a>
-                  </div>
-                  <div class="small text-muted"><i class="bi bi-geo-alt me-1"></i>${e.location}</div>
-                </div>
-                <div class="mb-2">
-                  <div class="fw-bold text-primary">${e.role}</div>
-                </div>
-              </div>
-              <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-start">
-                <div class="small text-muted mb-2 fw-semibold">Core Stack:</div>
-                <div class="d-flex flex-wrap gap-1">${techTags}</div>
-              </div>
-            </div>
+    return `<div class="card experience-card-forge mb-4" data-bs-toggle="modal" data-bs-target="#${e.modalId}">
+      <div class="d-flex flex-column flex-md-row align-items-start justify-content-between gap-3 mb-3">
+        <div>
+          <h3 class="h4 fw-bold mb-1 app-text-primary" style="font-family: 'Space Grotesk', sans-serif;">${e.role}</h3>
+          <div class="d-flex align-items-center flex-wrap gap-2 fs-6">
+            <a href="${e.companyUrl}" onclick="event.stopPropagation();" target="_blank" rel="noopener" class="exp-company-link">
+              <i class="bi bi-building me-1"></i>${e.companyName} <i class="bi bi-box-arrow-up-right small"></i>
+            </a>
+            <span class="text-muted small">•</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>${e.location}</span>
           </div>
-          <div class="col-lg-8">
-            <div class="text-sm">
-              <p class="education-lead-desc mb-3">${e.description}</p>
-              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4 pt-3 border-top border-secondary border-opacity-10">
-                <div class="d-flex align-items-center text-muted small">
-                  <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
-                  <span>Full-lifecycle ownership & production deployments</span>
-                </div>
-                <div class="btn btn-outline-primary btn-sm px-3 py-2 rounded-pill fw-semibold">
-                  <span>Explore Engineering Impact</span>
-                  <i class="bi bi-arrow-right ms-1"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <span class="exp-period-pill"><i class="bi bi-calendar3 me-1"></i>${e.period}</span>
+          ${projectCount ? `<span class="exp-projects-pill"><i class="bi bi-folder-check me-1"></i>${projectCount} Projects</span>` : ""}
+        </div>
+      </div>
+
+      <p class="exp-desc mb-3">${e.description}</p>
+
+      <div class="d-flex align-items-center flex-wrap gap-1 mb-4 pt-2">
+        <span class="small text-muted fw-semibold me-2">Core Stack:</span>
+        ${techTags}
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top border-secondary border-opacity-10">
+        <div class="d-flex align-items-center text-muted small">
+          <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+          <span>Full-lifecycle ownership & production deployments</span>
+        </div>
+        <div class="btn btn-outline-primary btn-sm px-3 py-2 rounded-pill fw-semibold">
+          <span>Explore Engineering Impact</span>
+          <i class="bi bi-arrow-right ms-1"></i>
         </div>
       </div>
     </div>`;
@@ -254,18 +272,18 @@ function renderExperienceModals(containerId) {
     const techDisplay = e.techCategories
       ? `<div class="modal-tech-categories">
           ${Object.entries(e.techCategories)
-            .map(
-              ([cat, items]) => `
+        .map(
+          ([cat, items]) => `
               <div class="mb-2">
                 <span class="small fw-bold text-primary me-2">${cat}:</span>
                 <div class="d-inline-flex flex-wrap gap-1 align-items-center mt-1">
                   ${items
-                    .map((t) => `<span class="tech-badge tech-badge-sm">${t}</span>`)
-                    .join("")}
+              .map((t) => `<span class="tech-badge tech-badge-sm">${t}</span>`)
+              .join("")}
                 </div>
               </div>`
-            )
-            .join("")}
+        )
+        .join("")}
         </div>`
       : `<div class="d-flex flex-wrap gap-1 modal-tech-badges">${techBadges}</div>`;
 
@@ -275,11 +293,11 @@ function renderExperienceModals(containerId) {
             <h6 class="fw-bold mb-3"><i class="bi bi-diagram-3 me-2"></i>Core Engineering Areas</h6>
             <div class="d-flex flex-wrap gap-2">
               ${e.engineeringAreas
-                .map(
-                  (area) =>
-                    `<span class="engineering-area-tag"><i class="bi bi-check-circle me-1 text-primary"></i>${area}</span>`
-                )
-                .join("")}
+          .map(
+            (area) =>
+              `<span class="engineering-area-tag"><i class="bi bi-check-circle me-1 text-primary"></i>${area}</span>`
+          )
+          .join("")}
             </div>
           </div>`
         : "";
@@ -290,8 +308,8 @@ function renderExperienceModals(containerId) {
             <h6 class="fw-bold mb-3"><i class="bi bi-speedometer2 me-2"></i>${e.metricsTitle || "Key Impact & Scale Metrics"}</h6>
             <div class="row g-3">
               ${e.metrics
-                .map(
-                  (m) => `
+          .map(
+            (m) => `
                 <div class="col-6 col-md-4 col-lg-3">
                   <div class="metric-card h-100">
                     <div class="metric-value">${m.value}</div>
@@ -299,8 +317,8 @@ function renderExperienceModals(containerId) {
                     ${m.subtext ? `<div class="metric-subtext">${m.subtext}</div>` : ""}
                   </div>
                 </div>`
-                )
-                .join("")}
+          )
+          .join("")}
             </div>
           </div>`
         : "";
@@ -318,39 +336,39 @@ function renderExperienceModals(containerId) {
           </div>
           <div class="project-accordion-list">
             ${e.projects
-              .map((p, idx) => {
-                const collapseId = `collapse-${e.modalId}-${idx}`;
-                const isExpanded = idx < 2 || p.prominent;
-                const tagsHtml = (p.tech || [])
-                  .map((t) => {
-                    const isAi = /ai|rag|llm|agent/i.test(t);
-                    return `<span class="project-tag ${isAi ? "project-tag-ai" : ""}">${t}</span>`;
-                  })
-                  .join("");
-                const highlightsHtml = (p.highlights || [])
-                  .map(
-                    (h) =>
-                      `<li><i class="bi bi-check2-circle me-2 text-primary"></i><span>${h}</span></li>`
-                  )
-                  .join("");
-                const badgeText = p.prominentBadgeText || "Key Business Impact";
-                const prominentBadge = p.prominent
-                  ? `<span class="badge bg-warning text-dark fw-bold me-2"><i class="bi bi-star-fill me-1"></i>${badgeText}</span>`
-                  : "";
-                const techContributionHtml = p.technicalContribution
-                  ? `<div class="project-contribution-box p-3 rounded-3 mb-3">
+        .map((p, idx) => {
+          const collapseId = `collapse-${e.modalId}-${idx}`;
+          const isExpanded = idx < 2 || p.prominent;
+          const tagsHtml = (p.tech || [])
+            .map((t) => {
+              const isAi = /ai|rag|llm|agent/i.test(t);
+              return `<span class="project-tag ${isAi ? "project-tag-ai" : ""}">${t}</span>`;
+            })
+            .join("");
+          const highlightsHtml = (p.highlights || [])
+            .map(
+              (h) =>
+                `<li><i class="bi bi-check2-circle me-2 text-primary"></i><span>${h}</span></li>`
+            )
+            .join("");
+          const badgeText = p.prominentBadgeText || "Key Business Impact";
+          const prominentBadge = p.prominent
+            ? `<span class="badge bg-warning text-dark fw-bold me-2"><i class="bi bi-star-fill me-1"></i>${badgeText}</span>`
+            : "";
+          const techContributionHtml = p.technicalContribution
+            ? `<div class="project-contribution-box p-3 rounded-3 mb-3">
                       <div class="fw-bold small text-primary mb-1"><i class="bi bi-gear-wide-connected me-2"></i>Technical Contribution</div>
                       <div class="small text-muted-subtle">${p.technicalContribution}</div>
                     </div>`
-                  : "";
-                const impactCalloutHtml = p.impact
-                  ? `<div class="project-impact-box p-3 rounded-3 mb-3">
+            : "";
+          const impactCalloutHtml = p.impact
+            ? `<div class="project-impact-box p-3 rounded-3 mb-3">
                       <div class="fw-bold small text-success mb-1"><i class="bi bi-graph-up-arrow me-2"></i>Measurable Impact</div>
                       <div class="small text-muted-subtle">${p.impact}</div>
                     </div>`
-                  : "";
+            : "";
 
-                return `
+          return `
                   <div class="project-card-collapsible ${p.prominent ? "project-card-prominent" : ""} mb-3">
                     <div class="project-card-header ${isExpanded ? "" : "collapsed"}" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${isExpanded}" aria-controls="${collapseId}" role="button">
                       <div class="d-flex align-items-start justify-content-between">
@@ -375,32 +393,32 @@ function renderExperienceModals(containerId) {
                       </div>
                     </div>
                   </div>`;
-              })
-              .join("")}
+        })
+        .join("")}
           </div>
         </div>`
       : `<div class="project-info-card">
           <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
           <ul class="project-list">
             ${(e.projects || [])
-              .map(
-                (p) =>
-                  `<li><div class="project-name">${p.name}</div><p class="mb-0 text-muted">${p.desc}</p></li>`
-              )
-              .join("")}
+        .map(
+          (p) =>
+            `<li><div class="project-name">${p.name}</div><p class="mb-0 text-muted">${p.desc}</p></li>`
+        )
+        .join("")}
           </ul>
         </div>`;
 
     const impactSection = e.impact
-      ? `<div class="project-info-card"><h6 class="fw-bold mb-2"><i class="bi bi-trophy me-2"></i>Professional Impact</h6><p class="mb-0">${e.impact}</p></div>`
+      ? `<div class="project-info-card"><div class="d-flex align-items-center mb-2"><i class="bi bi-trophy text-primary me-2 fs-5"></i><h6 class="fw-bold mb-0 app-text-primary">Professional Impact</h6></div><p class="mb-0 text-muted-subtle">${e.impact}</p></div>`
       : "";
 
     return `<div class="modal fade" id="${e.modalId}" tabindex="-1" aria-labelledby="${e.modalId}Label" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="${e.modalId}Label"><i class="bi bi-building me-2"></i>${e.companyName} - ${e.role}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="${e.modalId}Label"><i class="bi bi-building me-2 text-primary"></i><span class="app-text-primary fw-bold">${e.companyName}</span> <span class="text-muted fw-normal fs-6">/</span> <span class="text-primary">${e.role}</span></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="company-info-section mb-4">
@@ -422,9 +440,9 @@ function renderExperienceModals(containerId) {
             ${projectsContent}
             ${impactSection}
           </div>
-          <div class="modal-footer">
-            <a href="${e.websiteUrl}" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe me-1"></i>Visit Company Website</a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <div class="modal-footer app-bg border-top app-border px-4 py-3">
+            <a href="${e.websiteUrl}" target="_blank" rel="noopener" class="btn btn-primary px-4 py-2 fw-semibold rounded-3"><i class="bi bi-globe me-2"></i>Visit Company Website</a>
+            <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-3" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -445,11 +463,10 @@ function renderEducation(containerId) {
         })
         .join("");
 
-      return `<div class="card shadow border-0 rounded-4 mb-5 education-card-current">
-        <div class="card-body p-4 p-md-5">
+      return `<div class="card experience-card-forge mb-4 education-card-current">
           <div class="row align-items-start gx-5">
             <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4 h-100">
+              <div class="h-100">
                 <div class="d-flex align-items-center justify-content-between mb-2">
                   <span class="text-secondary fw-bolder">${ed.period}</span>
                   <span class="badge bg-success text-white px-2 py-1"><i class="bi bi-circle-fill me-1" style="font-size: 0.45rem;"></i>${ed.status || "Ongoing"}</span>
@@ -461,32 +478,29 @@ function renderEducation(containerId) {
                 <div class="mb-2">
                   <div class="fw-bold text-primary">${ed.degree}</div>
                 </div>
-                ${
-                  ed.focusHighlight
-                    ? `<div class="academic-focus-box p-3 rounded-3 mt-3 text-start">
+                ${ed.focusHighlight
+          ? `<div class="academic-focus-box p-3 rounded-3 mt-3 text-start">
                         <div class="small fw-bold text-primary mb-1"><i class="bi bi-bullseye me-1"></i>Focus:</div>
                         <div class="small text-muted-subtle" style="font-size: 0.8rem; line-height: 1.4;">${ed.focusHighlight}</div>
                       </div>`
-                    : ""
-                }
+          : ""
+        }
               </div>
             </div>
             <div class="col-lg-8">
               <div class="text-sm">
                 <p class="education-lead-desc mb-3">${ed.description}</p>
-                ${
-                  coreAreasHtml
-                    ? `<div class="mb-4">
+                ${coreAreasHtml
+          ? `<div class="mb-4">
                         <div class="small fw-bold text-primary mb-2"><i class="bi bi-book me-1"></i>Core Areas of Study:</div>
                         <div class="d-flex flex-wrap gap-2">${coreAreasHtml}</div>
                       </div>`
-                    : ""
-                }
-                ${
-                  ed.scholarship || ed.achievement
-                    ? (() => {
-                        const ach = ed.scholarship || ed.achievement;
-                        return `<div class="scholarship-achievement-card p-3 rounded-3 mt-3">
+          : ""
+        }
+                ${ed.scholarship || ed.achievement
+          ? (() => {
+            const ach = ed.scholarship || ed.achievement;
+            return `<div class="scholarship-achievement-card p-3 rounded-3 mt-3">
                           <div class="d-flex align-items-center gap-3">
                             <div class="scholarship-badge-icon">
                               <i class="bi ${ach.icon || "bi-award-fill"} text-warning fs-3"></i>
@@ -497,13 +511,12 @@ function renderEducation(containerId) {
                             </div>
                           </div>
                         </div>`;
-                      })()
-                    : ""
-                }
+          })()
+          : ""
+        }
               </div>
             </div>
           </div>
-        </div>
       </div>`;
     }
 
@@ -522,11 +535,10 @@ function renderEducation(containerId) {
         </div>`
       : "";
 
-    return `<div class="card shadow border-0 rounded-4 mb-5">
-      <div class="card-body p-4 p-md-5">
+    return `<div class="card experience-card-forge mb-4">
         <div class="row align-items-center gx-5">
           <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
-            <div class="bg-light p-4 rounded-4 h-100">
+            <div class="h-100">
               <div class="text-secondary fw-bolder mb-2">${ed.period}</div>
               <div class="mb-2">
                 <div class="small fw-bolder fs-6"><a href="${ed.schoolUrl}" target="_blank" rel="noopener">${ed.schoolName}</a></div>
@@ -543,10 +555,9 @@ function renderEducation(containerId) {
               <p class="education-lead-desc mb-3">${ed.description}</p>
               ${achievementHtml}
             </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>`;
+      </div>`;
   }).join("");
 }
 
@@ -569,7 +580,7 @@ function renderSkills(containerId) {
       .join("");
 
     return `<div class="col-12 col-lg-6">
-      <div class="skill-category-card p-4 rounded-4 h-100 ${isAi ? "skill-category-featured" : ""}">
+      <div class="card experience-card-forge h-100 ${isAi ? "skill-category-featured" : ""}">
         <div class="d-flex align-items-center mb-3">
           <div class="skill-category-icon me-2">
             <i class="bi ${cat.icon} text-primary fs-5"></i>
@@ -617,24 +628,25 @@ function renderResumeCertifications(containerId) {
   el.innerHTML = topCertifications
     .map(
       (c) =>
-        `<div class="col-md-6 text-center mb-5 mb-md-0">
-          <div class="bg-light p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
+        `<div class="col-md-6 mb-4">
+          <div class="card cert-forge-card h-100 p-4 d-flex flex-column justify-content-between">
             <div>
-              <h3 class="fw-bolder mb-3">
-                <span class="text-gradient small-awards d-inline">${c.name}</span>
-              </h3>
-              <div class="my-3">
-                <a href="${c.link}" target="_blank" rel="noopener" class="d-inline-block">
-                  <img class="border-rad noinverseimgages cert-preview-img" src="${c.image}" style="max-height: 160px; max-width: 85%; object-fit: contain;" alt="${c.name}">
+              <div class="cert-logo-frame mb-3">
+                <a href="${c.link}" target="_blank" rel="noopener">
+                  <img class="border-rad noinverseimgages cert-img-forge" src="${c.image}" alt="${c.name}">
                 </a>
               </div>
-            </div>
-            <div class="mt-3">
-              <div class="small text-muted mb-3">
-                ${c.name.includes("AWS") ? "Amazon Web Services (AWS) • Verified Credential" : "MongoDB • Verified Credential"}
+              <div class="cert-issuer-badge mb-2">
+                <i class="bi bi-patch-check-fill text-primary me-1"></i>
+                ${c.name.includes("AWS") ? "Amazon Web Services (AWS)" : "MongoDB University"}
               </div>
-              <a href="${c.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm px-3 py-1 rounded-pill">
-                <i class="bi bi-patch-check-fill me-1"></i>Verify Credential
+              <h3 class="h5 fw-bold text-light mb-2">${c.name}</h3>
+              <p class="text-muted small mb-3">${c.name.includes("AWS") ? "Validated knowledge in architecting, developing, and deploying cloud applications on AWS." : "Validated proficiency in building production applications with MongoDB and Node.js."}</p>
+            </div>
+            <div class="pt-3 border-top border-secondary border-opacity-10 d-flex align-items-center justify-content-between">
+              <span class="badge bg-success-subtle text-success small fw-semibold px-2 py-1"><i class="bi bi-check-circle me-1"></i>Verified</span>
+              <a href="${c.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold">
+                <span>Verify Credential</span> <i class="bi bi-box-arrow-up-right ms-1 small"></i>
               </a>
             </div>
           </div>
@@ -649,12 +661,22 @@ function renderResumeAwards(containerId) {
   if (!el) return;
   el.innerHTML = AWARDS_DATA.map(
     (a) =>
-      `<div class="col text-center text-mg-start mb-5 mb-lg-0">
-        <div class="bg-light p-4 rounded-4">
-          <h3 class="fw-bolder mb-0"><span class="text-gradient small-awards d-inline">${a.title}</span></h3>
-          <br>
-          <a href="${a.link}" target="_blank" rel="noopener"><img class="border-rad noinverseimgages" src="${a.image}" width="90%" alt="${a.title}"></a>
-          <div class="text-sm awards-text">Facilitation of Toppers<br><div class="small text-muted lower-text">${a.subtitle}</div></div>
+      `<div class="col-md-6 mb-4">
+        <div class="card cert-forge-card h-100 p-4 d-flex flex-column justify-content-between">
+          <div>
+            <div class="cert-logo-frame mb-3">
+              <a href="${a.link}" target="_blank" rel="noopener">
+                <img class="border-rad noinverseimgages cert-img-forge" src="${a.image}" alt="${a.title}">
+              </a>
+            </div>
+            <h3 class="h5 fw-bold mb-1"><span class="text-gradient small-awards d-inline">${a.title}</span></h3>
+            <div class="text-sm awards-text text-muted mb-3">Facilitation of Toppers • <span class="text-primary">${a.subtitle}</span></div>
+          </div>
+          <div class="pt-3 border-top border-secondary border-opacity-10 text-end">
+            <a href="${a.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold">
+              <span>View Award</span> <i class="bi bi-box-arrow-up-right ms-1 small"></i>
+            </a>
+          </div>
         </div>
       </div>`
   ).join("");
@@ -666,19 +688,23 @@ function renderExtracurricular(containerId) {
   if (!el) return;
   el.innerHTML = EXTRACURRICULAR_DATA.map(
     (ex) =>
-      `<div class="card shadow border-0 rounded-4 mb-5">
-        <div class="card-body p-5">
+      `<div class="card experience-card-forge mb-4">
           <div class="row align-items-center gx-5">
-            <div class="col text-center text-mg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">${ex.title}</span></h3>
-                <br>
-                ${ex.link ? `<a href="${ex.link}" target="_blank" rel="noopener"><img class="border-rad noinverseimgages" src="${ex.image}" width="90%" alt="${ex.title}"></a>` : `<img class="border-rad noinverseimgages" src="${ex.image}" width="90%" alt="${ex.title}">`}
+            <div class="col-lg-5 text-center mb-4 mb-lg-0">
+              <div class="position-relative">
+                ${ex.link ? `<a href="${ex.link}" target="_blank" rel="noopener" class="d-block text-decoration-none">` : ""}
+                <img class="img-fluid rounded-3" src="${ex.image}" alt="${ex.title}" style="object-fit: cover; width: 100%; border-radius: 8px;">
+                ${ex.link ? `</a>` : ""}
               </div>
             </div>
-            <div class="col-lg-8"><div class="text-sm">${ex.description}</div></div>
+            <div class="col-lg-7">
+              <div class="mb-3">
+                <h3 class="fw-bolder mb-1 app-text-primary">${ex.title}</h3>
+                ${ex.link ? `<a href="${ex.link}" target="_blank" class="small fw-semibold text-primary text-decoration-none"><i class="bi bi-link-45deg"></i> View Certificate/Event</a>` : ""}
+              </div>
+              <p class="app-text-secondary mb-0" style="line-height: 1.6;">${ex.description}</p>
+            </div>
           </div>
-        </div>
       </div>`
   ).join("");
 }
@@ -758,10 +784,10 @@ function renderPrintableResume(containerId) {
           </ul>
         </div>
 
-        <!-- TudeDude -->
+        <!-- TuteDude -->
         <div class="print-exp-item mb-0">
           <div class="d-flex justify-content-between align-items-baseline">
-            <span class="fw-bold print-item-title">TudeDude</span>
+            <span class="fw-bold print-item-title">TuteDude</span>
             <span class="print-item-date">June 2020 – July 2023</span>
           </div>
           <div class="d-flex justify-content-between align-items-baseline small text-muted mb-1">

@@ -100,7 +100,7 @@ const TECH_AI = [
 
 const STATS = [
   { value: "18+", label: "Projects Completed", colorClass: "text-primary" },
-  { value: "3+", label: "Years Experience", colorClass: "text-success" },
+  { value: "6+", label: "Years Experience", colorClass: "text-success" },
   { value: "15+", label: "Technologies Mastered", colorClass: "text-warning" },
   { value: "100%", label: "Commitment", colorClass: "text-info" },
 ];
@@ -653,13 +653,13 @@ const EXPERIENCE_DATA = [
   {
     period: "June 2020 – July 2023",
     role: "Software Engineer",
-    companyName: "TudeDude",
-    companyUrl: "https://tudedude.com/",
-    location: "India",
+    companyName: "TuteDude",
+    companyUrl: "https://www.tutedude.com/",
+    location: "Remote",
     techStack: "Full Stack, Video Streaming Architecture & EdTech Infrastructure",
     description:
       "Worked as a Software Engineer on the development and evolution of a production EdTech platform for online course delivery. Contributed across the full software development lifecycle, including frontend applications, backend services, REST APIs, database architecture, video-streaming infrastructure, administrative dashboards, authentication, content management, and production deployments. Took ownership of core platform functionality and worked across multiple layers of the system to build scalable and maintainable learning infrastructure.",
-    modalId: "tudedudeModal",
+    modalId: "tutedudeModal",
     metricsTitle: "Key Engineering Impact & Capabilities",
     metrics: [
       {
@@ -922,7 +922,7 @@ const EXPERIENCE_DATA = [
     ],
     impact:
       "Worked as a Software Engineer on the development and evolution of a production EdTech platform for online course delivery. Contributed across the full software development lifecycle, including frontend applications, backend services, REST APIs, database architecture, video-streaming infrastructure, administrative dashboards, authentication, content management, and production deployments. Took ownership of core platform functionality and worked across multiple layers of the system to build scalable and maintainable learning infrastructure.",
-    websiteUrl: "https://tudedude.com/",
+    websiteUrl: "https://www.tutedude.com/",
   },
 ];
 
@@ -1076,7 +1076,7 @@ const SKILLS_DATA = [
   },
   {
     category: "Databases",
-    icon: "bi-database",
+    icon: "bi-server",
     emoji: "🗄️",
     skills: [
       "PostgreSQL",

@@ -37,9 +37,9 @@
   <script src="js/scripts.js"></script>
 </head>
 
-<body class="d-flex flex-column h-100 bg-light">
+<body class="d-flex flex-column h-100">
   <div id="loadOverlay" style="
-        background-color: rgb(54, 54, 54);
+        background-color: #090A0F;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -56,8 +56,8 @@
           color: white;
           justify-content: center;
           font-size: 24px;
-          font-weight: bold; /* Optionally make it bold */
-          animation: pulse 1s infinite alternate; /* Add animation */
+          font-weight: bold;
+          animation: pulse 1s infinite alternate;
         ">
       <div class="loading-spinner">
         <div class="dot"></div>
@@ -67,16 +67,23 @@
     </div>
   </div>
   <main class="flex-shrink-0">
+    <!-- Global Ambient Background -->
+    <div class="position-fixed top-0 start-0 w-100 h-100" style="z-index: -1; pointer-events: none; overflow: hidden;">
+      <div class="ambient-blob blob-primary" style="width: 600px; height: 600px; top: -10%; left: -10%; animation-delay: 0s;"></div>
+      <div class="ambient-blob blob-info" style="width: 500px; height: 500px; top: 40%; right: -10%; animation-delay: -5s;"></div>
+      <div class="ambient-blob blob-secondary" style="width: 700px; height: 700px; bottom: -20%; left: 20%; animation-delay: -10s;"></div>
+    </div>
     <!-- Navigation (injected from js/data.js + components.js)-->
     <div id="nav-placeholder"></div>
     <!-- Projects Section-->
-    <section class="py-5">
+    <section class="py-5 mt-5">
       <div class="container px-5 mb-5">
         <!-- Project Header -->
         <div class="text-center mb-5">
           <h1 class="display-5 fw-bolder mb-0">
-            <span class="text-gradient d-inline">Projects</span>
+            <span class="text-gradient d-inline">Featured Projects</span>
           </h1>
+          <p class="lead fw-light text-muted-subtle mt-3">Key case studies and open source contributions</p>
         </div>
 
         <!-- Main Div -->
@@ -88,13 +95,15 @@
       </div>
     </section>
     <!-- Call to action section-->
-    <section class="py-5 bg-gradient-primary-to-secondary text-white">
+    <section class="py-5 card-surface border-top app-border">
       <div class="container px-5 my-5">
         <div class="text-center">
-          <h2 class="display-4 fw-bolder mb-4">
-            Let's build something together
+          <h2 class="display-5 fw-bolder app-text-primary mb-4">
+            Let's build something <span class="text-gradient d-inline">exceptional</span>
           </h2>
-          <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
+          <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-semibold rounded-pill shadow-sm" href="contact.html">
+            <i class="bi bi-envelope me-2"></i> Get in touch
+          </a>
         </div>
       </div>
     </section>

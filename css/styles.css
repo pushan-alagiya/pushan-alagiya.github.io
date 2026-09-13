@@ -13039,9 +13039,9 @@ a {
 }
 
 .project-tag-ai {
-  background: linear-gradient(135deg, rgba(212, 208, 20, 0.15) 0%, rgba(44, 224, 118, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(232, 168, 56, 0.15) 0%, rgba(199, 125, 60, 0.2) 100%);
   color: #0b6e3f;
-  border: 1px solid rgba(44, 224, 118, 0.4);
+  border: 1px solid rgba(199, 125, 60, 0.4);
 }
 
 .project-toggle-icon {
@@ -13297,14 +13297,14 @@ a {
 }
 
 .skill-pill-ai {
-  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.12) 0%, rgba(44, 224, 118, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.12) 0%, rgba(199, 125, 60, 0.08) 100%);
   border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
   color: #1e293b;
   font-weight: 600;
 }
 
 .skill-pill-ai:hover {
-  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.2) 0%, rgba(44, 224, 118, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.2) 0%, rgba(199, 125, 60, 0.15) 100%);
   border-color: var(--bs-primary);
   color: #000000;
 }
@@ -13351,7 +13351,7 @@ a {
 }
 
 .btn-resume-download {
-  background: linear-gradient(135deg, var(--bs-primary) 0%, #2ce076 100%) !important;
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #C77D3C 100%) !important;
   border: none !important;
   color: #0b0f19 !important;
   font-weight: 700 !important;
@@ -13757,4 +13757,83 @@ a {
   .ai-track {
     animation: scroll-ai 6s linear infinite;
   }
+}
+
+/* Semantic Light Mode Themes */
+.card-surface { background-color: #ffffff !important; border-color: rgba(0,0,0,0.1) !important; color: #212529 !important; }
+.app-bg { background-color: #f8f9fa !important; }
+.app-text-primary { color: #212529 !important; }
+.app-text-secondary { color: #6c757d !important; }
+.app-border { border-color: rgba(0,0,0,0.1) !important; }
+.app-icon-bg { background-color: rgba(30, 48, 243, 0.1) !important; color: #1e30f3 !important; border-color: rgba(30, 48, 243, 0.25) !important; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Ambient Blobs */
+.ambient-blob {
+  position: absolute;
+  filter: blur(80px);
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: blob-float 15s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+.blob-primary { background: var(--bs-primary); }
+.blob-secondary { background: var(--bs-secondary); }
+.blob-info { background: var(--bs-info); }
+@keyframes blob-float {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.ambient-content { position: relative; z-index: 1; }
+
+/* Experience Card Forge */
+.experience-card-forge {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 14px !important;
+  padding: 2.25rem !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.experience-card-forge:hover {
+  transform: translateY(-3px);
+  border-color: rgba(30, 48, 243, 0.3) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08), 0 0 20px rgba(30, 48, 243, 0.06) !important;
+}
+
+
+.resume-quick-nav::-webkit-scrollbar { display: none; }
+.resume-quick-nav { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Certificate Styles */
+.cert-logo-frame {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cert-img-forge {
+  max-height: 100px;
+  max-width: 85%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.experience-card-forge:hover .cert-img-forge {
+  transform: scale(1.04);
 }

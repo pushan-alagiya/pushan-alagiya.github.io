@@ -21,7 +21,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
 
   <!-- Bootstrap icons-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
@@ -74,148 +76,77 @@
     </div>
   </div>
   <main class="flex-shrink-0">
+    <!-- Global Ambient Background -->
+    <div class="position-fixed top-0 start-0 w-100 h-100" style="z-index: -1; pointer-events: none; overflow: hidden;">
+      <div class="ambient-blob blob-primary" style="width: 600px; height: 600px; top: -10%; left: -10%; animation-delay: 0s;"></div>
+      <div class="ambient-blob blob-info" style="width: 500px; height: 500px; top: 40%; right: -10%; animation-delay: -5s;"></div>
+      <div class="ambient-blob blob-secondary" style="width: 700px; height: 700px; bottom: -20%; left: 20%; animation-delay: -10s;"></div>
+    </div>
     <!-- Navigation (injected from js/data.js + components.js)-->
     <div id="nav-placeholder"></div>
 
     <!-- Header-->
-    <header class="py-5">
-      <div class="container px-5 pb-5">
+    <header class="hero-section py-5">
+      <div class="container px-5 pb-5 pt-5 mt-4">
         <div class="row gx-5 align-items-center">
-          <div class="col-xxl-5">
+          <div class="col-lg-7 mb-5 mb-lg-0">
             <!-- Header text content-->
-            <div class="text-center text-xxl-start">
-              <div class="badge bg-gradient-primary-to-secondary text-white mb-4 animate__animated animate__fadeInDown animate__faster">
-                <div class="text-uppercase">Next.js • NestJS • Full Stack Developer</div>
+            <div class="text-center text-lg-start">
+              <div class="badge bg-primary-subtle text-primary border border-primary-subtle mb-4 px-3 py-2 animate__animated animate__fadeInDown animate__faster rounded-pill fw-semibold">
+                <i class="bi bi-terminal me-1"></i> Senior Software Engineer & Architect
               </div>
-              <div class="fs-3 fw-light text-muted animate__animated animate__fadeInLeft animate__faster">
-                <b> Hi&nbsp; there </b> &nbsp; 👋 &nbsp; , I'm
+              <div class="h5 fw-normal app-text-secondary mb-2 animate__animated animate__fadeInUp animate__faster">
+                Hi, I'm <span class="fw-bold app-text-primary">Pushan Alagiya</span> 👋
               </div>
-              <h1 class="display-3 fw-bolder mb-5 animate__animated animate__fadeInUp animate__faster">
-                <span class="text-gradient d-inline">Pushan Alagiya</span>
+              <h1 class="display-3 fw-bolder mb-4 animate__animated animate__fadeInUp animate__faster app-text-primary" style="letter-spacing: -0.03em; line-height: 1.1;">
+                Architecting <span class="text-gradient d-inline">Scalable Systems</span> & Agentic AI
               </h1>
-              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder animate__animated animate__fadeInLeft animate__faster" href="resume.html">Resume</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder animate__animated animate__fadeInRight animate__faster" href="projects.html">Projects</a>
+              <p class="lead fw-normal app-text-secondary mb-5 animate__animated animate__fadeInUp animate__faster" style="max-width: 600px; font-size: 1.15rem;">
+                I build high-throughput backend infrastructure, resilient distributed systems, and intelligent LLM-powered applications. Focusing on performance, observability, and production reliability.
+              </p>
+              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mb-4">
+                <a class="btn btn-primary btn-lg px-4 py-3 fs-6 fw-semibold animate__animated animate__fadeInLeft animate__faster" href="projects.html">
+                  View Featured Work <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+                <a class="btn btn-outline-primary btn-lg px-4 py-3 fs-6 fw-semibold animate__animated animate__fadeInRight animate__faster" href="resume.html">
+                  <i class="bi bi-file-earmark-text me-2"></i>Read Resume
+                </a>
+              </div>
+              
+              <!-- Engineering Metrics (Quick Stats) -->
+              <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 mt-5 pt-3 border-top border-secondary border-opacity-25 animate__animated animate__fadeIn">
+                <div>
+                  <div class="h3 fw-bold app-text-primary mb-0">6+</div>
+                  <div class="small text-muted fw-semibold">Years Experience</div>
+                </div>
+                <div>
+                  <div class="h3 fw-bold app-text-primary mb-0">99.9%</div>
+                  <div class="small text-muted fw-semibold">System Uptime</div>
+                </div>
+                <div>
+                  <div class="h3 fw-bold app-text-primary mb-0">&lt;50ms</div>
+                  <div class="small text-muted fw-semibold">API Latency</div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-xxl-7">
+          <div class="col-lg-5 text-center">
             <!-- Header profile picture-->
-            <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-              <div class="profile bg-gradient-primary-to-secondary">
-                <img class="profile-img noinverseimgages animate__animated animate__fadeIn animate__faster" src="assets/Profile photo/profile_final.webp" alt="..." />
-
-                <div class="dots-1">
-                  <!-- SVG Dots-->
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                    </g>
-                  </svg>
-                  <!-- END of SVG dots-->
-                </div>
-                <div class="dots-2">
-                  <!-- SVG Dots-->
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                    </g>
-                  </svg>
-                  <!-- END of SVG dots-->
-                </div>
-                <div class="dots-3">
-                  <!-- SVG Dots-->
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                    </g>
-                  </svg>
-                  <!-- END of SVG dots-->
-                </div>
-                <div class="dots-4">
-                  <!-- SVG Dots-->
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                      <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                      <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                      <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                      <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                      <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                      <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                      <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                      <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                      <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                      <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                      <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                      <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                      <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                      <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                      <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                      <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                      <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                      <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                      <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                      <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                    </g>
-                  </svg>
-                  <!-- END of SVG dots-->
+            <div class="position-relative d-inline-block mt-5 mt-lg-0 animate__animated animate__fadeIn animate__slow" style="padding: 20px;">
+              <!-- Modern abstract background layers with micro-motions -->
+              <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-10 rounded-4" style="border: 1px solid rgba(30,48,243,0.2); animation: float 8s ease-in-out infinite; transform-origin: center;"></div>
+              <div class="position-absolute top-0 start-0 w-100 h-100 border border-secondary border-opacity-25 rounded-4" style="z-index: 0; animation: float 10s ease-in-out infinite reverse; transform-origin: center;"></div>
+              
+              <!-- Profile Image -->
+              <img class="img-fluid rounded-4 shadow-lg position-relative" src="assets/Profile photo/profile_final.webp" alt="Pushan Alagiya" style="max-width: 320px; object-fit: cover; object-position: top center; aspect-ratio: 4/5; z-index: 1;" />
+              
+              <!-- Floating Attention Grabber Badge -->
+              <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 px-4 py-2 rounded-pill shadow-lg app-bg app-border border w-100" style="max-width: 250px; z-index: 2; animation: float 4s ease-in-out infinite; backdrop-filter: blur(10px);">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                  <div class="spinner-grow text-success spinner-grow-sm" style="width: 0.75rem; height: 0.75rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <span class="fw-bold app-text-primary small mb-0" style="white-space: nowrap;">Open to Opportunities</span>
                 </div>
               </div>
             </div>
@@ -223,27 +154,61 @@
         </div>
       </div>
     </header>
-    <!-- About Section-->
-    <section class="bg-light py-5">
+
+    <!-- About Section -->
+    <section class="py-5 app-bg border-top border-bottom app-border">
       <div class="container px-5">
-        <div class="row gx-5 justify-content-center">
-          <div class="col-xxl-8">
-            <div class="text-center my-5 animate__animated animate__fadeInDown animate__fast">
-              <h2 class="display-5 fw-bolder">
-                <span class="text-gradient d-inline">About Me</span>
-              </h2>
-              <p class="lead fw-light mb-4">
-                <b>
-                  Full Stack Developer with 3+ years of experience specializing in
-                  Node.js, NextJS, cloud architecture, and blockchain solutions.
-                </b>
-              </p>
-              <p class="text-muted animate__animated animate__fadeInUp animate__fast">
-                I'm a Full Stack Developer skilled in backend (Node.js, NestJS, Express, GraphQL) and frontend (React, Next.js, TypeScript) technologies. I have strong experience with AWS, Azure, Docker, Kubernetes, and blockchain (Solidity, smart contracts, Web3). With 18+ projects delivered, I focus on building scalable and innovative solutions.
-              </p>
-              <div id="socialLinksContainer" class="d-flex justify-content-center fs-2 gap-4 animate__animated animate__fadeIn animate__fast">
-                <!-- Social links injected from js/data.js -->
-              </div>
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h2 class="h3 fw-bolder mb-3 app-text-primary">Bridging the gap between engineering and product.</h2>
+            <p class="app-text-secondary mb-0" style="line-height: 1.7;">
+              I specialize in designing fault-tolerant architectures and scalable APIs that power mission-critical platforms. My background spans from orchestrating cloud-native deployments on AWS to integrating sophisticated Retrieval-Augmented Generation (RAG) pipelines and autonomous agents. With a strong emphasis on clean code and system observability, I strive to deliver engineering solutions that directly accelerate business objectives.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <div id="socialLinksContainer" class="d-flex justify-content-center justify-content-lg-end gap-3 fs-3">
+              <!-- Social links injected from js/data.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Philosophy Section -->
+    <section class="py-5">
+      <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bolder mb-0">
+            <span class="text-gradient d-inline">Engineering Philosophy</span>
+          </h2>
+          <p class="lead fw-light mb-4 app-text-secondary">How I approach building software</p>
+        </div>
+        <div class="row gx-5 row-cols-1 row-cols-md-3">
+          <div class="col mb-5 mb-md-0">
+            <div class="card experience-card-forge h-100" style="border-top: 4px solid var(--bs-primary) !important;">
+                <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-4" style="width: 3.5rem; height: 3.5rem; background: linear-gradient(135deg, rgba(30,48,243,0.15), rgba(30,48,243,0.05)); color: var(--bs-primary); border: 1px solid rgba(30,48,243,0.2);">
+                  <i class="bi bi-diagram-3-fill fs-3"></i>
+                </div>
+                <h3 class="h4 fw-bold app-text-primary mb-3">Scale from Day One</h3>
+                <p class="app-text-secondary mb-0">I design systems that expect failure and traffic spikes. My focus is on horizontal scaling, caching strategies, and stateless architectures to ensure nothing breaks under load.</p>
+            </div>
+          </div>
+          <div class="col mb-5 mb-md-0">
+            <div class="card experience-card-forge h-100" style="border-top: 4px solid var(--bs-info) !important;">
+                <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-4" style="width: 3.5rem; height: 3.5rem; background: linear-gradient(135deg, rgba(13,202,240,0.15), rgba(13,202,240,0.05)); color: var(--bs-info); border: 1px solid rgba(13,202,240,0.2);">
+                  <i class="bi bi-cpu-fill fs-3"></i>
+                </div>
+                <h3 class="h4 fw-bold app-text-primary mb-3">AI & Real-Time Sync</h3>
+                <p class="app-text-secondary mb-0">Beyond basic APIs, I integrate Agentic workflows, orchestrate RAG systems, and implement WebSockets to build highly interactive and intelligent applications.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card experience-card-forge h-100" style="border-top: 4px solid var(--bs-success) !important;">
+                <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-4" style="width: 3.5rem; height: 3.5rem; background: linear-gradient(135deg, rgba(25,135,84,0.15), rgba(25,135,84,0.05)); color: var(--bs-success); border: 1px solid rgba(25,135,84,0.2);">
+                  <i class="bi bi-heart-pulse-fill fs-3"></i>
+                </div>
+                <h3 class="h4 fw-bold app-text-primary mb-3">Sleep-at-Night Reliability</h3>
+                <p class="app-text-secondary mb-0">If you can't measure it, you can't fix it. I prioritize deep observability, automated deployments, and infrastructure-as-code so I sleep peacefully when the app is in production.</p>
             </div>
           </div>
         </div>
@@ -251,59 +216,54 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-5">
-      <div class="container px-5">
+    <section class="py-5 app-bg border-top border-bottom app-border">
+      <div class="container px-5 my-5">
         <div class="text-center mb-5">
           <h2 class="display-5 fw-bolder">
-            <span class="text-gradient d-inline">Technical Skills</span>
+            <span class="text-gradient d-inline">Technical Arsenal</span>
           </h2>
-          <p class="lead fw-light mb-4">Technologies I work with</p>
+          <p class="lead fw-light mb-4 app-text-secondary">Core technologies, frameworks, and engineering domains</p>
         </div>
 
         <div class="row gx-5 justify-content-center">
-          <div class="col-lg-10">
+          <div class="col-lg-12">
             <!-- Backend Technologies (injected from js/data.js) -->
             <div class="mb-5">
               <div class="tech-carousel">
-                <h4 class="text-center mb-4">Backend Technologies</h4>
+                <h4 class="text-center mb-4 app-text-primary fw-bold">Backend Technologies</h4>
                 <div id="techBackendTrack" class="tech-track"></div>
               </div>
             </div>
 
             <!-- Frontend Technologies (injected from js/data.js) -->
             <div class="mb-5">
-              <div class="frontend-carousel">
-                <h4 class="text-center mb-4">Frontend Technologies</h4>
-                <div id="techFrontendTrack" class="frontend-track"></div>
+              <div class="tech-carousel">
+                <h4 class="text-center mb-4 app-text-primary fw-bold">Frontend Technologies</h4>
+                <div id="techFrontendTrack" class="tech-track frontend-track"></div>
               </div>
             </div>
 
-            <!-- Cloud & Blockchain Technologies -->
-            <div class="mb-0">
-              <div class="row gx-5">
-                <!-- Cloud Technologies (injected from js/data.js) -->
-                <div class="col-lg-6 mb-5">
-                  <div class="cloud-carousel">
-                    <h4 class="text-center mb-4">Cloud Technologies</h4>
-                    <div id="techCloudTrack" class="cloud-track"></div>
-                  </div>
-                </div>
+            <!-- Cloud, Infrastructure & Devops (injected from js/data.js) -->
+            <div class="mb-5">
+              <div class="tech-carousel">
+                <h4 class="text-center mb-4 app-text-primary fw-bold">Cloud, Infrastructure & Devops</h4>
+                <div id="techCloudTrack" class="tech-track cloud-track"></div>
+              </div>
+            </div>
 
-                <!-- Blockchain Technologies (injected from js/data.js) -->
-                <div class="col-lg-6 mb-5">
-                  <div class="blockchain-carousel">
-                    <h4 class="text-center mb-4">Blockchain Technologies</h4>
-                    <div id="techBlockchainTrack" class="blockchain-track"></div>
-                  </div>
-                </div>
+            <!-- Blockchain Technologies (injected from js/data.js) -->
+            <div class="mb-5">
+              <div class="tech-carousel">
+                <h4 class="text-center mb-4 app-text-primary fw-bold">Blockchain Technologies</h4>
+                <div id="techBlockchainTrack" class="tech-track blockchain-track"></div>
               </div>
             </div>
 
             <!-- AI Technologies (injected from js/data.js) -->
             <div class="mb-5">
-              <div class="ai-carousel">
-                <h4 class="text-center mb-4">AI Technologies</h4>
-                <div id="techAiTrack" class="ai-track"></div>
+              <div class="tech-carousel">
+                <h4 class="text-center mb-4 app-text-primary fw-bold">AI Technologies</h4>
+                <div id="techAiTrack" class="tech-track ai-track"></div>
               </div>
             </div>
           </div>

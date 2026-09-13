@@ -42,10 +42,10 @@
 
 </head>
 
-<body class="d-flex flex-column h-100 bg-light">
+<body class="d-flex flex-column h-100">
   <main class="flex-shrink-0">
     <div id="loadOverlay" style="
-        background-color: rgb(54, 54, 54);
+        background-color: #090A0F;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -62,8 +62,8 @@
           color: white;
           justify-content: center;
           font-size: 24px;
-          font-weight: bold; /* Optionally make it bold */
-          animation: pulse 1s infinite alternate; /* Add animation */
+          font-weight: bold;
+          animation: pulse 1s infinite alternate;
         ">
         <div class="loading-spinner">
           <div class="dot"></div>
@@ -72,20 +72,27 @@
         </div>
       </div>
     </div>
+    
+    <!-- Global Ambient Background -->
+    <div class="position-fixed top-0 start-0 w-100 h-100" style="z-index: -1; pointer-events: none; overflow: hidden;">
+      <div class="ambient-blob blob-primary" style="width: 600px; height: 600px; top: -10%; left: -10%; animation-delay: 0s;"></div>
+      <div class="ambient-blob blob-info" style="width: 500px; height: 500px; top: 40%; right: -10%; animation-delay: -5s;"></div>
+      <div class="ambient-blob blob-secondary" style="width: 700px; height: 700px; bottom: -20%; left: 20%; animation-delay: -10s;"></div>
+    </div>
     <!-- Navigation (injected from js/data.js + components.js)-->
     <div id="nav-placeholder"></div>
 
     <!-- Screen Resume Page Content-->
-    <div id="screenResumeContent" class="container px-4 px-md-5 my-5">
+    <div id="screenResumeContent" class="container px-4 px-md-5 my-5 pt-5">
       <!-- Executive Hero Header -->
       <div class="resume-hero-header text-center mb-5">
-        <div class="badge bg-gradient-primary-to-secondary text-white px-3 py-2 rounded-pill mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">
+        <div class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 rounded-pill mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">
           Portfolio Resume & Technical Profile
         </div>
         <h1 class="display-4 fw-bolder mb-2">
           <span class="text-gradient d-inline">Pushan Alagiya</span>
         </h1>
-        <p class="fs-5 text-muted mb-4 fw-normal">
+        <p class="fs-5 text-muted-subtle mb-4 fw-normal">
           Software Engineer • Full Stack, Backend & Agentic AI Systems
         </p>
 
@@ -102,7 +109,8 @@
 
       <!-- Quick Nav Sticky Bar -->
       <div class="resume-quick-nav-wrapper mb-5 sticky-top py-2">
-        <nav class="resume-quick-nav d-flex justify-content-center flex-wrap gap-2 p-2 rounded-pill shadow-sm">
+        <!-- Desktop Nav -->
+        <nav class="resume-quick-nav d-none d-md-flex justify-content-center gap-2 p-2 rounded-pill shadow-sm">
           <a href="#summary-section" class="quick-nav-link">Summary</a>
           <a href="#experience-section" class="quick-nav-link">Experience</a>
           <a href="#education-section" class="quick-nav-link">Education</a>
@@ -111,6 +119,24 @@
           <a href="#achievements-section" class="quick-nav-link">Achievements</a>
           <a href="#extracurricular-section" class="quick-nav-link">Extra Curriculars</a>
         </nav>
+        
+        <!-- Mobile Nav -->
+        <div class="d-md-none px-2">
+          <div class="dropdown">
+            <button class="btn w-100 rounded-pill shadow-sm fw-bold dropdown-toggle d-flex justify-content-between align-items-center px-4 py-3 app-bg border app-border app-text-primary" type="button" id="mobileQuickNavDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span><i class="bi bi-compass me-2 text-primary"></i> Navigate Resume</span>
+            </button>
+            <ul class="dropdown-menu w-100 shadow-lg border app-border rounded-4 mt-2 p-2 app-bg" aria-labelledby="mobileQuickNavDropdown">
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#summary-section">Summary</a></li>
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#experience-section">Experience</a></li>
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#education-section">Education</a></li>
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#skills-section">Skills</a></li>
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#certifications-section">Certifications</a></li>
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#achievements-section">Achievements</a></li>
+              <li><a class="dropdown-item rounded-3 py-2 fw-semibold app-text-secondary" href="#extracurricular-section">Extra Curriculars</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="row gx-5 justify-content-center">
@@ -118,12 +144,19 @@
           <!-- Summary Section-->
           <section id="summary-section" class="mb-5 pt-2">
             <h2 class="text-primary fw-bolder mb-4">Summary</h2>
-            <div class="card shadow border-0 rounded-4 resume-summary-card">
-              <div class="card-body p-4 p-md-5">
+            <div class="card experience-card-forge resume-summary-card">
+                <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(232, 168, 56, 0.1); border: 1px solid rgba(232, 168, 56, 0.25); color: #E8A838; font-size: 0.8rem; font-weight: 600;">
+                  <i class="bi bi-shield-check"></i> Executive Overview
+                </div>
                 <p class="resume-summary-text mb-0">
-                  Software Engineer with 6+ years of experience building scalable full-stack, backend, cloud-native, and AI-powered applications. Experienced in Node.js, NestJS, React, Next.js, TypeScript, microservices, REST APIs, AWS, and real-time systems, with expertise in designing production-grade architectures and automating complex business workflows. Hands-on experience building Agentic AI and LLM-powered applications using LangChain, LangGraph, RAG, and intelligent workflow orchestration. Currently pursuing an M.Sc. in Computer Science at the University of Helsinki, focusing on AI, Machine Learning, Distributed Systems, Cloud Computing, and Software Engineering.
+                  <strong class="summary-highlight">Software Engineer with 6+ years of experience</strong> building scalable <strong class="summary-highlight">full-stack, backend, cloud-native, and AI-powered applications</strong>. Experienced in <strong class="summary-highlight">Node.js, NestJS, React, Next.js, TypeScript, microservices, REST APIs, AWS</strong>, and <strong class="summary-highlight">real-time systems</strong>, with expertise in designing production-grade architectures and automating complex business workflows. Hands-on experience building <span class="summary-highlight-accent">Agentic AI and LLM-powered applications</span> using <strong class="summary-highlight">LangChain, LangGraph, RAG</strong>, and intelligent workflow orchestration. Currently pursuing an <strong class="summary-highlight">M.Sc. in Computer Science at the University of Helsinki</strong>, focusing on <strong class="summary-highlight">AI, Machine Learning, Distributed Systems, Cloud Computing</strong>, and <strong class="summary-highlight">Software Engineering</strong>.
                 </p>
-              </div>
+                <div class="d-flex flex-wrap gap-2 pt-4 mt-4 border-top border-secondary border-opacity-10">
+                  <span class="forge-pill"><i class="bi bi-clock-history me-1 text-primary"></i>6+ Years Experience</span>
+                  <span class="forge-pill forge-pill-ai"><i class="bi bi-robot me-1"></i>Agentic AI & RAG</span>
+                  <span class="forge-pill"><i class="bi bi-cloud-check me-1 text-primary"></i>Cloud-Native & Microservices</span>
+                  <span class="forge-pill"><i class="bi bi-mortarboard me-1 text-primary"></i>M.Sc. CS @ Univ. of Helsinki</span>
+                </div>
             </div>
           </section>
 
@@ -169,19 +202,15 @@
 
           <!-- Certifications Section-->
           <section id="certifications-section" class="pt-2">
-            <a href="certificates.html">
-              <h2 class="text-primary fw-bolder mb-4" style="display: inline-block;">Certifications</h2>
-              <div class="feature link-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                <i class="bi bi-box-arrow-up-right"></i>
-              </div>
-            </a>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h2 class="text-primary fw-bolder mb-0">Certifications</h2>
+              <a href="certificates.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold">
+                <span>View All Credentials</span> <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
             <!-- Certifications (injected from js/data.js)-->
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-4 p-md-5">
-                <div id="resumeCertificationsContainer" class="row align-items-center gx-5">
-                  <!-- Certifications injected from js/data.js -->
-                </div>
-              </div>
+            <div id="resumeCertificationsContainer" class="row gx-4">
+              <!-- Certifications injected from js/data.js -->
             </div>
           </section>
 
@@ -189,19 +218,15 @@
 
           <!-- Awards Section-->
           <section id="achievements-section" class="pt-2">
-            <a href="certificates.html">
-              <h2 class="text-primary fw-bolder mb-4" style="display: inline-block;">Achievements</h2>
-              <div class="feature link-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                <i class="bi bi-box-arrow-up-right"></i>
-              </div>
-            </a>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h2 class="text-primary fw-bolder mb-0">Achievements</h2>
+              <a href="certificates.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold">
+                <span>View All Achievements</span> <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
             <!-- Awards (injected from js/data.js)-->
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <div id="resumeAwardsContainer" class="row align-items-center gx-5">
-                  <!-- Awards injected from js/data.js -->
-                </div>
-              </div>
+            <div id="resumeAwardsContainer" class="row gx-4">
+              <!-- Awards injected from js/data.js -->
             </div>
           </section>
 

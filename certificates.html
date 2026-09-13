@@ -53,22 +53,18 @@
     <script src="js/scripts.js"></script>
   </head>
 
-  <body class="d-flex flex-column h-100 bg-light">
+  <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-      <div
-        id="loadOverlay"
-      style="
-        background-color: rgb(54, 54, 54);
+      <div id="loadOverlay" style="
+        background-color: #090A0F;
         position: absolute;
         top: 0px;
         left: 0px;
         width: 100%;
         height: 100%;
         z-index: 2000;
-      "
-    >
-      <div
-        style="
+      ">
+        <div style="
           display: flex;
           width: 100%;
           height: 100%;
@@ -77,17 +73,22 @@
           color: white;
           justify-content: center;
           font-size: 24px;
-          font-weight: bold; /* Optionally make it bold */
-          animation: pulse 1s infinite alternate; /* Add animation */
-        "
-      >
-        <div class="loading-spinner">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+          font-weight: bold;
+          animation: pulse 1s infinite alternate;
+        ">
+          <div class="loading-spinner">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
         </div>
       </div>
-    </div>
+      <!-- Global Ambient Background -->
+      <div class="position-fixed top-0 start-0 w-100 h-100" style="z-index: -1; pointer-events: none; overflow: hidden;">
+        <div class="ambient-blob blob-primary" style="width: 600px; height: 600px; top: -10%; left: -10%; animation-delay: 0s;"></div>
+        <div class="ambient-blob blob-info" style="width: 500px; height: 500px; top: 40%; right: -10%; animation-delay: -5s;"></div>
+        <div class="ambient-blob blob-secondary" style="width: 700px; height: 700px; bottom: -20%; left: 20%; animation-delay: -10s;"></div>
+      </div>
       <!-- Navigation (injected from js/data.js + components.js)-->
       <div id="nav-placeholder"></div>
 
@@ -102,13 +103,12 @@
           <div class="col-lg-11 col-xl-9 col-xxl-8">
             <!-- Awards Section (injected from js/data.js)-->
             <section>
-              <h2 class="text-primary fw-bolder mb-4">Awards</h2>
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div id="awardsContainer" class="row align-items-center gx-5">
-                    <!-- Awards injected from js/data.js -->
-                  </div>
-                </div>
+              <div class="d-flex align-items-center mb-4">
+                <div class="section-accent-bar"></div>
+                <h2 class="text-primary fw-bolder mb-0">Awards & Honors</h2>
+              </div>
+              <div id="awardsContainer" class="row gx-4">
+                <!-- Awards injected from js/data.js -->
               </div>
             </section>
 
@@ -116,7 +116,10 @@
 
             <!-- Certifications Section (injected from js/data.js)-->
             <section>
-              <h2 class="text-primary fw-bolder mb-4">Certifications</h2>
+              <div class="d-flex align-items-center mb-4">
+                <div class="section-accent-bar"></div>
+                <h2 class="text-primary fw-bolder mb-0">Professional Certifications</h2>
+              </div>
               <div id="certificationsContainer">
                 <!-- Certifications injected from js/data.js -->
               </div>

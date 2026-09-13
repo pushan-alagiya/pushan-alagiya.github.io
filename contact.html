@@ -55,11 +55,11 @@
     <script src="js/form-validation.js"></script>
   </head>
 
-  <body class="d-flex flex-column">
+  <body class="d-flex flex-column h-100">
     <div
       id="loadOverlay"
       style="
-        background-color: rgb(54, 54, 54);
+        background-color: #090A0F;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -78,8 +78,8 @@
           color: white;
           justify-content: center;
           font-size: 24px;
-          font-weight: bold; /* Optionally make it bold */
-          animation: pulse 1s infinite alternate; /* Add animation */
+          font-weight: bold;
+          animation: pulse 1s infinite alternate;
         "
       >
         <div class="loading-spinner">
@@ -90,33 +90,35 @@
       </div>
     </div>
     <main class="flex-shrink-0">
+      <!-- Global Ambient Background -->
+      <div class="position-fixed top-0 start-0 w-100 h-100" style="z-index: -1; pointer-events: none; overflow: hidden;">
+        <div class="ambient-blob blob-primary" style="width: 600px; height: 600px; top: -10%; left: -10%; animation-delay: 0s;"></div>
+        <div class="ambient-blob blob-info" style="width: 500px; height: 500px; top: 40%; right: -10%; animation-delay: -5s;"></div>
+        <div class="ambient-blob blob-secondary" style="width: 700px; height: 700px; bottom: -20%; left: 20%; animation-delay: -10s;"></div>
+      </div>
       <!-- Navigation (injected from js/data.js + components.js)-->
       <div id="nav-placeholder"></div>
 
       <!-- Page content-->
-      <section class="py-5">
+      <section class="py-5 mt-5">
         <div class="container px-5">
           <!-- Contact form-->
-          <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+          <div class="card experience-card-forge">
             <div class="text-center mb-5">
-              <div
-                class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"
-              >
-                <i class="bi bi-envelope"></i>
+              <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-3 mb-4" style="width: 4.5rem; height: 4.5rem; background: linear-gradient(135deg, rgba(30,48,243,0.15), rgba(30,48,243,0.05)); color: var(--bs-primary); border: 1px solid rgba(30,48,243,0.2);">
+                <i class="bi bi-envelope fs-1"></i>
               </div>
-              <h1 class="fw-bolder">Get in touch</h1>
-              <p class="lead fw-normal text-muted mb-0">Let's work together!</p>
+              <h1 class="fw-bolder app-text-primary display-5">Get in touch</h1>
+              <p class="lead fw-normal app-text-secondary mb-0">Open to discussing scalable systems and architecture.</p>
             </div>
 
-            <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body contact-card">
-                <div
-                  class="text-primary d-flex justify-content-center gap-4 email-in-contact"
-                >
+            <div class="card experience-card-forge mb-5">
+              <div class="text-center">
+                <a href="mailto:pushanalagiya@gmail.com" class="h4 text-primary text-decoration-none fw-bold mb-4 d-block email-in-contact">
                   pushanalagiya@gmail.com
-                </div>
-                <div class="bg-light p-4 rounded-4">
-                  <div id="socialLinksContainer" class="d-flex justify-content-center contact-items">
+                </a>
+                <div class="p-4 mx-auto" style="max-width: 400px;">
+                  <div id="socialLinksContainer" class="d-flex justify-content-center gap-4 contact-items fs-3">
                     <!-- Social links injected from js/data.js -->
                   </div>
                 </div>
@@ -124,115 +126,109 @@
             </div>
 
             <!-- All inputs -->
-            <div class="card shadow border-0 rounded-4 mb-5 contact-inputs">
-              <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6">
-                  <div class="text-primary center-text fw-bolder mb-4">
-                    Have Something to Say...?
+            <div class="card experience-card-forge mb-5 contact-inputs">
+              <div>
+                <div class="row gx-5 justify-content-center">
+                  <div class="col-lg-8 col-xl-6">
+                    <div class="app-text-primary fw-bolder mb-4 text-center fs-5">
+                      Send a Message
+                    </div>
+                    <form id="contactForm">
+                      <div class="form-floating mb-3">
+                        <input
+                          class="form-control app-bg app-border app-text-primary"
+                          id="name"
+                          type="text"
+                          placeholder="Enter your name..."
+                          data-sb-validations="required"
+                        />
+                        <label for="name" class="app-text-secondary">Full name</label>
+                        <div
+                          class="invalid-feedback"
+                          data-sb-feedback="name:required"
+                        >
+                          A name is required.
+                        </div>
+                      </div>
+                      <!-- Email input-->
+                      <div class="form-floating mb-3">
+                        <input
+                          class="form-control app-bg app-border app-text-primary"
+                          id="email"
+                          type="email"
+                          placeholder="name@example.com"
+                          data-sb-validations="required,email"
+                        />
+                        <label for="email" class="app-text-secondary">Email address</label>
+                        <div
+                          class="invalid-feedback"
+                          data-sb-feedback="email:required"
+                        >
+                          An email is required.
+                        </div>
+                        <div
+                          class="invalid-feedback"
+                          data-sb-feedback="email:email"
+                        >
+                          Email is not valid.
+                        </div>
+                      </div>
+                      <!-- Phone number input-->
+                      <div class="form-floating mb-3">
+                        <input
+                          class="form-control app-bg app-border app-text-primary"
+                          id="phone"
+                          type="tel"
+                          placeholder="(123) 456-7890"
+                          data-sb-validations="required"
+                        />
+                        <label for="phone" class="app-text-secondary">Phone number</label>
+                        <div
+                          class="invalid-feedback"
+                          data-sb-feedback="phone:required"
+                        >
+                          A phone number is required.
+                        </div>
+                      </div>
+                      <!-- Message input-->
+                      <div class="form-floating mb-3">
+                        <textarea
+                          class="form-control app-bg app-border app-text-primary"
+                          id="message"
+                          type="text"
+                          placeholder="Enter your message here..."
+                          style="height: 10rem"
+                          data-sb-validations="required"
+                        ></textarea>
+                        <label for="message" class="app-text-secondary">Message</label>
+                        <div
+                          class="invalid-feedback"
+                          data-sb-feedback="message:required"
+                        >
+                          A message is required.
+                        </div>
+                      </div>
+                      <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3 text-success">
+                          <div class="fw-bolder">Form submission successful!</div>
+                        </div>
+                      </div>
+                      <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                      </div>
+
+                      <div class="d-grid">
+                        <button
+                          class="btn btn-primary btn-lg rounded-pill fw-semibold shadow-sm"
+                          id="submitButton"
+                          type="submit"
+                          onclick="submitForm()"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
                   </div>
-                  <form id="contactForm">
-                    <div class="form-floating mb-3">
-                      <input
-                        class="form-control"
-                        id="name"
-                        type="text"
-                        placeholder="Enter your name..."
-                        data-sb-validations="required"
-                        name="Name"
-                        autocomplete="name"
-                      />
-                      <label for="name">Full name</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="name:required"
-                      >
-                        A name is required.
-                      </div>
-                    </div>
-                    <!-- Email input-->
-                    <div class="form-floating mb-3">
-                      <input
-                        class="form-control"
-                        id="email"
-                        type="email"
-                        placeholder="name@example.com"
-                        data-sb-validations="required,email"
-                        name="Email"
-                        autocomplete="email"
-                      />
-                      <label for="email">Email address</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="email:required"
-                      >
-                        An email is required.
-                      </div>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="email:email"
-                      >
-                        Email is not valid.
-                      </div>
-                    </div>
-                    <!-- Phone number input-->
-                    <div class="form-floating mb-3">
-                      <input
-                        class="form-control"
-                        id="phone"
-                        type="tel"
-                        placeholder="(123) 456-7890"
-                        data-sb-validations="required"
-                        name="Mobile"
-                        autocomplete="tel"
-                      />
-                      <label for="phone">Phone number</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="phone:required"
-                      >
-                        A phone number is required.
-                      </div>
-                    </div>
-                    <!-- Message input-->
-                    <div class="form-floating mb-3">
-                      <textarea
-                        class="form-control"
-                        id="message"
-                        type="text"
-                        placeholder="Enter your message here..."
-                        style="height: 10rem"
-                        data-sb-validations="required"
-                        name="Message"
-                        autocomplete="message"
-                      ></textarea>
-                      <label for="message">Message</label>
-                      <div
-                        class="invalid-feedback"
-                        data-sb-feedback="message:required"
-                      >
-                        A message is required.
-                      </div>
-                    </div>
-
-                    <!-- Submit Button-->
-                    <div class="d-grid">
-                      <button
-                        class="btn btn-primary btn-lg"
-                        id="submitButton"
-                        type="submit"
-                        onclick="submitForm()"
-                      >
-                        Submit
-                      </button>
-                    </div>
-
-                    <p class="small text-muted mt-3">
-                      Please note: Your browser may display a warning when using
-                      this form. This is due to the way the form is processed,
-                      but rest assured that your data is safe. The form is just
-                      for redirecting you to the default mail service app.
-                    </p>
-                  </form>
                 </div>
               </div>
             </div>
