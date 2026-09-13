@@ -184,117 +184,408 @@ function renderExperienceCards(containerId) {
   if (typeof EXPERIENCE_DATA === "undefined") return;
   const el = document.getElementById(containerId);
   if (!el) return;
-  el.innerHTML = EXPERIENCE_DATA.map(
-    (e) =>
-      `<div class="card shadow border-0 rounded-4 experience-card" data-bs-toggle="modal" data-bs-target="#${e.modalId}" style="cursor: pointer;">
-        <div class="card-body">
-          <div class="row align-items-center gx-5">
-            <div class="col text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                <div class="text-secondary fw-bolder mb-2">${e.period}</div>
-                <div class="small fw-bolder mb-2">${e.role}</div>
-                <div class="small text-muted-title"><a href="${e.companyUrl}" onclick="event.stopPropagation();" target="_blank" rel="noopener">${e.companyName}</a></div>
-                <div class="small text-muted">${e.location}</div>
-                <hr>
-                <div class="small text-muted">Tech Stack: </div>
-                <div class="fw-bolder text-gradient">${e.techStack}</div>
+  el.innerHTML = EXPERIENCE_DATA.map((e) => {
+    const projectCount = (e.projects || []).length;
+    const techTags = (e.techStack || "")
+      .split(",")
+      .slice(0, 6)
+      .map((t) => `<span class="project-tag small py-1 px-2 mb-1">${t.trim()}</span>`)
+      .join("");
+
+    return `<div class="card shadow border-0 rounded-4 mb-5 experience-card" data-bs-toggle="modal" data-bs-target="#${e.modalId}" style="cursor: pointer;">
+      <div class="card-body p-4 p-md-5">
+        <div class="row align-items-start gx-5">
+          <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+            <div class="bg-light p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="text-secondary fw-bolder">${e.period}</span>
+                  ${projectCount ? `<span class="badge bg-primary text-dark fw-bold px-2 py-1"><i class="bi bi-folder-check me-1"></i>${projectCount} Projects</span>` : ""}
+                </div>
+                <div class="mb-2">
+                  <div class="small fw-bolder fs-6">
+                    <a href="${e.companyUrl}" onclick="event.stopPropagation();" target="_blank" rel="noopener">${e.companyName}</a>
+                  </div>
+                  <div class="small text-muted"><i class="bi bi-geo-alt me-1"></i>${e.location}</div>
+                </div>
+                <div class="mb-2">
+                  <div class="fw-bold text-primary">${e.role}</div>
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-start">
+                <div class="small text-muted mb-2 fw-semibold">Core Stack:</div>
+                <div class="d-flex flex-wrap gap-1">${techTags}</div>
               </div>
             </div>
-            <div class="col-lg-8">
-              <div class="text-sm experience-info">${e.description}
-                <div class="mt-3 click-indicator"><i class="bi bi-arrow-right-circle me-2"></i><span class="text-primary fw-medium">Click to view detailed project information</span></div>
+          </div>
+          <div class="col-lg-8">
+            <div class="text-sm">
+              <p class="education-lead-desc mb-3">${e.description}</p>
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4 pt-3 border-top border-secondary border-opacity-10">
+                <div class="d-flex align-items-center text-muted small">
+                  <i class="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                  <span>Full-lifecycle ownership & production deployments</span>
+                </div>
+                <div class="btn btn-outline-primary btn-sm px-3 py-2 rounded-pill fw-semibold">
+                  <span>Explore Engineering Impact</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>`
-  ).join("");
+      </div>
+    </div>`;
+  }).join("");
 }
 
 function renderExperienceModals(containerId) {
   if (typeof EXPERIENCE_DATA === "undefined") return;
   const el = document.getElementById(containerId);
   if (!el) return;
-  el.innerHTML = EXPERIENCE_DATA.map(
-    (e) => {
-      const projectsList = (e.projects || [])
-        .map(
-          (p) =>
-            `<li><div class="project-name">${p.name}</div><p class="mb-0 text-muted">${p.desc}</p></li>`
-        )
-        .join("");
-      const techBadges = (e.technologies || [])
-        .map((t) => `<span class="tech-badge">${t}</span>`)
-        .join("");
-      const impactSection = e.impact
-        ? `<div class="project-info-card"><h6 class="fw-bold mb-2"><i class="bi bi-trophy me-2"></i>Professional Impact</h6><p class="mb-0">${e.impact}</p></div>`
-        : "";
-      return `<div class="modal fade" id="${e.modalId}" tabindex="-1" aria-labelledby="${e.modalId}Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="${e.modalId}Label"><i class="bi bi-building me-2"></i>${e.companyName} - ${e.role}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  el.innerHTML = EXPERIENCE_DATA.map((e) => {
+    const hasDetailedProjects = (e.projects || []).some(
+      (p) => p.tech || p.highlights
+    );
+    const techBadges = (e.technologies || [])
+      .map((t) => `<span class="tech-badge">${t}</span>`)
+      .join("");
+
+    const techDisplay = e.techCategories
+      ? `<div class="modal-tech-categories">
+          ${Object.entries(e.techCategories)
+            .map(
+              ([cat, items]) => `
+              <div class="mb-2">
+                <span class="small fw-bold text-primary me-2">${cat}:</span>
+                <div class="d-inline-flex flex-wrap gap-1 align-items-center mt-1">
+                  ${items
+                    .map((t) => `<span class="tech-badge tech-badge-sm">${t}</span>`)
+                    .join("")}
+                </div>
+              </div>`
+            )
+            .join("")}
+        </div>`
+      : `<div class="d-flex flex-wrap gap-1 modal-tech-badges">${techBadges}</div>`;
+
+    const engineeringAreasSection =
+      e.engineeringAreas && e.engineeringAreas.length
+        ? `<div class="company-info-section mb-4">
+            <h6 class="fw-bold mb-3"><i class="bi bi-diagram-3 me-2"></i>Core Engineering Areas</h6>
+            <div class="d-flex flex-wrap gap-2">
+              ${e.engineeringAreas
+                .map(
+                  (area) =>
+                    `<span class="engineering-area-tag"><i class="bi bi-check-circle me-1 text-primary"></i>${area}</span>`
+                )
+                .join("")}
             </div>
-            <div class="modal-body">
-              <div class="company-info-section mb-4">
-                <div class="row align-items-center">
-                  <div class="col-md-6">
-                    <h6 class="fw-bold mb-2">Position Details</h6>
-                    <div class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>${e.period}</div>
-                    <div class="text-muted mb-1"><i class="bi bi-geo-alt me-2"></i>${e.location}</div>
-                    <div class="text-muted"><i class="bi bi-briefcase me-2"></i>${e.role}</div>
+          </div>`
+        : "";
+
+    const metricsSection =
+      e.metrics && e.metrics.length
+        ? `<div class="impact-metrics-section mb-4">
+            <h6 class="fw-bold mb-3"><i class="bi bi-speedometer2 me-2"></i>${e.metricsTitle || "Key Impact & Scale Metrics"}</h6>
+            <div class="row g-3">
+              ${e.metrics
+                .map(
+                  (m) => `
+                <div class="col-6 col-md-4 col-lg-3">
+                  <div class="metric-card h-100">
+                    <div class="metric-value">${m.value}</div>
+                    <div class="metric-label">${m.label}</div>
+                    ${m.subtext ? `<div class="metric-subtext">${m.subtext}</div>` : ""}
                   </div>
-                  <div class="col-md-6">
-                    <h6 class="fw-bold mb-2">Technologies</h6>
-                    <div class="d-flex flex-wrap gap-1">${techBadges}</div>
-                  </div>
+                </div>`
+                )
+                .join("")}
+            </div>
+          </div>`
+        : "";
+
+    const projectsContent = hasDetailedProjects
+      ? `<div class="project-cards-section mb-4">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h6 class="fw-bold mb-0">
+              <i class="bi bi-code-square me-2"></i>Featured Projects & Architecture
+              <span class="badge rounded-pill bg-primary text-dark ms-2 fw-bold">${e.projects.length}</span>
+            </h6>
+            <span class="small text-muted d-none d-sm-inline">
+              <i class="bi bi-arrows-expand me-1"></i>Click card to toggle details
+            </span>
+          </div>
+          <div class="project-accordion-list">
+            ${e.projects
+              .map((p, idx) => {
+                const collapseId = `collapse-${e.modalId}-${idx}`;
+                const isExpanded = idx < 2 || p.prominent;
+                const tagsHtml = (p.tech || [])
+                  .map((t) => {
+                    const isAi = /ai|rag|llm|agent/i.test(t);
+                    return `<span class="project-tag ${isAi ? "project-tag-ai" : ""}">${t}</span>`;
+                  })
+                  .join("");
+                const highlightsHtml = (p.highlights || [])
+                  .map(
+                    (h) =>
+                      `<li><i class="bi bi-check2-circle me-2 text-primary"></i><span>${h}</span></li>`
+                  )
+                  .join("");
+                const badgeText = p.prominentBadgeText || "Key Business Impact";
+                const prominentBadge = p.prominent
+                  ? `<span class="badge bg-warning text-dark fw-bold me-2"><i class="bi bi-star-fill me-1"></i>${badgeText}</span>`
+                  : "";
+                const techContributionHtml = p.technicalContribution
+                  ? `<div class="project-contribution-box p-3 rounded-3 mb-3">
+                      <div class="fw-bold small text-primary mb-1"><i class="bi bi-gear-wide-connected me-2"></i>Technical Contribution</div>
+                      <div class="small text-muted-subtle">${p.technicalContribution}</div>
+                    </div>`
+                  : "";
+                const impactCalloutHtml = p.impact
+                  ? `<div class="project-impact-box p-3 rounded-3 mb-3">
+                      <div class="fw-bold small text-success mb-1"><i class="bi bi-graph-up-arrow me-2"></i>Measurable Impact</div>
+                      <div class="small text-muted-subtle">${p.impact}</div>
+                    </div>`
+                  : "";
+
+                return `
+                  <div class="project-card-collapsible ${p.prominent ? "project-card-prominent" : ""} mb-3">
+                    <div class="project-card-header ${isExpanded ? "" : "collapsed"}" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${isExpanded}" aria-controls="${collapseId}" role="button">
+                      <div class="d-flex align-items-start justify-content-between">
+                        <div class="project-title-area pe-2">
+                          <div class="d-flex flex-wrap align-items-center gap-1 mb-1">
+                            ${prominentBadge}
+                            <span class="project-card-name">${p.name}</span>
+                          </div>
+                          <div class="project-tags-wrap mt-2">${tagsHtml}</div>
+                        </div>
+                        <div class="project-toggle-icon ms-2">
+                          <i class="bi bi-chevron-down project-chevron"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="${collapseId}" class="collapse ${isExpanded ? "show" : ""}">
+                      <div class="project-card-body">
+                        ${p.desc ? `<p class="project-summary-desc mb-3">${p.desc}</p>` : ""}
+                        ${techContributionHtml}
+                        ${impactCalloutHtml}
+                        ${highlightsHtml ? `<ul class="project-highlights-list mb-0">${highlightsHtml}</ul>` : ""}
+                      </div>
+                    </div>
+                  </div>`;
+              })
+              .join("")}
+          </div>
+        </div>`
+      : `<div class="project-info-card">
+          <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
+          <ul class="project-list">
+            ${(e.projects || [])
+              .map(
+                (p) =>
+                  `<li><div class="project-name">${p.name}</div><p class="mb-0 text-muted">${p.desc}</p></li>`
+              )
+              .join("")}
+          </ul>
+        </div>`;
+
+    const impactSection = e.impact
+      ? `<div class="project-info-card"><h6 class="fw-bold mb-2"><i class="bi bi-trophy me-2"></i>Professional Impact</h6><p class="mb-0">${e.impact}</p></div>`
+      : "";
+
+    return `<div class="modal fade" id="${e.modalId}" tabindex="-1" aria-labelledby="${e.modalId}Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="${e.modalId}Label"><i class="bi bi-building me-2"></i>${e.companyName} - ${e.role}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="company-info-section mb-4">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                  <h6 class="fw-bold mb-3"><i class="bi bi-person-workspace me-2"></i>Position Details</h6>
+                  <div class="text-muted mb-2"><i class="bi bi-calendar3 me-2"></i>${e.period}</div>
+                  <div class="text-muted mb-2"><i class="bi bi-geo-alt me-2"></i>${e.location}</div>
+                  <div class="text-muted"><i class="bi bi-briefcase me-2"></i>${e.role}</div>
+                </div>
+                <div class="col-md-7">
+                  <h6 class="fw-bold mb-2"><i class="bi bi-cpu me-2"></i>Technologies & Specializations</h6>
+                  ${techDisplay}
                 </div>
               </div>
-              <div class="project-info-card">
-                <h6 class="fw-bold mb-3"><i class="bi bi-code-square me-2"></i>Key Projects & Contributions</h6>
-                <ul class="project-list">${projectsList}</ul>
-              </div>
-              ${impactSection}
             </div>
-            <div class="modal-footer">
-              <a href="${e.websiteUrl}" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe me-1"></i>Visit Company Website</a>
-              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
+            ${engineeringAreasSection}
+            ${metricsSection}
+            ${projectsContent}
+            ${impactSection}
+          </div>
+          <div class="modal-footer">
+            <a href="${e.websiteUrl}" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-globe me-1"></i>Visit Company Website</a>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
-      </div>`;
-    }
-  ).join("");
+      </div>
+    </div>`;
+  }).join("");
 }
 
 function renderEducation(containerId) {
   if (typeof EDUCATION_DATA === "undefined") return;
   const el = document.getElementById(containerId);
   if (!el) return;
-  el.innerHTML = EDUCATION_DATA.map(
-    (ed) =>
-      `<div class="card shadow border-0 rounded-4 mb-5">
-        <div class="card-body p-5">
-          <div class="row align-items-center gx-5">
-            <div class="col text-center text-lg-start mb-4 mb-lg-0">
-              <div class="bg-light p-4 rounded-4">
-                <div class="text-secondary fw-bolder mb-2">${ed.period}</div>
+  el.innerHTML = EDUCATION_DATA.map((ed) => {
+    if (ed.isCurrent) {
+      const coreAreasHtml = (ed.coreAreas || [])
+        .map((a) => {
+          const isAgentic = /agent/i.test(a);
+          return `<span class="project-tag ${isAgentic ? "project-tag-ai" : ""}">${a}</span>`;
+        })
+        .join("");
+
+      return `<div class="card shadow border-0 rounded-4 mb-5 education-card-current">
+        <div class="card-body p-4 p-md-5">
+          <div class="row align-items-start gx-5">
+            <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+              <div class="bg-light p-4 rounded-4 h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="text-secondary fw-bolder">${ed.period}</span>
+                  <span class="badge bg-success text-white px-2 py-1"><i class="bi bi-circle-fill me-1" style="font-size: 0.45rem;"></i>${ed.status || "Ongoing"}</span>
+                </div>
                 <div class="mb-2">
-                  <div class="small fw-bolder"><a href="${ed.schoolUrl}" target="_blank" rel="noopener">${ed.schoolName}</a></div>
-                  <div class="small text-muted">${ed.board}</div>
+                  <div class="small fw-bolder fs-6"><a href="${ed.schoolUrl}" target="_blank" rel="noopener">${ed.schoolName}</a></div>
+                  <div class="small text-muted"><i class="bi bi-geo-alt me-1"></i>${ed.location || ed.board}</div>
                 </div>
-                <div class="fst-italic">
-                  <div class="small text-muted">${ed.degree}</div>
-                  ${ed.details ? `<div class="small text-muted mt-2">${ed.details}</div>` : ""}
+                <div class="mb-2">
+                  <div class="fw-bold text-primary">${ed.degree}</div>
                 </div>
+                ${
+                  ed.focusHighlight
+                    ? `<div class="academic-focus-box p-3 rounded-3 mt-3 text-start">
+                        <div class="small fw-bold text-primary mb-1"><i class="bi bi-bullseye me-1"></i>Focus:</div>
+                        <div class="small text-muted-subtle" style="font-size: 0.8rem; line-height: 1.4;">${ed.focusHighlight}</div>
+                      </div>`
+                    : ""
+                }
               </div>
             </div>
-            <div class="col-lg-8"><div class="text-sm">${ed.description}</div></div>
+            <div class="col-lg-8">
+              <div class="text-sm">
+                <p class="education-lead-desc mb-3">${ed.description}</p>
+                ${
+                  coreAreasHtml
+                    ? `<div class="mb-4">
+                        <div class="small fw-bold text-primary mb-2"><i class="bi bi-book me-1"></i>Core Areas of Study:</div>
+                        <div class="d-flex flex-wrap gap-2">${coreAreasHtml}</div>
+                      </div>`
+                    : ""
+                }
+                ${
+                  ed.scholarship || ed.achievement
+                    ? (() => {
+                        const ach = ed.scholarship || ed.achievement;
+                        return `<div class="scholarship-achievement-card p-3 rounded-3 mt-3">
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="scholarship-badge-icon">
+                              <i class="bi ${ach.icon || "bi-award-fill"} text-warning fs-3"></i>
+                            </div>
+                            <div>
+                              <div class="fw-bold text-primary" style="font-size: 0.95rem;">${ach.title}</div>
+                              <div class="small text-muted">${ach.organization}</div>
+                            </div>
+                          </div>
+                        </div>`;
+                      })()
+                    : ""
+                }
+              </div>
+            </div>
           </div>
         </div>
-      </div>`
-  ).join("");
+      </div>`;
+    }
+
+    const ach = ed.scholarship || ed.achievement;
+    const achievementHtml = ach
+      ? `<div class="scholarship-achievement-card p-3 rounded-3 mt-3">
+          <div class="d-flex align-items-center gap-3">
+            <div class="scholarship-badge-icon">
+              <i class="bi ${ach.icon || "bi-award-fill"} text-warning fs-3"></i>
+            </div>
+            <div>
+              <div class="fw-bold text-primary" style="font-size: 0.95rem;">${ach.title}</div>
+              <div class="small text-muted">${ach.organization}</div>
+            </div>
+          </div>
+        </div>`
+      : "";
+
+    return `<div class="card shadow border-0 rounded-4 mb-5">
+      <div class="card-body p-4 p-md-5">
+        <div class="row align-items-center gx-5">
+          <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+            <div class="bg-light p-4 rounded-4 h-100">
+              <div class="text-secondary fw-bolder mb-2">${ed.period}</div>
+              <div class="mb-2">
+                <div class="small fw-bolder fs-6"><a href="${ed.schoolUrl}" target="_blank" rel="noopener">${ed.schoolName}</a></div>
+                <div class="small text-muted">${ed.board ? `<i class="bi bi-geo-alt me-1"></i>${ed.board}` : ""}</div>
+              </div>
+              <div>
+                <div class="fw-bold text-primary">${ed.degree}</div>
+                ${ed.details ? `<div class="small text-muted mt-1"><i class="bi bi-star-fill text-warning me-1"></i>${ed.details}</div>` : ""}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="text-sm">
+              <p class="education-lead-desc mb-3">${ed.description}</p>
+              ${achievementHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function renderSkills(containerId) {
+  if (typeof SKILLS_DATA === "undefined") return;
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
+  const cardsHtml = SKILLS_DATA.map((cat) => {
+    const isAi =
+      cat.category.toLowerCase().includes("ai") ||
+      cat.category.toLowerCase().includes("llm");
+    const pillsHtml = cat.skills
+      .map((s) => {
+        const isAiSkill =
+          isAi ||
+          /agent|rag|llm|vector|prompt|lang|llama|pinecone|orchestration/i.test(s);
+        return `<span class="skill-pill ${isAiSkill ? "skill-pill-ai" : ""}">${s}</span>`;
+      })
+      .join("");
+
+    return `<div class="col-12 col-lg-6">
+      <div class="skill-category-card p-4 rounded-4 h-100 ${isAi ? "skill-category-featured" : ""}">
+        <div class="d-flex align-items-center mb-3">
+          <div class="skill-category-icon me-2">
+            <i class="bi ${cat.icon} text-primary fs-5"></i>
+          </div>
+          <h5 class="fw-bold mb-0 text-primary d-flex align-items-center" style="font-size: 1.05rem;">
+            ${cat.emoji ? `<span class="me-2">${cat.emoji}</span>` : ""}${cat.category}
+          </h5>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          ${pillsHtml}
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  el.innerHTML = `<div class="row g-4 mb-2">${cardsHtml}</div>`;
 }
 
 function renderSkillsGrid(containerId, skills, visibleCount, additionalClass) {
@@ -316,6 +607,40 @@ function renderSkillsGrid(containerId, skills, visibleCount, additionalClass) {
     )
     .join("");
   el.innerHTML = visibleHTML + hiddenHTML;
+}
+
+function renderResumeCertifications(containerId) {
+  if (typeof CERTIFICATIONS_DATA === "undefined") return;
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const topCertifications = CERTIFICATIONS_DATA.slice(0, 2);
+  el.innerHTML = topCertifications
+    .map(
+      (c) =>
+        `<div class="col-md-6 text-center mb-5 mb-md-0">
+          <div class="bg-light p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="fw-bolder mb-3">
+                <span class="text-gradient small-awards d-inline">${c.name}</span>
+              </h3>
+              <div class="my-3">
+                <a href="${c.link}" target="_blank" rel="noopener" class="d-inline-block">
+                  <img class="border-rad noinverseimgages cert-preview-img" src="${c.image}" style="max-height: 160px; max-width: 85%; object-fit: contain;" alt="${c.name}">
+                </a>
+              </div>
+            </div>
+            <div class="mt-3">
+              <div class="small text-muted mb-3">
+                ${c.name.includes("AWS") ? "Amazon Web Services (AWS) • Verified Credential" : "MongoDB • Verified Credential"}
+              </div>
+              <a href="${c.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm px-3 py-1 rounded-pill">
+                <i class="bi bi-patch-check-fill me-1"></i>Verify Credential
+              </a>
+            </div>
+          </div>
+        </div>`
+    )
+    .join("");
 }
 
 function renderResumeAwards(containerId) {
@@ -356,4 +681,206 @@ function renderExtracurricular(containerId) {
         </div>
       </div>`
   ).join("");
+}
+
+function renderPrintableResume(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
+  const summary = typeof RESUME_SUMMARY !== "undefined"
+    ? RESUME_SUMMARY
+    : "Software Engineer with 6+ years of experience building scalable full-stack, backend, cloud-native, and AI-powered applications. Experienced in Node.js, NestJS, React, Next.js, TypeScript, microservices, REST APIs, AWS, and real-time systems. Hands-on experience building Agentic AI and LLM-powered applications using LangChain, LangGraph, RAG, and intelligent workflow orchestration. Currently pursuing an M.Sc. in Computer Science at the University of Helsinki.";
+
+  el.innerHTML = `
+    <!-- PRINT PAGE 1 -->
+    <div class="print-page print-page-1">
+      <header class="print-header mb-3 pb-2 border-bottom border-dark">
+        <div class="d-flex justify-content-between align-items-end">
+          <div>
+            <h1 class="print-name m-0 fw-bold">Pushan Alagiya</h1>
+            <div class="print-role text-muted fw-semibold">Software Engineer • Full Stack, Backend & Agentic AI Systems</div>
+          </div>
+          <div class="print-contact text-end small">
+            <div><i class="bi bi-geo-alt"></i> Helsinki, Finland / India</div>
+            <div><i class="bi bi-envelope"></i> pushanalagiya@gmail.com</div>
+            <div><i class="bi bi-globe"></i> pushan-alagiya.github.io</div>
+            <div><i class="bi bi-linkedin"></i> linkedin.com/in/pushan-alagiya • <i class="bi bi-github"></i> github.com/pushan-alagiya</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="print-section mb-3">
+        <h2 class="print-section-title">Professional Summary</h2>
+        <p class="print-summary-text mb-0">${summary}</p>
+      </section>
+
+      <section class="print-section mb-0">
+        <h2 class="print-section-title">Professional Experience</h2>
+
+        <!-- Crest Infosystems -->
+        <div class="print-exp-item mb-3">
+          <div class="d-flex justify-content-between align-items-baseline">
+            <span class="fw-bold print-item-title">Crest Infosystems / NuVista AI</span>
+            <span class="print-item-date">January 2024 – July 2026</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-baseline small text-muted mb-1">
+            <span class="fst-italic fw-semibold">SDE L2 / Software Engineer</span>
+            <span>Surat, Gujarat, India</span>
+          </div>
+          <div class="small fw-semibold text-dark mb-1">
+            <span class="text-secondary">Core Stack:</span> React.js, Next.js, TypeScript, Node.js, NestJS, Express.js, PostgreSQL, MongoDB, Redis, DynamoDB, AWS Lambda, S3, Docker, BullMQ, WebSockets, REST APIs, Microservices
+          </div>
+          <ul class="print-bullet-list">
+            <li>Architected and scaled production full-stack microservices, event-driven backends, and serverless applications handling multi-tenant real-time workloads.</li>
+            <li>Engineered Agentic AI workflows using LangChain, LangGraph, RAG, and LLM orchestration for automated document processing, multi-agent tasks, and contextual retrieval.</li>
+            <li>Designed and maintained complex database models across PostgreSQL, MongoDB, and Redis with optimized compound indexing, connection pooling, and sub-second latencies.</li>
+            <li>Led technical implementation across 8 commercial projects including Digifama, Intarp, Adbox, Kindertales, Pikhaul, and Wakabay 3PL logistics.</li>
+          </ul>
+        </div>
+
+        <!-- Wholetax -->
+        <div class="print-exp-item mb-3">
+          <div class="d-flex justify-content-between align-items-baseline">
+            <span class="fw-bold print-item-title">Wholetax Pvt. Ltd.</span>
+            <span class="print-item-date">July 2023 – December 2023</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-baseline small text-muted mb-1">
+            <span class="fst-italic fw-semibold">Software Engineer</span>
+            <span>Surat, Gujarat, India</span>
+          </div>
+          <div class="small fw-semibold text-dark mb-1">
+            <span class="text-secondary">Core Stack:</span> Node.js, Express.js, React.js, Next.js, PostgreSQL, MongoDB, Redis, Docker, AWS, REST APIs, QR Tracking
+          </div>
+          <ul class="print-bullet-list">
+            <li>Engineered enterprise supply chain management and automated logistics platforms with end-to-end QR code tracking and parcel movement monitoring.</li>
+            <li>Reduced physical inventory reconciliation time by ~60% through automated scanning workflows and centralized event logging pipelines.</li>
+            <li>Architected role-based RESTful APIs and real-time operational dashboards for warehouse dispatch and business-critical asset visibility.</li>
+          </ul>
+        </div>
+
+        <!-- TudeDude -->
+        <div class="print-exp-item mb-0">
+          <div class="d-flex justify-content-between align-items-baseline">
+            <span class="fw-bold print-item-title">TudeDude</span>
+            <span class="print-item-date">June 2020 – July 2023</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-baseline small text-muted mb-1">
+            <span class="fst-italic fw-semibold">Software Engineer</span>
+            <span>India</span>
+          </div>
+          <div class="small fw-semibold text-dark mb-1">
+            <span class="text-secondary">Core Stack:</span> React.js, Node.js, Express.js, MongoDB, REST APIs, JWT, AWS, Docker, Video Streaming Microservices
+          </div>
+          <ul class="print-bullet-list">
+            <li>Built core functionality for a production EdTech online course delivery platform, including video lesson playback and progress tracking.</li>
+            <li>Architected dedicated video streaming microservice with secure media access controls, chunked streaming, and instructor upload workflows.</li>
+            <li>Designed administrative portals, curriculum authoring tools, and MongoDB aggregation pipelines tracking student engagement and course completions.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- PRINT PAGE 2 -->
+    <div class="print-page print-page-2">
+      <section class="print-section mb-3">
+        <h2 class="print-section-title">Education</h2>
+
+        <!-- Master's -->
+        <div class="print-edu-item mb-2">
+          <div class="d-flex justify-content-between align-items-baseline">
+            <span class="fw-bold print-item-title">University of Helsinki</span>
+            <span class="print-item-date">August 2026 – Present</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-baseline small text-muted">
+            <span class="fst-italic fw-semibold">Master of Science (M.Sc.) in Computer Science</span>
+            <span>Helsinki, Finland • Ongoing</span>
+          </div>
+          <div class="small mt-1">
+            <span class="fw-semibold">Core Focus:</span> Mix of software development and Agentic systems, combining advanced software engineering with autonomous AI agents and scalable distributed architecture.
+          </div>
+          <div class="small text-success fw-bold mt-1">
+            ★ Awarded 100% Merit-Based Tuition Scholarship (University of Helsinki — 2026)
+          </div>
+        </div>
+
+        <!-- Bachelor's -->
+        <div class="print-edu-item mb-0">
+          <div class="d-flex justify-content-between align-items-baseline">
+            <span class="fw-bold print-item-title">GTU - Gujarat Technological University</span>
+            <span class="print-item-date">2020 – 2024</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-baseline small text-muted">
+            <span class="fst-italic fw-semibold">Bachelor of Engineering (B.E.) in Information Technology</span>
+            <span>Gujarat, India</span>
+          </div>
+          <div class="small mt-1">
+            <span class="fw-semibold">Academic Excellence:</span> CGPA: 9.45 / 10.0 • Graduated as <strong class="text-dark">College Topper</strong> with highest academic distinction.
+          </div>
+        </div>
+      </section>
+
+      <section class="print-section mb-3">
+        <h2 class="print-section-title">Technical Skills & Competencies</h2>
+        <div class="print-skills-grid">
+          <div class="print-skill-row">
+            <strong class="print-skill-label">🤖 AI & LLM Engineering:</strong>
+            <span class="print-skill-vals">Agentic AI, AI Agents, LLM Applications, RAG, LLM Orchestration, AI Workflow Automation, Tool Calling, Prompt Engineering, Context Engineering, Multi-Agent Systems, Vector Search, AI Solution Architecture</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">🧠 AI Frameworks:</strong>
+            <span class="print-skill-vals">LangChain, LangGraph, LlamaIndex, pgvector, Pinecone, LLM APIs</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">⚙️ Software Engineering:</strong>
+            <span class="print-skill-vals">Backend Engineering, Full Stack Development, Microservices, Distributed Systems, REST & GraphQL APIs, Real-Time Systems, Software Architecture, Performance Engineering, Automation</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">☁️ Cloud & Infrastructure:</strong>
+            <span class="print-skill-vals">AWS (Lambda, EC2, S3, RDS, SQS, SES), Docker, CI/CD, Serverless, Cloud-Native Architecture</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">💻 Programming Languages:</strong>
+            <span class="print-skill-vals">Python, TypeScript, JavaScript, SQL, Go, C/C++, Solidity</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">🧩 Frameworks & Libraries:</strong>
+            <span class="print-skill-vals">Node.js, NestJS, Express, React, Next.js, Socket.IO, BullMQ, Tailwind CSS, MUI</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">🗄️ Databases & Storage:</strong>
+            <span class="print-skill-vals">PostgreSQL, MongoDB, Redis, MySQL, DynamoDB, pgvector, Pinecone</span>
+          </div>
+          <div class="print-skill-row">
+            <strong class="print-skill-label">⛓️ Additional / Web3:</strong>
+            <span class="print-skill-vals">Ethereum, Solidity, Ethers.js, Web3</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="print-section mb-3">
+        <h2 class="print-section-title">Certifications</h2>
+        <div class="row g-2">
+          <div class="col-6">
+            <div class="print-cert-box p-2 border rounded">
+              <div class="fw-bold small">AWS Certified Developer - Associate</div>
+              <div class="text-muted" style="font-size: 0.75rem;">Amazon Web Services • Verified Credential (Credly)</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="print-cert-box p-2 border rounded">
+              <div class="fw-bold small">MongoDB Node.js Developer</div>
+              <div class="text-muted" style="font-size: 0.75rem;">MongoDB Official Certification • Verified Credential</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="print-section mb-0">
+        <h2 class="print-section-title">Honors & Achievements</h2>
+        <div class="print-award-item small">
+          <strong>Devang Mehta IT Awards (2022 & 2023):</strong> Facilitation of Toppers — Recognized with state-level IT award for academic excellence and graduating as College Topper.
+        </div>
+      </section>
+    </div>
+  `;
 }

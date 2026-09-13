@@ -272,17 +272,26 @@ window.addEventListener("DOMContentLoaded", () => {
   if (typeof renderEducation === "function" && document.getElementById("educationContainer")) {
     renderEducation("educationContainer");
   }
+  if (typeof renderSkills === "function" && document.getElementById("skillsContainer")) {
+    renderSkills("skillsContainer");
+  }
   if (typeof renderSkillsGrid === "function" && document.getElementById("skillsGrid") && typeof PROFESSIONAL_SKILLS !== "undefined") {
     renderSkillsGrid("skillsGrid", PROFESSIONAL_SKILLS, 8, "additional-skill");
   }
   if (typeof renderSkillsGrid === "function" && document.getElementById("languagesGrid") && typeof LANGUAGES_LIST !== "undefined") {
     renderSkillsGrid("languagesGrid", LANGUAGES_LIST, 7, "additional-language");
   }
+  if (typeof renderResumeCertifications === "function" && document.getElementById("resumeCertificationsContainer")) {
+    renderResumeCertifications("resumeCertificationsContainer");
+  }
   if (typeof renderResumeAwards === "function" && document.getElementById("resumeAwardsContainer")) {
     renderResumeAwards("resumeAwardsContainer");
   }
   if (typeof renderExtracurricular === "function" && document.getElementById("extracurricularContainer")) {
     renderExtracurricular("extracurricularContainer");
+  }
+  if (typeof renderPrintableResume === "function" && document.getElementById("printableResume")) {
+    renderPrintableResume("printableResume");
   }
 
   if (window.innerWidth >= 450) {

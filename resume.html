@@ -75,25 +75,65 @@
     <!-- Navigation (injected from js/data.js + components.js)-->
     <div id="nav-placeholder"></div>
 
-    <!-- Page Content-->
-    <div class="container px-5 my-5">
-      <div class="text-center mb-5">
-        <h1 class="display-5 fw-bolder mb-0">
-          <span class="text-gradient d-inline">Resume</span>
+    <!-- Screen Resume Page Content-->
+    <div id="screenResumeContent" class="container px-4 px-md-5 my-5">
+      <!-- Executive Hero Header -->
+      <div class="resume-hero-header text-center mb-5">
+        <div class="badge bg-gradient-primary-to-secondary text-white px-3 py-2 rounded-pill mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.75rem;">
+          Portfolio Resume & Technical Profile
+        </div>
+        <h1 class="display-4 fw-bolder mb-2">
+          <span class="text-gradient d-inline">Pushan Alagiya</span>
         </h1>
+        <p class="fs-5 text-muted mb-4 fw-normal">
+          Software Engineer • Full Stack, Backend & Agentic AI Systems
+        </p>
+
+        <!-- Metadata Info Pills -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+          <span class="resume-meta-pill"><i class="bi bi-geo-alt me-1 text-primary"></i>Helsinki, Finland / India</span>
+          <span class="resume-meta-pill"><i class="bi bi-mortarboard me-1 text-primary"></i>M.Sc. CS @ Univ. of Helsinki</span>
+          <span class="resume-meta-pill"><i class="bi bi-briefcase me-1 text-primary"></i>6+ Years Experience</span>
+          <a href="https://github.com/pushan-alagiya" target="_blank" rel="noopener" class="resume-meta-pill resume-meta-link"><i class="bi bi-github me-1"></i>GitHub</a>
+          <a href="https://www.linkedin.com/in/pushan-alagiya/" target="_blank" rel="noopener" class="resume-meta-pill resume-meta-link"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+          <a href="mailto:pushanalagiya@gmail.com" class="resume-meta-pill resume-meta-link"><i class="bi bi-envelope me-1"></i>Contact</a>
+        </div>
       </div>
+
+      <!-- Quick Nav Sticky Bar -->
+      <div class="resume-quick-nav-wrapper mb-5 sticky-top py-2">
+        <nav class="resume-quick-nav d-flex justify-content-center flex-wrap gap-2 p-2 rounded-pill shadow-sm">
+          <a href="#summary-section" class="quick-nav-link">Summary</a>
+          <a href="#experience-section" class="quick-nav-link">Experience</a>
+          <a href="#education-section" class="quick-nav-link">Education</a>
+          <a href="#skills-section" class="quick-nav-link">Skills</a>
+          <a href="#certifications-section" class="quick-nav-link">Certifications</a>
+          <a href="#achievements-section" class="quick-nav-link">Achievements</a>
+          <a href="#extracurricular-section" class="quick-nav-link">Extra Curriculars</a>
+        </nav>
+      </div>
+
       <div class="row gx-5 justify-content-center">
         <div class="col-lg-11 col-xl-9 col-xxl-8">
+          <!-- Summary Section-->
+          <section id="summary-section" class="mb-5 pt-2">
+            <h2 class="text-primary fw-bolder mb-4">Summary</h2>
+            <div class="card shadow border-0 rounded-4 resume-summary-card">
+              <div class="card-body p-4 p-md-5">
+                <p class="resume-summary-text mb-0">
+                  Software Engineer with 6+ years of experience building scalable full-stack, backend, cloud-native, and AI-powered applications. Experienced in Node.js, NestJS, React, Next.js, TypeScript, microservices, REST APIs, AWS, and real-time systems, with expertise in designing production-grade architectures and automating complex business workflows. Hands-on experience building Agentic AI and LLM-powered applications using LangChain, LangGraph, RAG, and intelligent workflow orchestration. Currently pursuing an M.Sc. in Computer Science at the University of Helsinki, focusing on AI, Machine Learning, Distributed Systems, Cloud Computing, and Software Engineering.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Divider-->
+          <div class="pb-5"></div>
+
           <!-- Experience Section-->
-          <section>
+          <section id="experience-section" class="pt-2">
             <div class="d-flex align-items-center justify-content-between mb-4">
               <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-              <!-- Download resume button-->
-              <a class="btn btn-primary px-4 py-3" href="assets/Resume.pdf">
-                <div class="d-inline-block bi bi-download bi-align-center me-2">
-                  <span class="d-none d-sm-inline">&nbsp; Download Resume</span>
-                </div>
-              </a>
             </div>
 
             <!-- Experience cards (injected from js/data.js)-->
@@ -105,68 +145,50 @@
 
           <!-- Divider-->
           <div class="pb-5"></div>
+
           <!-- Education Section (injected from js/data.js)-->
-          <section>
-            <h2 class="text-primary  fw-bolder mb-4">Education</h2>
+          <section id="education-section" class="pt-2">
+            <h2 class="text-primary fw-bolder mb-4">Education</h2>
             <div id="educationContainer">
               <!-- Education cards injected from js/data.js -->
             </div>
           </section>
+
           <!-- Divider-->
           <div class="pb-5"></div>
+
           <!-- Skills Section-->
-          <section>
-            <!-- Skillset Card-->
-            <h2 class="text-primary  fw-bolder mb-4">Skills</h2>
+          <section id="skills-section" class="pt-2">
+            <h2 class="text-primary fw-bolder mb-4">Skills & Technologies</h2>
+            <div id="skillsContainer">
+              <!-- Categorized skills injected from js/data.js + components.js -->
+            </div>
+          </section>
+
+          <div class="pb-5"></div>
+
+          <!-- Certifications Section-->
+          <section id="certifications-section" class="pt-2">
+            <a href="certificates.html">
+              <h2 class="text-primary fw-bolder mb-4" style="display: inline-block;">Certifications</h2>
+              <div class="feature link-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                <i class="bi bi-box-arrow-up-right"></i>
+              </div>
+            </a>
+            <!-- Certifications (injected from js/data.js)-->
             <div class="card shadow border-0 rounded-4 mb-5">
-              <div class="card-body p-5">
-                <!-- Professional skills list-->
-                <div class="mb-5">
-                  <div class="d-flex align-items-center mb-4">
-                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                      <i class="bi bi-tools"></i>
-                    </div>
-                    <h4 class="fw-bolder mb-0">
-                      <span class="text-gradient d-inline">Professional Skills</span>
-                    </h4>
-                  </div>
-                  <div id="skillsGrid" class="row row-cols-1 row-cols-md-3 g-4">
-                    <!-- Professional skills injected from js/data.js -->
-                  </div>
-                  <div class="text-center mb-4 mt-4">
-                    <button class="btn btn-outline-primary btn-sm" id="toggleSkills" onclick="toggleProfessionalSkills()">
-                      <i class="bi bi-plus-circle me-1"></i>Show More Skills
-                    </button>
-                  </div>
-                </div>
-                <!-- Languages list-->
-                <div class="mb-0">
-                  <div class="d-flex align-items-center mb-4">
-                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                      <i class="bi bi-code-slash"></i>
-                    </div>
-                    <h3 class="fw-bolder mb-0">
-                      <span class="text-gradient d-inline">Languages</span>
-                    </h3>
-                  </div>
-                  <div id="languagesGrid" class="row row-cols-1 row-cols-md-3 g-4">
-                    <!-- Languages/technologies injected from js/data.js -->
-                  </div>
-                  <div class="text-center mt-4">
-                    <button class="btn btn-outline-primary btn-sm" id="toggleLanguages" onclick="toggleLanguages()">
-                      <i class="bi bi-plus-circle me-1"></i>Show More Technologies
-                    </button>
-                  </div>
+              <div class="card-body p-4 p-md-5">
+                <div id="resumeCertificationsContainer" class="row align-items-center gx-5">
+                  <!-- Certifications injected from js/data.js -->
                 </div>
               </div>
             </div>
           </section>
 
-
           <div class="pb-5"></div>
 
           <!-- Awards Section-->
-          <section>
+          <section id="achievements-section" class="pt-2">
             <a href="certificates.html">
               <h2 class="text-primary fw-bolder mb-4" style="display: inline-block;">Achievements</h2>
               <div class="feature link-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
@@ -183,25 +205,28 @@
             </div>
           </section>
 
-
           <!-- Divider-->
           <div class="pb-5"></div>
+
           <!-- Extra Curricular Section (injected from js/data.js)-->
-          <section>
+          <section id="extracurricular-section" class="pt-2">
             <h2 class="text-primary fw-bolder mb-4">Extra Curriculars</h2>
             <div id="extracurricularContainer">
               <!-- Extracurricular cards injected from js/data.js -->
             </div>
           </section>
+        </div>
+      </div>
+    </div>
 
+    <!-- Printable 2-Page Resume (Shown exclusively during window.print()) -->
+    <div id="printableResume"></div>
 
+    <!-- Footer (injected from js/components.js)-->
+    <div id="footer-placeholder"></div>
 
-
-          <!-- Footer (injected from js/components.js)-->
-          <div id="footer-placeholder"></div>
-
-          <!-- Experience Modals (injected from js/data.js)-->
-          <div id="experienceModalsContainer"></div>
+    <!-- Experience Modals (injected from js/data.js)-->
+    <div id="experienceModalsContainer"></div>
 
 </body>
 
